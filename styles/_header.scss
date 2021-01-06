@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    height: 7.2rem;
+    justify-content: space-around;
+    align-items: center;
+    ul {
+        list-style-type: none;
+        display: flex;
+        li {
+            padding: 0 3rem;
+        }
+    }
+    button {
+        @include rectangle-button($pure-black, $pure-white);
+    }
+}

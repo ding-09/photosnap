@@ -21,7 +21,6 @@ $light-grey: #dfdfdf;
 @mixin rectangle-button($background, $color) {
   width: 15.8rem;
   height: 4rem;
-  padding: 1.2rem 2.4rem;
   font-weight: 700;
   line-height: 1.6rem;
   letter-spacing: 2px;
@@ -64,6 +63,7 @@ $light-grey: #dfdfdf;
   position: relative;
 }
 
+// Global styles 
 * {
   margin: 0;
   padding: 0;
@@ -76,6 +76,9 @@ html {
 
 body {
   font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 
 h2 {
@@ -88,4 +91,13 @@ h3 {
 
 h4 {
   @include heading-style(1.2rem, 1.6rem, 2px);
+}
+
+a {
+  text-decoration: none;
+  color: $pure-black;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  letter-spacing: 2px;
 }
