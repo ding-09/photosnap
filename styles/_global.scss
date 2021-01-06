@@ -18,6 +18,52 @@ $light-grey: #dfdfdf;
   @include heading-style(4rem, 4.8rem, 4px);
 }
 
+@mixin rectangle-button($background, $color) {
+  width: 15.8rem;
+  height: 4rem;
+  padding: 1.2rem 2.4rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  letter-spacing: 2px;
+  text-align: center;
+  border: none;
+  background-color: $background;
+  color: $color;
+  &:hover {
+    background: $light-grey;
+    color: $pure-black;
+  }
+}
+
+@mixin arrow-button($color) {
+  p {
+    &:hover span {
+      text-decoration: underline;
+    }
+    svg {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      g {
+        stroke: $color;
+      }
+    }
+  }
+  width: 14rem;
+  height: 1.6rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  letter-spacing: 2px;
+  text-align: left;
+  border: none;
+  background: transparent;
+  color: $color;
+}
+
+.arrow {
+  position: relative;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,8 +76,6 @@ html {
 
 body {
   font-family: 'DM Sans', sans-serif;
-  button {
-  }
 }
 
 h2 {
@@ -45,13 +89,3 @@ h3 {
 h4 {
   @include heading-style(1.2rem, 1.6rem, 2px);
 }
-
-body {
-  h1 {
-    @include large-heading();
-  }
-}
-
-
-
-
