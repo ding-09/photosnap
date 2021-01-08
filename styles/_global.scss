@@ -34,26 +34,24 @@ $light-grey: #dfdfdf;
   }
 }
 
-@mixin arrow-button($color) {
-  p {
-    &:hover span {
-      text-decoration: underline;
-    }
-    svg {
-      display: inline-block;
-      position: absolute;
-      right: 0;
-      g {
-        stroke: $color;
-      }
+@mixin arrow-button($color, $padding) {
+  span {
+    display: inline-block;
+    padding-right: $padding;
+  }
+  &:hover span {
+    text-decoration: underline;
+  }
+  svg {
+    position: absolute;
+    g {
+      stroke: $color;
     }
   }
-  width: 14rem;
   height: 1.6rem;
   font-weight: 700;
   line-height: 1.6rem;
   letter-spacing: 2px;
-  text-align: left;
   border: none;
   background: transparent;
   color: $color;
@@ -105,3 +103,4 @@ a {
   line-height: 1.6rem;
   letter-spacing: 2px;
 }
+
