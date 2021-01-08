@@ -63,7 +63,7 @@ $light-grey: #dfdfdf;
   position: relative;
 }
 
-// Global styles 
+// Global styles
 * {
   margin: 0;
   padding: 0;
@@ -91,6 +91,10 @@ h3 {
 
 h4 {
   @include heading-style(1.2rem, 1.6rem, 2px);
+}
+
+ul {
+  list-style-type: none;
 }
 
 a {

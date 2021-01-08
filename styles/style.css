@@ -41,6 +41,10 @@ h4 {
   letter-spacing: 2px;
 }
 
+ul {
+  list-style-type: none;
+}
+
 a {
   text-decoration: none;
   color: #000000;
@@ -48,5 +52,52 @@ a {
   font-weight: 700;
   line-height: 1.6rem;
   letter-spacing: 2px;
+}
+
+header {
+  width: 100%;
+  height: 7.2rem;
+}
+
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header-container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-container nav ul li {
+  padding: 0 3.5rem;
+}
+
+.header-container button {
+  width: 15.8rem;
+  height: 4rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  letter-spacing: 2px;
+  text-align: center;
+  border: none;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.header-container button:hover {
+  background: #dfdfdf;
+  color: #000000;
 }
 /*# sourceMappingURL=style.css.map */
