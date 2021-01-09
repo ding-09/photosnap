@@ -71,3 +71,35 @@
     @include arrow-button($pure-white, 2rem);
   }
 }
+
+.stories-row {
+  @include flex(50rem);
+  flex-wrap: wrap;
+}
+
+.story-card {
+  flex: 1 1 1fr;
+  position: relative;
+}
+
+.card-info {
+  width: 28rem;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 4rem;
+  color: $pure-white;
+  .text-container {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    padding-bottom: 1.6rem;
+    margin-bottom: 2rem;
+    p {
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+  }
+  button {
+    @include arrow-button($pure-white, 14rem);
+  }
+}
