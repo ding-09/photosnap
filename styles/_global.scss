@@ -66,6 +66,9 @@ $light-grey: #dfdfdf;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
 }
 
 html {
@@ -104,3 +107,6 @@ a {
   letter-spacing: 2px;
 }
 
+button {
+  cursor: pointer;
+}

@@ -9,6 +9,10 @@
           box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -52,6 +56,10 @@ a {
   font-weight: 700;
   line-height: 1.6rem;
   letter-spacing: 2px;
+}
+
+button {
+  cursor: pointer;
 }
 
 header {
@@ -101,12 +109,66 @@ header {
   color: #000000;
 }
 
-.flex {
+.create-and-share {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 65rem;
+}
+
+.stories,
+.designed-for-everyone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 60rem;
+}
+
+.stories .box-1,
+.designed-for-everyone .box-1 {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.stories .box-1 .description-container button,
+.designed-for-everyone .box-1 .description-container button {
+  height: 1.6rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  letter-spacing: 2px;
+  border: none;
+  background: transparent;
+  color: #000000;
+}
+
+.stories .box-1 .description-container button span,
+.designed-for-everyone .box-1 .description-container button span {
+  display: inline-block;
+  padding-right: 2.5rem;
+}
+
+.stories .box-1 .description-container button:hover span,
+.designed-for-everyone .box-1 .description-container button:hover span {
+  text-decoration: underline;
+}
+
+.stories .box-1 .description-container button svg,
+.designed-for-everyone .box-1 .description-container button svg {
+  position: absolute;
+}
+
+.stories .box-1 .description-container button svg g,
+.designed-for-everyone .box-1 .description-container button svg g {
+  stroke: #000000;
+}
+
+.designed-for-everyone .box-2 {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 .black {
@@ -135,6 +197,17 @@ header {
           flex: 1 1 83rem;
 }
 
+.box-2 figure {
+  height: 100%;
+}
+
+.box-2 figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .description-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,9 +219,12 @@ header {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 40rem;
   height: 30rem;
-  padding: 0 2rem;
+  margin: 0 1rem;
 }
 
 .description-container h1 {
@@ -156,11 +232,11 @@ header {
   font-size: 4rem;
   line-height: 4.8rem;
   letter-spacing: 4px;
-  padding-bottom: 2rem;
+  padding-bottom: 2.1rem;
 }
 
 .description-container p {
-  padding-bottom: 4.5rem;
+  padding-bottom: 4.8rem;
   opacity: 0.6;
 }
 
