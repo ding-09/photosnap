@@ -28,6 +28,7 @@ $light-grey: #dfdfdf;
   border: none;
   background-color: $background;
   color: $color;
+  @include simple-transition();
   &:hover {
     background: $light-grey;
     color: $pure-black;
@@ -57,8 +58,8 @@ $light-grey: #dfdfdf;
   color: $color;
 }
 
-.arrow {
-  position: relative;
+@mixin simple-transition() {
+  transition: all 0.25s ease-in-out;
 }
 
 // Global styles
@@ -96,6 +97,8 @@ h4 {
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -105,6 +108,10 @@ a {
   font-weight: 700;
   line-height: 1.6rem;
   letter-spacing: 2px;
+  @include simple-transition();
+  &:hover {
+    opacity: 0.3;
+  }
 }
 
 button {
@@ -113,4 +120,8 @@ button {
 
 img {
   display: block;
+}
+
+.arrow {
+  position: relative;
 }

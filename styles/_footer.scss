@@ -1,0 +1,86 @@
+@mixin svg-color($id-color) {
+  svg {
+    path {
+      fill: $id-color;
+    }
+  }
+}
+
+footer {
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $pure-black;
+}
+
+.footer-container {
+  width: 110.5rem;
+  height: 12.2rem;
+  display: flex;;
+}
+
+.logos {
+  flex-basis: 20rem;
+  margin-right: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.social-media-logos {
+  li {
+    display: inline-block;
+    margin-right: 1.3rem;
+    a {
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  #facebook:hover {
+    @include svg-color(url(#fb));
+  }
+  #youtube:hover {
+    @include svg-color(url(#yt));
+  }
+  #twitter:hover {
+    @include svg-color(url(#twt));
+  }
+  #pinterest:hover {
+    @include svg-color(url(#pint));
+  }
+  #instagram:hover {
+    @include svg-color(url(#ig));
+  }
+}
+
+.links {
+  flex-basis: 25rem;
+  margin-right: 20rem;
+  ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    li a {
+      color: $pure-white;
+    }
+  }
+}
+
+.misc-info {
+  flex-basis: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  button {
+    padding-left: 12rem;
+    @include arrow-button($pure-white, 1.6rem);
+  }
+  p {
+    align-self: flex-end;
+    color: $pure-white;
+    opacity: 0.5;
+  }
+}
