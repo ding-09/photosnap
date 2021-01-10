@@ -53,7 +53,7 @@
 }
 
 .story-card {
-  position: relative;
+  // position: relative;
   button {
     @include arrow-button($pure-white, 9rem);
   }
@@ -63,9 +63,20 @@
       display: block;
     }
   }
+  cursor: pointer;
 }
 
-
+.overlay {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 35rem;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.0001) 0.27%,
+    rgba(0, 0, 0, 0.661222) 100%
+  );
+}
 
 #mountains {
   @include background-property(url('../assets/stories/desktop/mountains.jpg'));
@@ -116,4 +127,29 @@
 }
 
 #horses {
+    @include background-property(url('../assets/stories/desktop/running-free.jpg'))
+}
+
+#waves {
+    @include background-property(url('../assets/stories/desktop/behind-the-waves.jpg'))
+}
+
+#calm {
+    @include background-property(url('../assets/stories/desktop/calm-waters.jpg'))
+}
+
+#milky-way {
+    @include background-property(url('../assets/stories/desktop/milky-way.jpg'))
+}
+
+#forest {
+    @include background-property(url('../assets/stories/desktop/dark-forest.jpg'))
+}
+
+#somwarpet {
+    @include background-property(url('../assets/stories/desktop/somwarpet.jpg'))
+}
+
+#dreams {
+    @include background-property(url('../assets/stories/desktop/land-of-dreams.jpg'))
 }

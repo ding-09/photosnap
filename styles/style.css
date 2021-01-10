@@ -311,15 +311,6 @@ header {
   transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 
-.story-card figure:hover {
-  -webkit-transform: translateY(-2rem);
-          transform: translateY(-2rem);
-}
-
-.story-card figure:hover .gradient-border {
-  display: block;
-}
-
 .gradient-border {
   display: none;
   width: 100%;
@@ -500,7 +491,7 @@ header {
 }
 
 .story-card {
-  position: relative;
+  cursor: pointer;
 }
 
 .story-card button {
@@ -537,6 +528,15 @@ header {
 
 .story-card:hover .gradient-border {
   display: block;
+}
+
+.overlay {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 35rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.27%, rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.661222)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.27%, rgba(0, 0, 0, 0.661222) 100%);
 }
 
 #mountains {
@@ -597,6 +597,55 @@ header {
 
 #sea {
   background-image: url("../assets/stories/desktop/rage-of-the-sea.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#horses {
+  background-image: url("../assets/stories/desktop/running-free.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#waves {
+  background-image: url("../assets/stories/desktop/behind-the-waves.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#calm {
+  background-image: url("../assets/stories/desktop/calm-waters.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#milky-way {
+  background-image: url("../assets/stories/desktop/milky-way.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#forest {
+  background-image: url("../assets/stories/desktop/dark-forest.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#somwarpet {
+  background-image: url("../assets/stories/desktop/somwarpet.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#dreams {
+  background-image: url("../assets/stories/desktop/land-of-dreams.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
