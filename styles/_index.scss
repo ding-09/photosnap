@@ -95,7 +95,7 @@
   flex: 1 1 1fr;
   position: relative;
   transition: transform 0.5s ease-out;
-  &:hover {
+  figure:hover {
     transform: translateY(-2rem);
     .gradient-border {
       display: block;

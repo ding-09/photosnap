@@ -311,12 +311,12 @@ header {
   transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 
-.story-card:hover {
+.story-card figure:hover {
   -webkit-transform: translateY(-2rem);
           transform: translateY(-2rem);
 }
 
-.story-card:hover .gradient-border {
+.story-card figure:hover .gradient-border {
   display: block;
 }
 
@@ -415,6 +415,191 @@ header {
 
 .upload img {
   margin-bottom: 8.5rem;
+}
+
+.hero {
+  position: relative;
+  height: 65rem;
+  background-image: url("../assets/stories/desktop/moon-of-appalacia.jpg");
+  background-repeat: no-repeat;
+}
+
+.hero-text {
+  position: absolute;
+  left: 11rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 39rem;
+  height: 40rem;
+  color: #ffffff;
+}
+
+.hero-text #featured {
+  margin-bottom: 2.4rem;
+}
+
+.hero-text h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: 4px;
+  margin-bottom: 1.6rem;
+}
+
+.hero-text #description {
+  font-size: 1.3rem;
+  margin-bottom: 2.4rem;
+}
+
+.hero-text #description #date {
+  display: inline-block;
+  padding-right: 1rem;
+  opacity: 0.75;
+}
+
+.hero-text #summary {
+  opacity: 0.6;
+  margin-bottom: 2.4rem;
+}
+
+.hero-text button {
+  height: 1.6rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  letter-spacing: 2px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+}
+
+.hero-text button span {
+  display: inline-block;
+  padding-right: 1.6rem;
+}
+
+.hero-text button:hover span {
+  text-decoration: underline;
+}
+
+.hero-text button svg {
+  position: absolute;
+}
+
+.hero-text button svg g {
+  stroke: #ffffff;
+}
+
+.story-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (50rem)[4];
+      grid-template-rows: repeat(4, 50rem);
+}
+
+.story-card {
+  position: relative;
+}
+
+.story-card button {
+  height: 1.6rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  letter-spacing: 2px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+}
+
+.story-card button span {
+  display: inline-block;
+  padding-right: 9rem;
+}
+
+.story-card button:hover span {
+  text-decoration: underline;
+}
+
+.story-card button svg {
+  position: absolute;
+}
+
+.story-card button svg g {
+  stroke: #ffffff;
+}
+
+.story-card:hover {
+  -webkit-transform: translateY(-2rem);
+          transform: translateY(-2rem);
+}
+
+.story-card:hover .gradient-border {
+  display: block;
+}
+
+#mountains {
+  background-image: url("../assets/stories/desktop/mountains.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#city {
+  background-image: url("../assets/stories/desktop/cityscapes.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#voyage {
+  background-image: url("../assets/stories/desktop/18-days-voyage.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#architecturals {
+  background-image: url("../assets/stories/desktop/architecturals.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#world-tour {
+  background-image: url("../assets/stories/desktop/world-tour.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#corners {
+  background-image: url("../assets/stories/desktop/unforeseen-corners.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#africa {
+  background-image: url("../assets/stories/desktop/king-on-africa.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#trip {
+  background-image: url("../assets/stories/desktop/trip-to-nowhere.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#sea {
+  background-image: url("../assets/stories/desktop/rage-of-the-sea.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 footer {
