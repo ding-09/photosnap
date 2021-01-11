@@ -57,6 +57,7 @@ const GlobalStyle = createGlobalStyle`
     }
     a {
         text-decoration: none;
+        color: #000000;
     }
     button {
         cursor: pointer;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const RectangleButton = styled.button`
   min-width: 16rem;
-  min-height: 4rem;
+  height: 4rem;
   padding: 1.2rem 2.4rem;
   background: ${(props) => (props.black ? '#000000' : '#ffffff')};
   color: ${(props) => (props.black ? '#ffffff' : '#000000')};
