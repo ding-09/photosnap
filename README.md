@@ -1,2 +1,2 @@
-# Photosnap
-A marketing site for the photo-sharing app, Photosnap 
+# Photosnap 
+A marketing website for the Photosnap app.
