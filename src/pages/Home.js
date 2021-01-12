@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import ArrowButton from '../styles/ArrowButton';
+import StoryData from '../components/StoryData';
+import StoryCard from '../components/StoryCard';
 
 // images
 import createAndShare from '../assets/home/desktop/create-and-share.jpg';
@@ -58,6 +60,12 @@ const Home = () => {
           <figure></figure>
         </ImageBox>
       </Section>
+      <StoryRow>
+        {/* use slice up to 4 before mapping */}
+        {StoryData.map((data, index) => (
+          <StoryCard data={data} key={index}/>
+        ))}
+      </StoryRow>
     </main>
   );
 };
@@ -108,5 +116,10 @@ const ImageBox = styled.div`
     background-position: center;
   }
 `;
+
+const StoryRow = styled.section`
+  display: flex;
+  height: 50rem;
+`
 
 export default Home;

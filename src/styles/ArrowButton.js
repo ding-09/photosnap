@@ -3,9 +3,9 @@ import React from 'react';
 
 // Default style for arrow buttons 
 
-const ArrowButton = ({ title, color, padding }) => {
+const ArrowButton = ({ title, color }) => {
   return (
-    <Button padding={padding} color={color}>
+    <Button color={color}>
       <span>{title}</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
         <g fill="none" fillRule="evenodd" stroke={color || '#fff'}>
@@ -21,17 +21,22 @@ const Button = styled.button`
   padding-bottom: 5px;
   padding-left: 2px;
   background: transparent;
-  color: ${props => props.color || '#fff'};
+  color: ${(props) => props.color || '#fff'};
   border: none;
   display: flex;
   align-items: center;
+  position: relative;
   span {
-    padding-right: ${(props) => props.padding || '1.6rem'};
+    padding-right: 7rem;
   }
   &:hover {
     span {
       text-decoration: underline;
     }
+  }
+  svg {
+    position: absolute;
+    right: 0;
   }
 `;
 
