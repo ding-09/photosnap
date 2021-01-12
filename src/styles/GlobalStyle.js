@@ -23,7 +23,8 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'DM Sans', sans-serif;
     }
-    h1 {
+    html, body { height: 100%; }
+    h1, .heading {
         font-size: 4rem;
         line-height: 4.8rem;
         letter-spacing: 4.17px;
@@ -58,6 +59,10 @@ const GlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
         color: #000000;
+        transition: opacity 0.25s ease-in-out;
+        &:hover {
+            opacity: 0.3;
+        }
     }
     button {
         cursor: pointer;

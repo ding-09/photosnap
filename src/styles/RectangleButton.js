@@ -9,6 +9,7 @@ const RectangleButton = styled.button`
   background: ${(props) => (props.black ? '#000000' : '#ffffff')};
   color: ${(props) => (props.black ? '#ffffff' : '#000000')};
   border: none;
+  transition: 0.25s;
   &:hover {
     background: #dfdfdf;
     color: ${(props) => props.black && `#000000`};
