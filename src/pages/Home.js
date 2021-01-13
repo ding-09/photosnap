@@ -4,16 +4,20 @@ import ArrowButton from '../styles/ArrowButton';
 import StoryData from '../components/StoryData';
 import StoryCard from '../components/StoryCard';
 
-// images
+// images and icons
 import createAndShare from '../assets/home/desktop/create-and-share.jpg';
 import beautifulStories from '../assets/home/desktop/beautiful-stories.jpg';
 import designedFor from '../assets/home/desktop/designed-for-everyone.jpg';
+import responsiveIcon from '../assets/features/desktop/responsive.svg';
+import noLimitIcon from '../assets/features/desktop/no-limit.svg';
+import embedIcon from '../assets/features/desktop/embed.svg';
 
 const Home = () => {
   return (
     <main>
       <Section height="65rem">
         <TextBox background="#000000">
+          <div className="hero-border"></div>
           <div className="text-container">
             <h1>CREATE AND SHARE YOUR PHOTO STORIES.</h1>
             <p>
@@ -31,7 +35,9 @@ const Home = () => {
       <Section>
         <TextBox id="middle-textBox">
           <div className="text-container">
-            <h2 className="heading">BEAUTIFUL STORIES <br></br>EVERY TIME</h2>
+            <h2 className="heading">
+              BEAUTIFUL STORIES <br></br>EVERY TIME
+            </h2>
             <p>
               We provide design templates to ensure your stories look terrific.
               Easily add photos, text, embed maps and media from other networks.
@@ -63,9 +69,37 @@ const Home = () => {
       <StoryRow>
         {/* use slice up to 4 before mapping */}
         {StoryData.map((data, index) => (
-          <StoryCard data={data} key={index}/>
+          <StoryCard data={data} key={index} />
         ))}
       </StoryRow>
+      <AdditionalInfo>
+        <div className="additionalInfo-container">
+          <article>
+            <img src={responsiveIcon} alt="icon" />
+            <h3>100% Responsive</h3>
+            <p>
+              No matter which the device you’re on, our site is fully responsive
+              and stories look beautiful on any screen.
+            </p>
+          </article>
+          <article className="middle-feature">
+            <img src={noLimitIcon} alt="icon" />
+            <h3>No Photo Upload Limit</h3>
+            <p>
+              Our tool has no limits on uploads or bandwidth. Freely upload in
+              bulk and share all of your stories in one go.
+            </p>
+          </article>
+          <article>
+            <img src={embedIcon} alt="icon" />
+            <h3>Available to Embed</h3>
+            <p>
+              Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube
+              videos, Google Maps, and more.{' '}
+            </p>
+          </article>
+        </div>
+      </AdditionalInfo>
     </main>
   );
 };
@@ -81,22 +115,35 @@ const Section = styled.section`
 const TextBox = styled.div`
   background: ${(props) => props.background || '#ffffff'};
   color: ${(props) => props.background && '#ffffff'};
-  flex: 1 1 65rem;
+  flex: 1 1 61rem;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  .hero-border {
+    width: 6px;
+    height: 31rem;
+    left: 0;
+    background: linear-gradient(
+      26.57deg,
+      #ffc593 0%,
+      #bc7198 43.29%,
+      #5a77ff 83.33%
+    );
+    position: absolute;
+  }
   .text-container {
     min-width: 38rem;
     width: 40rem;
-    height: 30.4rem;
-    margin: 1rem;
+    height: 30rem;
+    margin: 5rem;
     h1,
     h2 {
-      margin-bottom: 2.1rem;
+      margin-bottom: 2rem;
     }
     p {
-      margin-bottom: 4.5rem;
+      margin-bottom: 4.2rem;
       opacity: 0.6;
     }
   }
@@ -119,7 +166,34 @@ const ImageBox = styled.div`
 
 const StoryRow = styled.section`
   display: flex;
-  height: 50rem;
-`
+  height: auto;
+`;
+
+const AdditionalInfo = styled.section`
+  .additionalInfo-container {
+    max-width: 111rem;
+    height: 24rem;
+    margin: 16rem auto;
+    padding: 0 2rem;
+    display: flex;
+    article {
+      flex-basis: 35rem;
+      text-align: center;
+      h3 {
+        margin-top: 4.8rem;
+        margin-bottom: 1.6rem;
+      }
+      p {
+        opacity: 0.6;
+      }
+    }
+    .middle-feature {
+      margin: 1.8rem 3rem 0;
+      h3 {
+        margin-top: 6.6rem;
+      }
+    }
+  }
+`;
 
 export default Home;

@@ -30,7 +30,7 @@ const App = () => {
           <Pricing />
         </Route>
       </Switch>
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   );
 };

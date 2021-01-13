@@ -24,6 +24,11 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'DM Sans', sans-serif;
     }
     html, body { height: 100%; }
+    footer {
+        background: #000000;
+        padding: 6.4rem 0;
+        height: 25rem;
+    }
     h1, .heading {
         font-size: 4rem;
         line-height: 4.8rem;
@@ -66,6 +71,18 @@ const GlobalStyle = createGlobalStyle`
     }
     button {
         cursor: pointer;
+    }
+    .theme-border {
+        width: 100% ;
+        height: 6px;
+        background: linear-gradient(
+            26.57deg,
+            #ffc593 0%,
+            #bc7198 43.29%,
+            #5a77ff 83.33%
+        );
+        position: absolute;
+        display: none;
     }
 `;
 
