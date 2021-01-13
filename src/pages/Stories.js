@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import heroImage from '../assets/stories/desktop/moon-of-appalacia.jpg';
+import tabletHeroImage from '../assets/stories/tablet/moon-of-appalacia.jpg';
 import ArrowButton from '../styles/ArrowButton';
 import StoryData from '../components/StoryData';
 import StoryCard from '../components/StoryCard';
 
-const thisStoryData = StoryData.slice(0, 4);
 const Stories = () => {
   return (
     <main>
@@ -37,16 +37,18 @@ const Stories = () => {
 
 const HeroSection = styled.section`
   min-height: 65rem;
+  padding-left: 8%;
   background: url(${heroImage}) no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
+  display: flex;
+  align-items: center;
+  @media (max-width: 768px) {
+    background: url(${tabletHeroImage}) no-repeat;
+    padding-left: 4rem;
+  }
   .hero-text {
-    position: absolute;
-    left: 10rem;
-    top: 0;
-    bottom: 0;
-    margin: auto;
     width: 38rem;
     height: 40.6rem;
     min-width: 38rem;
@@ -73,7 +75,6 @@ const StoryGrid = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(36rem,1fr));
   grid-template-rows: auto;
-  border: 1px solid red;
 `;
 
 export default Stories;
