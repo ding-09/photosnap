@@ -167,6 +167,9 @@ const ImageBox = styled.div`
 const StoryRow = styled.section`
   display: flex;
   height: auto;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const AdditionalInfo = styled.section`
@@ -191,6 +194,21 @@ const AdditionalInfo = styled.section`
       margin: 1.8rem 3rem 0;
       h3 {
         margin-top: 6.6rem;
+      }
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      width: 60%;
+      height: auto;
+      margin: 12rem auto;
+      article {
+        flex-basis: 21rem;
+      }
+      .middle-feature {
+        margin: 8rem 0;
+        h3 {
+          margin-top: 4.8rem;
+        }
       }
     }
   }

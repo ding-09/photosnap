@@ -26,8 +26,8 @@ const GlobalStyle = createGlobalStyle`
     html, body { height: 100%; }
     footer {
         background: #000000;
-        padding: 6.4rem 0;
-        height: 25rem;
+        padding: 6.4rem 2rem;
+        height: auto;
     }
     h1, .heading {
         font-size: 4rem;

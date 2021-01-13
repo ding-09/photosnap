@@ -37,6 +37,9 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Nav = styled.nav`

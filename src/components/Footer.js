@@ -158,10 +158,11 @@ const Footer = () => {
 };
 
 const FooterContainer = styled.div`
-  max-width: 110rem;
+  max-width: 111rem;
   height: 12rem;
   margin: auto;
   display: flex;
+  position: relative;
   #logos {
     display: flex;
     flex-direction: column;
@@ -185,10 +186,22 @@ const FooterContainer = styled.div`
     justify-content: space-between;
     align-items: flex-end;
     p {
-        color: #ffffff;
-        opacity: 0.5;
-        font-size: 1.5rem;
-        line-height: 2rem;
+      color: #ffffff;
+      opacity: 0.5;
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+    height: 17rem;
+    #links {
+      position: absolute;
+      top: 5rem;
+      ul li {
+        display: inline-block;
+        margin-right: 2.6rem;
+      }
     }
   }
 `;
