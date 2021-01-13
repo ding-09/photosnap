@@ -2,12 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import ArrowButton from '../styles/ArrowButton';
 
-const StoryCard = ({ data }) => {
+const StoryCard = ({ data, onHome }) => {
   return (
     <Card img={data.img}>
       <div className="theme-border"></div>
       <div className="card-container">
         <div className="text-container">
+          {!onHome && <p id="date">{data.date}</p>}
           <h3>{data.title}</h3>
           <p>{data.author}</p>
         </div>
@@ -22,7 +23,7 @@ const Card = styled.article`
   background-position: center;
   background-size: cover;
   color: #ffffff;
-  flex: 1 1 36rem;
+  flex: 1;
   height: 50rem;
   display: flex;
   align-items: flex-end;
@@ -56,6 +57,9 @@ const Card = styled.article`
         padding-bottom: 1.5rem;
         font-size: 1.3rem;
         line-height: 1.7rem;
+      }
+      #date {
+        padding-bottom: 4px;
       }
     }
   }

@@ -68,8 +68,8 @@ const Home = () => {
       </Section>
       <StoryRow>
         {/* use slice up to 4 before mapping */}
-        {StoryData.map((data, index) => (
-          <StoryCard data={data} key={index} />
+        {StoryData.slice(0, 4).map((data, index) => (
+          <StoryCard data={data} key={index} onHome={true}/>
         ))}
       </StoryRow>
       <AdditionalInfo>
