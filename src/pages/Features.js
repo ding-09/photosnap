@@ -188,32 +188,22 @@ const InviteSection = styled.section`
   background: url(${betaBG}) no-repeat;
   background-size: cover;
   background-position: center;
-  height: 28rem;
-  padding: 6.8rem 16.5rem;
+  padding: 6.4rem 2rem;
   position: relative;
-  .hero-border {
-    top: 0;
-    height: 100%;
-  }
-  @media (max-width: 768px) {
-    padding: 6.8rem 4rem;
-    .invite-container {
-      h2 {
-        flex: 1 1 31rem;
-      }
-      button {
-        flex: 1 1 1rem;
-      }
-    }
-  }
+  color: #ffffff;
   .invite-container {
-    height: 14.4rem;
-    color: #ffffff;
+    max-width: 114rem;
+    height: 15rem;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     h2 {
-      width: 40rem;
+      width: 45rem;
     }
+  }
+  .hero-border {
+    height: 100%;
+    top: 0;
   }
 `;
 
