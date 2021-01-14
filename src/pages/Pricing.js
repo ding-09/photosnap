@@ -7,7 +7,23 @@ import RectangleButton from '../styles/RectangleButton';
 import checkMark from '../assets/pricing/desktop/check.svg';
 
 const Pricing = () => {
+  const monthlyPrice = {
+    basic: '$19.00',
+    pro: '$39.00',
+    business: '$99.00',
+  };
+  const yearlyPrice = {
+    basic: '$190.00',
+    pro: '$390.00',
+    business: '$990.00',
+  };
   const [toggle, setToggle] = useState(false);
+  const [displayPrice, setDisplayPrice] = useState(monthlyPrice);
+
+  const handlePriceToggle = () => {
+    setToggle(!toggle);
+    setDisplayPrice((prevState) => (!toggle ? yearlyPrice : monthlyPrice));
+  };
 
   useEffect(() => {
     const monthly = document.getElementById('monthly');
@@ -24,6 +40,7 @@ const Pricing = () => {
       monthly.style.opacity = 1;
     }
   }, [toggle]);
+
   return (
     <main>
       <HeroSection>
@@ -48,7 +65,7 @@ const Pricing = () => {
             <div className="toggle-container">
               <h3 id="monthly">Monthly</h3>
               <div className="toggle-switch">
-                <input type="checkbox" onClick={() => setToggle(!toggle)} />
+                <input type="checkbox" onClick={handlePriceToggle} />
               </div>
               <h3 id="yearly">Yearly</h3>
             </div>
@@ -64,7 +81,7 @@ const Pricing = () => {
                   </p>
                 </section>
                 <section className="price">
-                  <h3 className="heading">$19.00</h3>
+                  <h3 className="heading">{displayPrice.basic}</h3>
                   <p>per month</p>
                 </section>
                 <RectangleButton black>PICK PLAN</RectangleButton>
@@ -80,7 +97,7 @@ const Pricing = () => {
                   </p>
                 </section>
                 <section className="price">
-                  <h3 className="heading">$39.00</h3>
+                  <h3 className="heading">{displayPrice.pro}</h3>
                   <p>per month</p>
                 </section>
                 <RectangleButton black>PICK PLAN</RectangleButton>
@@ -96,7 +113,7 @@ const Pricing = () => {
                   </p>
                 </section>
                 <section className="price">
-                  <h3 className="heading">$99.00</h3>
+                  <h3 className="heading">{displayPrice.business}</h3>
                   <p>per month</p>
                 </section>
                 <RectangleButton black>PICK PLAN</RectangleButton>
@@ -234,7 +251,8 @@ const FeaturesTable = styled.table`
   tbody {
     tr {
     }
-    th, td{
+    th,
+    td {
       padding: 2.3rem 0;
       border-bottom: 1px solid #dfdfdf;
     }
