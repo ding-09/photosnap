@@ -158,7 +158,7 @@ const Footer = () => {
 };
 
 const FooterContainer = styled.div`
-  max-width: 111rem;
+  max-width: 113rem;
   height: 12rem;
   margin: auto;
   display: flex;
@@ -193,7 +193,7 @@ const FooterContainer = styled.div`
     }
   }
   @media (max-width: 768px) {
-    padding: 0 1rem;
+    padding: 0 2rem;
     height: 17rem;
     #links {
       position: absolute;

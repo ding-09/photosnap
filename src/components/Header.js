@@ -4,7 +4,8 @@ import RectangleButton from '../styles/RectangleButton';
 import { Link } from 'react-router-dom';
 import logo from '../assets/shared/desktop/logo.svg';
 
-const Header = () => {
+const Header = ({ onFeatures }) => {
+  let title = onFeatures ? "SIGN UP" : "GET AN INVITE";
   return (
     <header>
       <HeaderContainer>
@@ -24,7 +25,7 @@ const Header = () => {
             </li>
           </ul>
         </Nav>
-        <RectangleButton black>GET AN INVITE</RectangleButton>
+        <RectangleButton black>{title}</RectangleButton>
       </HeaderContainer>
     </header>
   );

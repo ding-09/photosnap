@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import GlobalStyle from './styles/GlobalStyle';
 // use React router
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -12,10 +12,12 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 const App = () => {
+
+  const [onFeatures, setOnFeatures] = useState(false);
   return (
     <BrowserRouter>
       <GlobalStyle />
-      <Header />
+      <Header onFeatures={onFeatures}/>
       <Switch>
         <Route exact path="/">
           <Home />
@@ -24,7 +26,7 @@ const App = () => {
           <Stories />
         </Route>
         <Route exact path="/features">
-          <Features />
+          <Features setOnFeatures={setOnFeatures}/>
         </Route>
         <Route exact path="/pricing">
           <Pricing />

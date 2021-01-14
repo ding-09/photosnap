@@ -84,6 +84,18 @@ const GlobalStyle = createGlobalStyle`
         position: absolute;
         display: none;
     }
+    .hero-border {
+        width: 6px;
+        height: 31rem;
+        left: 0;
+        background: linear-gradient(
+            26.57deg,
+            #ffc593 0%,
+            #bc7198 43.29%,
+            #5a77ff 83.33%
+        );
+        position: absolute;
+  }
 `;
 
 export default GlobalStyle;

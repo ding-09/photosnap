@@ -121,18 +121,6 @@ const TextBox = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  .hero-border {
-    width: 6px;
-    height: 31rem;
-    left: 0;
-    background: linear-gradient(
-      26.57deg,
-      #ffc593 0%,
-      #bc7198 43.29%,
-      #5a77ff 83.33%
-    );
-    position: absolute;
-  }
   .text-container {
     min-width: 38rem;
     width: 40rem;
