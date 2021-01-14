@@ -2,14 +2,13 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import heroImage from '../assets/features/desktop/hero.jpg';
 import tabletHeroImage from '../assets/features/tablet/hero.jpg';
-import betaBG from '../assets/shared/desktop/bg-beta.jpg';
 import responsiveIcon from '../assets/features/desktop/responsive.svg';
 import noLimitIcon from '../assets/features/desktop/no-limit.svg';
 import embedIcon from '../assets/features/desktop/embed.svg';
 import domainIcon from '../assets/features/desktop/custom-domain.svg';
 import exposureIcon from '../assets/features/desktop/boost-exposure.svg';
 import dragDropIcon from '../assets/features/desktop/drag-drop.svg';
-import ArrowButton from '../styles/ArrowButton';
+import BetaInvite from '../components/BetaInvite';
 
 const Features = ({ setOnFeatures }) => {
   useEffect(() => {
@@ -92,15 +91,7 @@ const Features = ({ setOnFeatures }) => {
           </article>
         </div>
       </FeaturesSection>
-      <InviteSection>
-        <div className="hero-border"></div>
-        <div className="invite-container">
-          <h2 className="heading">
-            WE'RE IN BETA. <br></br>GET YOUR INVITE TODAY!
-          </h2>
-          <ArrowButton title="GET AN INVITE" />
-        </div>
-      </InviteSection>
+      <BetaInvite />
     </main>
   );
 };
@@ -181,29 +172,6 @@ const FeaturesSection = styled.section`
     img {
       margin: 1.8rem 0;
     }
-  }
-`;
-
-const InviteSection = styled.section`
-  background: url(${betaBG}) no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 6.4rem 2rem;
-  position: relative;
-  color: #ffffff;
-  .invite-container {
-    max-width: 114rem;
-    height: 15rem;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    h2 {
-      width: 45rem;
-    }
-  }
-  .hero-border {
-    height: 100%;
-    top: 0;
   }
 `;
 
