@@ -29,6 +29,7 @@ const Card = styled.article`
   align-items: flex-end;
   cursor: pointer;
   overflow-x: hidden;
+  transition: 0.35s;
   &:hover {
     transform: translateY(-2.4rem);
     .theme-border {

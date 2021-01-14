@@ -10,7 +10,9 @@ const Header = ({ onFeatures }) => {
     <header>
       <HeaderContainer>
         <figure>
-          <img src={logo} alt="Photosnap logo" />
+          <Link to="/">
+            <img src={logo} alt="Photosnap logo" />
+          </Link>
         </figure>
         <Nav>
           <ul>
@@ -38,6 +40,13 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  figure {
+    a {
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
   @media (max-width: 768px) {
     width: 100%;
   }
