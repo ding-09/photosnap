@@ -6,8 +6,11 @@ import StoryCard from '../components/StoryCard';
 
 // images and icons
 import createAndShare from '../assets/home/desktop/create-and-share.jpg';
+import tabletCreateAndShare from '../assets/home/tablet/create-and-share.jpg';
 import beautifulStories from '../assets/home/desktop/beautiful-stories.jpg';
+import tabletBeautifulStories from '../assets/home/tablet/beautiful-stories.jpg';
 import designedFor from '../assets/home/desktop/designed-for-everyone.jpg';
+import tabletDesignedFor from '../assets/home/tablet/designed-for-everyone.jpg';
 import responsiveIcon from '../assets/features/desktop/responsive.svg';
 import noLimitIcon from '../assets/features/desktop/no-limit.svg';
 import embedIcon from '../assets/features/desktop/embed.svg';
@@ -15,7 +18,7 @@ import embedIcon from '../assets/features/desktop/embed.svg';
 const Home = () => {
   return (
     <main>
-      <Section height="65rem">
+      <Section height="65rem" className="create-and-share">
         <TextBox background="#000000">
           <div className="hero-border"></div>
           <div className="text-container">
@@ -29,7 +32,7 @@ const Home = () => {
           </div>
         </TextBox>
         <ImageBox url={createAndShare}>
-          <figure></figure>
+          <figure id="create"></figure>
         </ImageBox>
       </Section>
       <Section>
@@ -47,7 +50,7 @@ const Home = () => {
           </div>
         </TextBox>
         <ImageBox url={beautifulStories}>
-          <figure></figure>
+          <figure id="stories"></figure>
         </ImageBox>
       </Section>
       <Section>
@@ -63,13 +66,13 @@ const Home = () => {
           </div>
         </TextBox>
         <ImageBox url={designedFor}>
-          <figure></figure>
+          <figure id="design"></figure>
         </ImageBox>
       </Section>
       <StoryRow>
         {/* use slice up to 4 before mapping */}
         {StoryData.slice(0, 4).map((data, index) => (
-          <StoryCard data={data} key={index} onHome={true}/>
+          <StoryCard data={data} key={index} onHome={true} />
         ))}
       </StoryRow>
       <AdditionalInfo>
@@ -110,6 +113,7 @@ const Section = styled.section`
   #middle-textBox {
     order: 1;
   }
+
 `;
 
 const TextBox = styled.div`
@@ -149,6 +153,23 @@ const ImageBox = styled.div`
     background: url(${(props) => props.url && `${props.url}`}) no-repeat;
     background-size: cover;
     background-position: center;
+  }
+  @media (max-width: 768px) {
+    #create {
+      background: url(${tabletCreateAndShare}) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    #stories {
+      background: url(${tabletBeautifulStories}) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    #design {
+      background: url(${tabletDesignedFor}) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
   }
 `;
 

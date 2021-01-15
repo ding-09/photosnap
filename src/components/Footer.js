@@ -204,6 +204,40 @@ const FooterContainer = styled.div`
       }
     }
   }
+  @media (max-width: 700px) {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    #logos {
+      padding-right: 0;
+      margin-top: 5rem;
+      .main-logo {
+        padding-bottom: 3rem;
+      }
+      .social-logos {
+        padding-left: 1rem;
+      }
+    }
+    #links {
+      position: relative;
+      text-align: center;
+      ul {
+        display: flex;
+        flex-direction: column;
+        li {
+          margin-right: 0;
+        }
+      }
+    }
+    #misc-info {
+      margin-top: 12rem;
+      margin-bottom: 5rem;
+      align-items: center;
+      button {
+        padding-bottom: 3.4rem;
+      }
+    }
+  }
 `;
 
 const SVG = styled.svg`

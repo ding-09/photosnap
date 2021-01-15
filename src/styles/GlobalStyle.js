@@ -38,6 +38,9 @@ const GlobalStyle = createGlobalStyle`
         background: #000000;
         padding: 6.4rem 3.9rem;
         height: auto;
+        @media (max-width: 700px) {
+            padding: 0;
+        }
     }
     h1, .heading {
         font-size: 4rem;
