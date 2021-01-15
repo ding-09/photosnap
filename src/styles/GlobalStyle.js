@@ -19,14 +19,24 @@ const GlobalStyle = createGlobalStyle`
     }
     html {
         font-size: 62.5%;
+        position: relative;
     }
     body {
         font-family: 'DM Sans', sans-serif;
     }
-    html, body { height: 100%; }
+    html, body{ height: 100%;}
+
+    header {
+        @media (max-width: 768px){
+            position: sticky;
+            top: 0;
+            background: #ffffff;
+            z-index: 2;
+        }
+    }
     footer {
         background: #000000;
-        padding: 6.4rem 2rem;
+        padding: 6.4rem 3.9rem;
         height: auto;
     }
     h1, .heading {

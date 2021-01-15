@@ -22,7 +22,7 @@ const InviteSection = styled.section`
   background: url(${betaBG}) no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 6.4rem 2rem;
+  padding: 6.4rem 4.9rem;
   position: relative;
   color: #ffffff;
   @media (max-width: 768px) {

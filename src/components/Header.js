@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import RectangleButton from '../styles/RectangleButton';
 import { Link } from 'react-router-dom';
 import logo from '../assets/shared/desktop/logo.svg';
+import menuIcon from '../assets/shared/mobile/menu.svg';
+import exitIcon from '../assets/shared/mobile/close.svg';
+import MobileMenu from './MobileMenu';
 
 const Header = ({ onFeatures }) => {
-  let title = onFeatures ? "SIGN UP" : "GET AN INVITE";
+  let title = onFeatures ? 'SIGN UP' : 'GET AN INVITE';
+  const [displayMenu, setDisplayMenu] = useState(false);
   return (
     <header>
       <HeaderContainer>
@@ -29,6 +33,17 @@ const Header = ({ onFeatures }) => {
         </Nav>
         <RectangleButton black>{title}</RectangleButton>
       </HeaderContainer>
+      <MobileHeaderContainer>
+        <figure>
+          <Link to="/">
+            <img src={logo} alt="Photosnap logo" />
+          </Link>
+        </figure>
+        <button className="icon" onClick={() => setDisplayMenu(!displayMenu)}>
+          <img src={displayMenu ? exitIcon : menuIcon} alt="menu icon" />
+        </button>
+        {displayMenu && <MobileMenu />}
+      </MobileHeaderContainer>
     </header>
   );
 };
@@ -49,6 +64,22 @@ const HeaderContainer = styled.div`
   }
   @media (max-width: 768px) {
     width: 100%;
+  }
+  @media (max-width: 700px) {
+    display: none;
+  }
+`;
+
+const MobileHeaderContainer = styled(HeaderContainer)`
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  display: none;
+  .icon {
+    background: transparent;
+    border: none;
+  }
+  @media (max-width: 700px) {
+    display: flex;
   }
 `;
 

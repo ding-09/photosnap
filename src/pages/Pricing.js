@@ -380,10 +380,10 @@ const PriceCard = styled.article`
     padding-bottom: 7rem;
     background: #000000;
     color: #ffffff;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     transition: 0.6s;
     button {
-      transition: 1s;
+      transition: 0.3s;
       background: #ffffff;
       color: #000000;
       &:hover {

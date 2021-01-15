@@ -23,7 +23,7 @@ const Card = styled.article`
   background-position: center;
   background-size: cover;
   color: #ffffff;
-  flex: 1;
+  flex: 1 1 35rem;
   height: 50rem;
   display: flex;
   align-items: flex-end;
