@@ -210,7 +210,7 @@ const FooterContainer = styled.div`
     align-items: center;
     #logos {
       padding-right: 0;
-      margin-top: 5rem;
+      margin-top: 5.5rem;
       .main-logo {
         padding-bottom: 3rem;
       }

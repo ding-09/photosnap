@@ -42,7 +42,7 @@ const Header = ({ onFeatures }) => {
         <button className="icon" onClick={() => setDisplayMenu(!displayMenu)}>
           <img src={displayMenu ? exitIcon : menuIcon} alt="menu icon" />
         </button>
-        {displayMenu && <MobileMenu />}
+        {displayMenu && <MobileMenu setDisplayMenu={setDisplayMenu} />}
       </MobileHeaderContainer>
     </header>
   );

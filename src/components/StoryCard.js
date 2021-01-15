@@ -4,7 +4,7 @@ import ArrowButton from '../styles/ArrowButton';
 
 const StoryCard = ({ data, onHome }) => {
   return (
-    <Card img={data.img}>
+    <Card img={data.img} mobileImg={data.mobileImg}>
       <div className="theme-border"></div>
       <div className="card-container">
         <div className="text-container">
@@ -30,6 +30,11 @@ const Card = styled.article`
   cursor: pointer;
   overflow-x: hidden;
   transition: 0.35s;
+  @media (max-width: 375px) {
+    flex: 1 1 37.5rem;
+    height: 37.5rem;
+    background: url(${props => props.mobileImg && `${props.mobileImg}`}) no-repeat;
+  }
   &:hover {
     transform: translateY(-2.4rem);
     .theme-border {

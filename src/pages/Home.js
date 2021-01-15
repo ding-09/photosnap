@@ -7,10 +7,13 @@ import StoryCard from '../components/StoryCard';
 // images and icons
 import createAndShare from '../assets/home/desktop/create-and-share.jpg';
 import tabletCreateAndShare from '../assets/home/tablet/create-and-share.jpg';
+import mobileCreateAndShare from '../assets/home/mobile/create-and-share.jpg';
 import beautifulStories from '../assets/home/desktop/beautiful-stories.jpg';
 import tabletBeautifulStories from '../assets/home/tablet/beautiful-stories.jpg';
+import mobileBeautifulStories from '../assets/home/mobile/beautiful-stories.jpg';
 import designedFor from '../assets/home/desktop/designed-for-everyone.jpg';
 import tabletDesignedFor from '../assets/home/tablet/designed-for-everyone.jpg';
+import mobileDesignedFor from '../assets/home/mobile/designed-for-everyone.jpg';
 import responsiveIcon from '../assets/features/desktop/responsive.svg';
 import noLimitIcon from '../assets/features/desktop/no-limit.svg';
 import embedIcon from '../assets/features/desktop/embed.svg';
@@ -21,6 +24,7 @@ const Home = () => {
       <Section height="65rem" className="create-and-share">
         <TextBox background="#000000">
           <div className="hero-border"></div>
+          <div className="mobile-hero-border"></div>
           <div className="text-container">
             <h1>CREATE AND SHARE YOUR PHOTO STORIES.</h1>
             <p>
@@ -113,7 +117,13 @@ const Section = styled.section`
   #middle-textBox {
     order: 1;
   }
-
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+    min-height: 70rem;
+    #middle-textBox {
+      order: 0;
+    }
+  }
 `;
 
 const TextBox = styled.div`
@@ -126,7 +136,7 @@ const TextBox = styled.div`
   align-items: center;
   position: relative;
   .text-container {
-    min-width: 38rem;
+    min-width: 37.5rem;
     width: 40rem;
     height: 30rem;
     margin: 5rem;
@@ -139,8 +149,37 @@ const TextBox = styled.div`
       opacity: 0.6;
     }
   }
-  #middle-row {
-    order: 1;
+  @media (max-width: 600px) {
+    flex: 1 1 60%;
+  }
+  @media (max-width: 500px) {
+    flex: 1 1 57%;
+    .hero-border {
+      display: none;
+    }
+    .text-container {
+      padding: 0 3.5rem;
+      height: auto;
+      h1, .heading {
+        font-size: 3.2rem;
+        line-height: 4rem;
+        letter-spacing: 3.3px;
+      }
+      h1, h2 {
+        margin-bottom: 1.6rem;
+      }
+      p {
+        margin-bottom: 2.3rem;
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    .mobile-hero-border {
+      display: block;
+    }
+    .text-container {
+      padding-left: 3.5rem;
+    }
   }
 `;
 
@@ -170,6 +209,27 @@ const ImageBox = styled.div`
       background-size: cover;
       background-position: center;
     }
+  }
+  @media (max-width: 600px) {
+    flex: 1 1 45%;
+    #create {
+      background: url(${mobileCreateAndShare}) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    #stories {
+      background: url(${mobileBeautifulStories}) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    #design {
+      background: url(${mobileDesignedFor}) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  @media (max-width: 500px) {
+    flex: 1 1 40%;
   }
 `;
 
@@ -207,7 +267,7 @@ const AdditionalInfo = styled.section`
     }
     @media (max-width: 768px) {
       flex-direction: column;
-      width: 60%;
+      width: 80%;
       height: auto;
       margin: 12rem auto;
       article {
@@ -219,6 +279,9 @@ const AdditionalInfo = styled.section`
           margin-top: 4.8rem;
         }
       }
+    }
+    @media (max-width: 500px) {
+      margin: 8rem auto;
     }
   }
 `;

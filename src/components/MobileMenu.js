@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import RectangleButton from '../styles/RectangleButton';
 
-const MobileMenu = () => {
+const MobileMenu = ({ setDisplayMenu }) => {
+  const closeMenu = () => {
+    setDisplayMenu(false);
+  };
+
   return (
     <MenuBG>
       <Menu>
@@ -11,13 +15,19 @@ const MobileMenu = () => {
           <nav>
             <ul>
               <li>
-                <Link to="/stories">STORIES</Link>
+                <Link to="/stories" onClick={closeMenu}>
+                  STORIES
+                </Link>
               </li>
               <li>
-                <Link to="/stories">FEATURES</Link>
+                <Link to="/features" onClick={closeMenu}>
+                  FEATURES
+                </Link>
               </li>
               <li>
-                <Link to="/stories">PRICING</Link>
+                <Link to="/pricing" onClick={closeMenu}>
+                  PRICING
+                </Link>
               </li>
             </ul>
           </nav>

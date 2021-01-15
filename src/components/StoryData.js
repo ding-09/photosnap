@@ -1,7 +1,11 @@
 import mountains from '../assets/stories/desktop/mountains.jpg';
+import mobileMountains from '../assets/stories/mobile/mountains.jpg';
 import cityscapes from '../assets/stories/desktop/cityscapes.jpg';
+import mobileCityscapes from '../assets/stories/mobile/cityscapes.jpg';
 import voyage from '../assets/stories/desktop/18-days-voyage.jpg';
+import mobileVoyage from '../assets/stories/mobile/18-days-voyage.jpg';
 import architecturals from '../assets/stories/desktop/architecturals.jpg';
+import mobileArchitecturals from '../assets/stories/mobile/architecturals.jpg';
 import worldTour from '../assets/stories/desktop/world-tour.jpg';
 import unforeseenCorners from '../assets/stories/desktop/unforeseen-corners.jpg';
 import kingOnAfrica from '../assets/stories/desktop/king-on-africa.jpg';
@@ -18,24 +22,28 @@ import dreamland from '../assets/stories/desktop/land-of-dreams.jpg';
 const StoryData = [
   {
     img: mountains,
+    mobileImg: mobileMountains,
     date: 'April 16th 2020',
     title: 'The Mountains',
     author: 'by John Appleseed',
   },
   {
     img: cityscapes,
+    mobileImg: mobileCityscapes,
     date: 'April 14th 2020',
     title: 'Sunset Cityscapes',
     author: 'by Benjamin Cruz',
   },
   {
     img: voyage,
+    mobileImg: mobileVoyage,
     date: 'April 11th 2020',
     title: '18 Days Voyage',
     author: 'by Alexei Borodin',
   },
   {
     img: architecturals,
+    mobileImg: mobileArchitecturals,
     date: 'April 9th 2020',
     title: 'Architecturals',
     author: 'by Samantha Brooke',

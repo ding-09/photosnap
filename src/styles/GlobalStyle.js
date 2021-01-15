@@ -108,7 +108,21 @@ const GlobalStyle = createGlobalStyle`
             #5a77ff 83.33%
         );
         position: absolute;
-  }
+    }
+    .mobile-hero-border {
+        width: 13rem;
+        height: 6px;
+         background: linear-gradient(
+            26.57deg,
+            #ffc593 0%,
+            #bc7198 43.29%,
+            #5a77ff 83.33%
+        );
+        position: absolute;
+        top: 0;
+        left: 3.5rem;
+        display: none;
+    }
 `;
 
 export default GlobalStyle;
