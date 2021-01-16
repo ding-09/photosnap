@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import heroImage from '../assets/stories/desktop/moon-of-appalacia.jpg';
 import tabletHeroImage from '../assets/stories/tablet/moon-of-appalacia.jpg';
+import mobileHeroImage from '../assets/stories/mobile/moon-of-appalacia.jpg';
 import ArrowButton from '../styles/ArrowButton';
 import StoryData from '../components/StoryData';
 import StoryCard from '../components/StoryCard';
@@ -10,6 +11,9 @@ const Stories = () => {
   return (
     <main>
       <HeroSection>
+        <section className="mobile-hero-image">
+
+        </section>
         <section className="hero-text">
           <h4>LAST MONTH’S FEATURED STORY</h4>
           <h1>HAZY FULL MOON OF APPALACHIA</h1>
@@ -48,10 +52,32 @@ const HeroSection = styled.section`
     background: url(${tabletHeroImage}) no-repeat;
     padding-left: 4rem;
   }
+  @media (max-width: 450px) {
+    background: #000000;
+    min-height: 50rem;
+    padding: 0;
+    flex-direction: column;
+    .mobile-hero-image {
+      width: 100%;
+      min-height: 32rem;
+      background: url(${mobileHeroImage}) no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    .hero-text {
+      min-width: 31rem;
+      margin: 0 auto;
+      padding: 2rem 3rem;
+      h1 {
+        font-size: 3.2rem;
+        line-height: 4rem;
+        letter-spacing: 3.3px;
+      }
+    }
+  }
   .hero-text {
-    width: 38rem;
-    height: 40.6rem;
-    min-width: 38rem;
+    width: 37.5rem;
+    min-height: 40.6rem;
     color: #ffffff;
     h1 {
       margin-top: 2.4rem;
@@ -73,8 +99,14 @@ const HeroSection = styled.section`
 
 const StoryGrid = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(36rem,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
   grid-template-rows: auto;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export default Stories;
