@@ -26,6 +26,7 @@ const Features = ({ setOnFeatures }) => {
       <HeroSection>
         <HeroText>
           <div className="hero-border"></div>
+          <div className="mobile-hero-border"></div>
           <div className="text-container">
             <h1>FEATURES</h1>
             <p>
@@ -99,6 +100,10 @@ const Features = ({ setOnFeatures }) => {
 const HeroSection = styled.section`
   display: flex;
   height: 49rem;
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+    height: 60rem;
+  }
 `;
 
 const HeroText = styled.article`
@@ -110,12 +115,34 @@ const HeroText = styled.article`
   justify-content: center;
   align-items: center;
   position: relative;
+  @media (max-width: 600px) {
+    flex: 1 1 50%;
+  }
+  @media (max-width: 500px) {
+    .hero-border {
+      display: none;
+    }
+    .text-container {
+      padding: 0 3.5rem;
+      height: auto;
+      margin: 0;
+      h1 {
+        font-size: 3.2rem;
+        line-height: 4rem;
+        letter-spacing: 3.3px;
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    .mobile-hero-border {
+      display: block;
+    }
+  }
   .hero-border {
     height: 14.4rem;
   }
   .text-container {
-    min-width: 38rem;
-    width: 40rem;
+    min-width: 37.5rem;
     height: 15rem;
     margin: 5rem;
     h1 {
@@ -131,15 +158,15 @@ const HeroText = styled.article`
 const HeroImage = styled.article`
   flex: 1 1 83rem;
   height: 100%;
+  @media (max-width: 600px) {
+    flex: 1 1 49%;
+  }
   figure {
     width: 100%;
     height: 100%;
-    background: url(${heroImage});
+    background: url(${heroImage}) no-repeat;
     background-size: cover;
     background-position: center;
-    @media (max-width: 768px) {
-      background: url(${tabletHeroImage});
-    }
   }
 `;
 
@@ -157,9 +184,15 @@ const FeaturesSection = styled.section`
     grid-template-rows: auto;
     grid-row-gap: 5rem;
     grid-column-gap: 1rem;
+    @media (max-width: 600px) {
+      padding: 0 3rem;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+    }
   }
   article {
     text-align: center;
+    padding: 0 2rem;
     h3 {
       margin-top: 4.8rem;
       margin-bottom: 1.6rem;

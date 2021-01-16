@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ArrowButton from '../styles/ArrowButton';
 import betaBG from '../assets/shared/desktop/bg-beta.jpg';
-import tabletBetaBG from '../assets/shared/tablet/bg-beta.jpg';
+import mobileBetaBG from '../assets/shared/mobile/bg-beta.jpg';
 
 
 const BetaInvite = () => {
@@ -26,6 +26,28 @@ const InviteSection = styled.section`
   padding: 6.4rem 4.9rem;
   position: relative;
   color: #ffffff;
+  @media (max-width: 700px) {
+    padding: 2rem 4rem;
+    height: auto;
+  }
+  @media (max-width: 400px) {
+    max-width: 40rem;
+    height: 25rem;
+    padding: 2rem 3rem; 
+    background: url(${mobileBetaBG}) no-repeat;
+    background-size: cover;
+    background-position: center;
+    .hero-border {
+      display: none;
+    }
+    .invite-container {
+      h2 {
+        font-size: 3.2rem;
+        line-height: 4rem;
+        letter-spacing: 3.3px;
+      }
+    }
+  }
   .invite-container {
     max-width: 114rem;
     height: 15rem;
@@ -34,6 +56,17 @@ const InviteSection = styled.section`
     justify-content: space-between;
     h2 {
       max-width: 45rem;
+    }
+    @media (max-width: 700px) {
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      h2 {
+        margin-bottom: 2rem;
+      }
+      button {
+        width: 20rem;
+      }
     }
   }
   .hero-border {
