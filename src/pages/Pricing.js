@@ -70,56 +70,50 @@ const Pricing = () => {
               <h3 id="yearly">Yearly</h3>
             </div>
           </PriceToggle>
-          <PriceList>
+          <PriceTable>
             <PriceCard>
-              <div className="text-container">
-                <section className="intro">
-                  <h2>Basic</h2>
-                  <p>
-                    Includes basic usage of our platform. Recommended for new
-                    and aspiring photographers.
-                  </p>
-                </section>
-                <section className="price">
-                  <h3 className="heading">{displayPrice.basic}</h3>
-                  <p>per month</p>
-                </section>
-                <RectangleButton black>PICK PLAN</RectangleButton>
+              <div className="intro">
+                <h2>Basic</h2>
+                <p>
+                  Includes basic usage of our platform. Recommended for new and
+                  aspiring photographers.
+                </p>
               </div>
+              <div className="pricing">
+                <h3 className="heading">$19.00</h3>
+                <p>per month</p>
+              </div>
+              <RectangleButton black>PICK PLAN</RectangleButton>
             </PriceCard>
-            <PriceCard className="middle-card">
-              <div className="text-container">
-                <section className="intro">
-                  <h2>Pro</h2>
-                  <p>
-                    More advanced features available. Recommended for
-                    photography veterans and professionals.
-                  </p>
-                </section>
-                <section className="price">
-                  <h3 className="heading">{displayPrice.pro}</h3>
-                  <p>per month</p>
-                </section>
-                <RectangleButton black>PICK PLAN</RectangleButton>
+            <PriceCard id="pro">
+              <div className="intro">
+                <h2>Pro</h2>
+                <p>
+                  More advanced features available. Recommended for photography
+                  veterans and professionals.
+                </p>
               </div>
+              <div className="pricing">
+                <h3 className="heading">$39.00</h3>
+                <p>per month</p>
+              </div>
+              <RectangleButton black>PICK PLAN</RectangleButton>
             </PriceCard>
             <PriceCard>
-              <div className="text-container">
-                <section className="intro">
-                  <h2>Business</h2>
-                  <p>
-                    Additional features such as more detailed metrics.
-                    Recommended for business owners.
-                  </p>
-                </section>
-                <section className="price">
-                  <h3 className="heading">{displayPrice.business}</h3>
-                  <p>per month</p>
-                </section>
-                <RectangleButton black>PICK PLAN</RectangleButton>
+              <div className="intro">
+                <h2>Business</h2>
+                <p>
+                  Additional features available such as more detailed metrics.
+                  Recommended for business owners.
+                </p>
               </div>
+              <div className="pricing">
+                <h3 className="heading">$99.00</h3>
+                <p>per month</p>
+              </div>
+              <RectangleButton black>PICK PLAN</RectangleButton>
             </PriceCard>
-          </PriceList>
+          </PriceTable>
         </div>
       </PricingSection>
       <FeaturesSection>
@@ -218,45 +212,58 @@ const Pricing = () => {
   );
 };
 
-const FeaturesSection = styled.div`
-  width: 73rem;
-  min-height: 62rem;
-  margin: 0 auto 16rem;
+const PriceTable = styled.section`
+  max-height: 47rem;
+  margin-top: 8rem;
+  display: flex;
+  #pro {
+    margin: 0 2rem;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    max-height: 86rem;
+    #pro {
+      margin: 2rem 0;
+    }
+  }
 `;
 
-const FeaturesTable = styled.table`
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  letter-spacing: 2px;
-  width: 100%;
-  caption {
-    padding-bottom: 5.6rem;
+const PriceCard = styled.article`
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 40.7rem;
+  padding: 0 2rem;
+  justify-content: space-evenly;
+  position: relative;
+  h2 {
+    padding-bottom: 1.8rem;
   }
-  .left {
+  p {
+    opacity: 0.6;
+  }
+  @media (max-width: 768px) {
+    height: 27rem;
     text-align: left;
-    padding-left: 2rem;
-    width: 40%;
-  }
-  th,
-  td {
-    text-align: center;
-    width: 14rem;
-  }
-  thead {
-    th {
-      padding-bottom: 2rem;
-      border-bottom: 1px solid #000000;
+    justify-content: space-around;
+    .intro, button {
+      width: 45%;
+      margin-left: 2rem;
     }
-  }
-  tbody {
-    tr {
+    .intro {
+      margin-top: 2rem;
     }
-    th,
-    td {
-      padding: 2.3rem 0;
-      border-bottom: 1px solid #dfdfdf;
+    .pricing {
+      position: absolute;
+      top: 4rem;
+      right: 4rem;
+      p {
+        text-align: right;
+        padding-right: 5px;
+      }
     }
-  }
+  } 
 `;
 
 const HeroSection = styled.section`
@@ -277,7 +284,7 @@ const HeroText = styled.article`
     height: 14.4rem;
   }
   .text-container {
-    min-width: 38rem;
+    min-width: 37.5rem;
     width: 40rem;
     height: 15rem;
     margin: 5rem;
@@ -360,55 +367,43 @@ const PriceToggle = styled.section`
   }
 `;
 
-const PriceList = styled.section`
-  width: 100%;
-  min-height: 47rem;
-  margin-top: 4.8rem;
-  display: flex;
-  align-items: center;
+const FeaturesSection = styled.div`
+  max-width: 73rem;
+  min-height: 62rem;
+  margin: 0 auto 16rem;
 `;
 
-const PriceCard = styled.article`
-  flex-basis: 35rem;
-  min-height: 40.7rem;
-  margin: 0 1rem;
-  padding: 5.5rem 3rem 4rem;
-  background: #f5f5f5;
-  cursor: pointer;
-  &:hover {
-    padding-top: 8rem;
-    padding-bottom: 7rem;
-    background: #000000;
-    color: #ffffff;
-    border-radius: 0.5rem;
-    transition: 0.6s;
-    button {
-      transition: 0.3s;
-      background: #ffffff;
-      color: #000000;
-      &:hover {
-        background: #dfdfdf;
-      }
+const FeaturesTable = styled.table`
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: 2px;
+  width: 100%;
+  caption {
+    padding-bottom: 5.6rem;
+  }
+  .left {
+    text-align: left;
+    padding-left: 2rem;
+    width: 40%;
+  }
+  th,
+  td {
+    text-align: center;
+    width: 14rem;
+  }
+  thead {
+    th {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #000000;
     }
   }
-  .text-container {
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    .intro {
-      margin-bottom: 4rem;
-      h2 {
-        padding-bottom: 1.8rem;
-      }
+  tbody {
+    tr {
     }
-    .price {
-      margin-bottom: 4rem;
-    }
-    button {
-      width: 100%;
-    }
-    p {
-      opacity: 0.6;
+    th,
+    td {
+      padding: 2.3rem 0;
+      border-bottom: 1px solid #dfdfdf;
     }
   }
 `;
