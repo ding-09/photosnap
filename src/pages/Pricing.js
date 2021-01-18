@@ -318,7 +318,8 @@ const PriceToggle = styled.section`
       width: 6.4rem;
       height: 3.2rem;
       border-radius: 1.6rem;
-      border: none;
+      border: 1px solid transparent;
+      outline: none;
       overflow: hidden;
       text-align: center;
       input[type='checkbox'] {
@@ -333,7 +334,7 @@ const PriceToggle = styled.section`
           content: '';
           position: absolute;
           left: 4px;
-          top: 5px;
+          top: 4px;
           width: 2.3rem;
           height: 2.3rem;
           background: #000000;
@@ -344,7 +345,7 @@ const PriceToggle = styled.section`
           transition: 0.5s;
           background: #000000;
           &:before {
-            transform: translateX(3.2rem);
+            transform: translateX(3.1rem);
             background: #ffffff;
           }
         }
