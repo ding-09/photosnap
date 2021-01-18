@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import BetaInvite from '../components/BetaInvite';
 import heroImage from '../assets/pricing/desktop/hero.jpg';
 import tabletHeroImage from '../assets/pricing/tablet/hero.jpg';
+import mobileHeroImage from '../assets/pricing/mobile/hero.jpg';
 import RectangleButton from '../styles/RectangleButton';
 import checkMark from '../assets/pricing/desktop/check.svg';
 
@@ -80,7 +81,7 @@ const Pricing = () => {
                 </p>
               </div>
               <div className="pricing">
-                <h3 className="heading">$19.00</h3>
+                <h3 className="heading">{displayPrice.basic}</h3>
                 <p>per month</p>
               </div>
               <RectangleButton black>PICK PLAN</RectangleButton>
@@ -94,7 +95,7 @@ const Pricing = () => {
                 </p>
               </div>
               <div className="pricing">
-                <h3 className="heading">$39.00</h3>
+                <h3 className="heading">{displayPrice.pro}</h3>
                 <p>per month</p>
               </div>
               <RectangleButton black>PICK PLAN</RectangleButton>
@@ -108,7 +109,7 @@ const Pricing = () => {
                 </p>
               </div>
               <div className="pricing">
-                <h3 className="heading">$99.00</h3>
+                <h3 className="heading">{displayPrice.business}</h3>
                 <p>per month</p>
               </div>
               <RectangleButton black>PICK PLAN</RectangleButton>
@@ -212,63 +213,12 @@ const Pricing = () => {
   );
 };
 
-const PriceTable = styled.section`
-  max-height: 47rem;
-  margin-top: 8rem;
-  display: flex;
-  #pro {
-    margin: 0 2rem;
-  }
-  @media (max-width: 768px) {
-    flex-direction: column;
-    max-height: 86rem;
-    #pro {
-      margin: 2rem 0;
-    }
-  }
-`;
-
-const PriceCard = styled.article`
-  background: #f5f5f5;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  height: 40.7rem;
-  padding: 0 2rem;
-  justify-content: space-evenly;
-  position: relative;
-  h2 {
-    padding-bottom: 1.8rem;
-  }
-  p {
-    opacity: 0.6;
-  }
-  @media (max-width: 768px) {
-    height: 27rem;
-    text-align: left;
-    justify-content: space-around;
-    .intro, button {
-      width: 45%;
-      margin-left: 2rem;
-    }
-    .intro {
-      margin-top: 2rem;
-    }
-    .pricing {
-      position: absolute;
-      top: 4rem;
-      right: 4rem;
-      p {
-        text-align: right;
-        padding-right: 5px;
-      }
-    }
-  } 
-`;
-
 const HeroSection = styled.section`
   display: flex;
   height: 49rem;
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const HeroText = styled.article`
@@ -296,6 +246,21 @@ const HeroText = styled.article`
       opacity: 0.6;
     }
   }
+  @media (max-width: 500px) {
+    .hero-border {
+      display: none;
+    }
+  }
+  @media (max-width: 440px) {
+    .text-container {
+      padding: 0 3rem;
+      h1 {
+        font-size: 3.2rem;
+        line-height: 4rem;
+        letter-spacing: 3.3px;
+      }
+    }
+  }
 `;
 
 const HeroImage = styled.article`
@@ -308,13 +273,20 @@ const HeroImage = styled.article`
     background-size: cover;
     background-position: center;
     @media (max-width: 768px) {
-      background: url(${tabletHeroImage});
+      background: url(${tabletHeroImage}) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    @media (max-width: 600px) {
+      background: url(${mobileHeroImage}) no-repeat;
+      background-size: cover;
+      background-position: center;
     }
   }
 `;
 
 const PricingSection = styled.section`
-  margin: 12rem 0 16rem;
+  margin: 12rem 2rem 16rem;
   .pricing-container {
     max-width: 111rem;
     margin: auto;
@@ -329,6 +301,7 @@ const PriceToggle = styled.section`
     width: 25rem;
     justify-content: space-between;
     align-items: center;
+    margin-right: 2rem;
     .toggle-switch {
       width: 6.4rem;
       height: 3.2rem;
@@ -367,10 +340,87 @@ const PriceToggle = styled.section`
   }
 `;
 
+const PriceTable = styled.section`
+  max-height: 47rem;
+  margin-top: 8rem;
+  display: flex;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    max-height: 86rem;
+  }
+  @media (max-width: 500px) {
+    max-height: 130rem;
+  }
+`;
+
+const PriceCard = styled.article`
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 40.7rem;
+  padding: 0 2rem;
+  justify-content: space-evenly;
+  position: relative;
+  margin: 0 2rem;
+  h2 {
+    padding-bottom: 1.8rem;
+  }
+  p {
+    opacity: 0.6;
+  }
+  @media (max-width: 768px) {
+    height: 27rem;
+    text-align: left;
+    justify-content: space-around;
+    margin: 1rem auto;
+    width: 95%;
+    .intro,
+    button {
+      width: 45%;
+      margin-left: 2rem;
+    }
+    .intro {
+      margin-top: 2rem;
+    }
+    .pricing {
+      position: absolute;
+      top: 4rem;
+      right: 4rem;
+      p {
+        text-align: right;
+        padding-right: 5px;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    height: auto;
+    text-align: center;
+    padding-top: 3rem;
+    .intro,
+    button {
+      width: 90%;
+      margin: 3rem auto;
+    }
+    .pricing {
+      position: relative;
+      top: 0;
+      right: 0;
+      p {
+        text-align: center;
+        padding-right: 0;
+      }
+    }
+  }
+`;
+
 const FeaturesSection = styled.div`
   max-width: 73rem;
   min-height: 62rem;
-  margin: 0 auto 16rem;
+  margin: 20rem auto 16rem;
+  @media (max-width: 768px) {
+    margin: 0 2rem 11rem;
+  }
 `;
 
 const FeaturesTable = styled.table`
@@ -378,6 +428,7 @@ const FeaturesTable = styled.table`
   line-height: 1.6rem;
   letter-spacing: 2px;
   width: 100%;
+  border-collapse: collapse;
   caption {
     padding-bottom: 5.6rem;
   }

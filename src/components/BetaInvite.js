@@ -27,7 +27,7 @@ const InviteSection = styled.section`
   position: relative;
   color: #ffffff;
   @media (max-width: 700px) {
-    padding: 2rem 4rem;
+    padding: 5rem 4rem;
     height: auto;
   }
   @media (max-width: 400px) {
