@@ -127,11 +127,10 @@ const Section = styled.section`
 `;
 
 const TextBox = styled.div`
-border: 2px solid red;
+  border: 2px solid red;
   background: ${(props) => props.background || '#ffffff'};
   color: ${(props) => props.background && '#ffffff'};
   flex: 1 1 61rem;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,7 +185,6 @@ border: 2px solid red;
 
 const ImageBox = styled.div`
   flex: 1 1 83rem;
-  height: 100%;
   figure {
     width: 100%;
     height: 100%;
