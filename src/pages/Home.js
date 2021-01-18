@@ -127,7 +127,6 @@ const Section = styled.section`
 `;
 
 const TextBox = styled.div`
-  border: 2px solid red;
   background: ${(props) => props.background || '#ffffff'};
   color: ${(props) => props.background && '#ffffff'};
   flex: 1 1 61rem;
