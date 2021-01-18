@@ -68,7 +68,7 @@ const HeroSection = styled.section`
     .hero-text {
       min-width: 31rem;
       margin: 0 auto;
-      padding: 2rem 3rem;
+      padding: 4rem 3rem;
       h1 {
         font-size: 3.2rem;
         line-height: 4rem;
