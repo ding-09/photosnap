@@ -35,6 +35,8 @@ const Card = styled.article`
     height: 37.5rem;
     background: url(${(props) => props.mobileImg && `${props.mobileImg}`})
       no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   @media (min-width: 769px) {
     &:hover {
