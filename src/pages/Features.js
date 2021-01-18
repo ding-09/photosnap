@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import heroImage from '../assets/features/desktop/hero.jpg';
-import tabletHeroImage from '../assets/features/tablet/hero.jpg';
 import responsiveIcon from '../assets/features/desktop/responsive.svg';
 import noLimitIcon from '../assets/features/desktop/no-limit.svg';
 import embedIcon from '../assets/features/desktop/embed.svg';
