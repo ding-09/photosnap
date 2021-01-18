@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import GlobalStyle from './styles/GlobalStyle';
 // use React router
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 
 // import all the pages and necessary components
 import Home from './pages/Home';
@@ -16,6 +17,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <GlobalStyle />
+      <ScrollToTop />
       <Header onFeatures={onFeatures} />
       <Switch>
         <Route exact path="/">
