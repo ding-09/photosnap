@@ -12,12 +12,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 const App = () => {
-
   const [onFeatures, setOnFeatures] = useState(false);
   return (
     <BrowserRouter>
       <GlobalStyle />
-      <Header onFeatures={onFeatures}/>
+      <Header onFeatures={onFeatures} />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -26,7 +25,7 @@ const App = () => {
           <Stories />
         </Route>
         <Route exact path="/features">
-          <Features setOnFeatures={setOnFeatures}/>
+          <Features setOnFeatures={setOnFeatures} />
         </Route>
         <Route exact path="/pricing">
           <Pricing />

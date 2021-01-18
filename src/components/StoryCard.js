@@ -29,16 +29,19 @@ const Card = styled.article`
   align-items: flex-end;
   cursor: pointer;
   overflow-x: hidden;
-  transition: 0.35s;
+  transition: 0.25s;
   @media (max-width: 375px) {
     flex: 1 1 37.5rem;
     height: 37.5rem;
-    background: url(${props => props.mobileImg && `${props.mobileImg}`}) no-repeat;
+    background: url(${(props) => props.mobileImg && `${props.mobileImg}`})
+      no-repeat;
   }
-  &:hover {
-    transform: translateY(-2.4rem);
-    .theme-border {
-      display: block;
+  @media (min-width: 769px) {
+    &:hover {
+      transform: translateY(-2.4rem);
+      .theme-border {
+        display: block;
+      }
     }
   }
   .card-container {
