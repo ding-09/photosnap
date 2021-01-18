@@ -216,7 +216,7 @@ const Pricing = () => {
 
 const HeroSection = styled.section`
   display: flex;
-  height: 49rem;
+  min-height: 49rem;
   @media (max-width: 600px) {
     flex-direction: column-reverse;
   }
