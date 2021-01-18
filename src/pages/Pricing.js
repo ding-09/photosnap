@@ -236,7 +236,6 @@ const HeroText = styled.article`
   }
   .text-container {
     min-width: 37.5rem;
-    width: 40rem;
     height: 15rem;
     margin: 5rem;
     h1 {
@@ -247,7 +246,7 @@ const HeroText = styled.article`
       opacity: 0.6;
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 450px) {
     .hero-border {
       display: none;
     }
@@ -273,10 +272,13 @@ const HeroText = styled.article`
 
 const HeroImage = styled.article`
   flex: 1 1 83rem;
+  @media (max-width: 600px) {
+    flex: 1 1 55%;
+  }
   figure {
     width: 100%;
     height: 100%;
-    background: url(${heroImage});
+    background: url(${heroImage}) no-repeat;
     background-size: cover;
     background-position: center;
     @media (max-width: 768px) {
@@ -288,7 +290,6 @@ const HeroImage = styled.article`
       background: url(${mobileHeroImage}) no-repeat;
       background-size: cover;
       background-position: center;
-      flex: 1 1 55%;
     }
   }
 `;
