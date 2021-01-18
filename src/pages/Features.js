@@ -119,11 +119,8 @@ const HeroText = styled.article`
     flex: 1 1 50%;
   }
   @media (max-width: 500px) {
-    .hero-border {
-      display: none;
-    }
     .text-container {
-      padding: 0 3.5rem;
+      padding: 0 1rem;
       height: auto;
       margin: 0;
       h1 {
@@ -132,6 +129,12 @@ const HeroText = styled.article`
         letter-spacing: 3.3px;
       }
     }
+  }
+  @media (max-width: 450px) {
+    .hero-border{ 
+      display: none;
+    }
+    flex: 1 1 45%;
   }
   @media (max-width: 375px) {
     .mobile-hero-border {
