@@ -5,7 +5,6 @@ import betaBG from '../assets/shared/desktop/bg-beta.jpg';
 import tabletBG from '../assets/shared/tablet/bg-beta.jpg'
 import mobileBetaBG from '../assets/shared/mobile/bg-beta.jpg';
 
-
 const BetaInvite = () => {
   return (
     <InviteSection>
