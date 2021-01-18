@@ -111,7 +111,6 @@ const HeroText = styled.article`
   background: #000000;
   color: #ffffff;
   flex: 1 1 61rem;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,7 +157,6 @@ const HeroText = styled.article`
 
 const HeroImage = styled.article`
   flex: 1 1 83rem;
-  height: 100%;
   @media (max-width: 600px) {
     flex: 1 1 49%;
   }
@@ -171,6 +169,7 @@ const HeroImage = styled.article`
     @media (max-width: 768px) {
       background: url(${tabletHeroImage}) no-repeat;
       background-size: cover;
+      background-position: center;
     }
     @media (max-width: 600px) {
       background: url(${mobileHeroImage}) no-repeat;
