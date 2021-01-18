@@ -119,7 +119,7 @@ const Section = styled.section`
   }
   @media (max-width: 600px) {
     flex-direction: column-reverse;
-    min-height: 70rem;
+    height: 70rem;
     #middle-textBox {
       order: 0;
     }
@@ -127,6 +127,7 @@ const Section = styled.section`
 `;
 
 const TextBox = styled.div`
+border: 2px solid red;
   background: ${(props) => props.background || '#ffffff'};
   color: ${(props) => props.background && '#ffffff'};
   flex: 1 1 61rem;

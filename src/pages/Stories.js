@@ -12,7 +12,6 @@ const Stories = () => {
     <main>
       <HeroSection>
         <section className="mobile-hero-image">
-
         </section>
         <section className="hero-text">
           <h4>LAST MONTH’S FEATURED STORY</h4>
