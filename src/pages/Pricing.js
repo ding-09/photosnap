@@ -216,9 +216,10 @@ const Pricing = () => {
 
 const HeroSection = styled.section`
   display: flex;
-  min-height: 49rem;
+  height: 49rem;
   @media (max-width: 600px) {
     flex-direction: column-reverse;
+    height: 60rem;
   }
 `;
 
