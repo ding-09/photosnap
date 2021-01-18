@@ -50,6 +50,8 @@ const HeroSection = styled.section`
   align-items: center;
   @media (max-width: 768px) {
     background: url(${tabletHeroImage}) no-repeat;
+    background-position: center;
+    background-size: cover;
     padding-left: 4rem;
   }
   @media (max-width: 450px) {

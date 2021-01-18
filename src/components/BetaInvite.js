@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ArrowButton from '../styles/ArrowButton';
 import betaBG from '../assets/shared/desktop/bg-beta.jpg';
+import tabletBG from '../assets/shared/tablet/bg-beta.jpg'
 import mobileBetaBG from '../assets/shared/mobile/bg-beta.jpg';
 
 
@@ -29,6 +30,7 @@ const InviteSection = styled.section`
   @media (max-width: 700px) {
     padding: 5rem 4rem;
     height: auto;
+    background: url(${tabletBG}) no-repeat;
   }
   @media (max-width: 400px) {
     max-width: 40rem;

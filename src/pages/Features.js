@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import heroImage from '../assets/features/desktop/hero.jpg';
+import tabletHeroImage from '../assets/features/tablet/hero.jpg';
+import mobileHeroImage from '../assets/features/mobile/hero.jpg';
 import responsiveIcon from '../assets/features/desktop/responsive.svg';
 import noLimitIcon from '../assets/features/desktop/no-limit.svg';
 import embedIcon from '../assets/features/desktop/embed.svg';
@@ -166,6 +168,13 @@ const HeroImage = styled.article`
     background: url(${heroImage}) no-repeat;
     background-size: cover;
     background-position: center;
+    @media (max-width: 768px) {
+      background: url(${tabletHeroImage}) no-repeat;
+      background-size: cover;
+    }
+    @media (max-width: 600px) {
+      background: url(${mobileHeroImage}) no-repeat;
+    }
   }
 `;
 

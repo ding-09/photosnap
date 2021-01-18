@@ -4,7 +4,7 @@ import ArrowButton from '../styles/ArrowButton';
 import StoryData from '../components/StoryData';
 import StoryCard from '../components/StoryCard';
 
-// images and icons
+// images and icons 
 import createAndShare from '../assets/home/desktop/create-and-share.jpg';
 import tabletCreateAndShare from '../assets/home/tablet/create-and-share.jpg';
 import mobileCreateAndShare from '../assets/home/mobile/create-and-share.jpg';
@@ -225,7 +225,7 @@ const ImageBox = styled.div`
     #design {
       background: url(${mobileDesignedFor}) no-repeat;
       background-size: cover;
-      background-position: center;
+      background-position: top;
     }
   }
   @media (max-width: 500px) {
