@@ -47,6 +47,7 @@ const Pricing = () => {
       <HeroSection>
         <HeroText>
           <div className="hero-border"></div>
+          <div className="mobile-hero-border"></div>
           <div className="text-container">
             <h1>PRICING</h1>
             <p>
@@ -225,7 +226,6 @@ const HeroText = styled.article`
   background: #000000;
   color: #ffffff;
   flex: 1 1 61rem;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,6 +250,7 @@ const HeroText = styled.article`
     .hero-border {
       display: none;
     }
+    flex: 1 1 45%;
   }
   @media (max-width: 440px) {
     .text-container {
@@ -261,11 +262,16 @@ const HeroText = styled.article`
       }
     }
   }
+  @media (max-width: 375px) {
+    .mobile-hero-border {
+      display: block;
+      left: 3rem;
+    }
+  }
 `;
 
 const HeroImage = styled.article`
   flex: 1 1 83rem;
-  height: 100%;
   figure {
     width: 100%;
     height: 100%;
@@ -281,6 +287,7 @@ const HeroImage = styled.article`
       background: url(${mobileHeroImage}) no-repeat;
       background-size: cover;
       background-position: center;
+      flex: 1 1 55%;
     }
   }
 `;
@@ -299,6 +306,9 @@ const PriceToggle = styled.section`
   .toggle-container {
     display: flex;
     width: 25rem;
+    @media (max-width: 375px) {
+      width: 70%;
+    }
     justify-content: space-between;
     align-items: center;
     margin-right: 2rem;
@@ -306,6 +316,7 @@ const PriceToggle = styled.section`
       width: 6.4rem;
       height: 3.2rem;
       border-radius: 1.6rem;
+      border: none;
       overflow: hidden;
       text-align: center;
       input[type='checkbox'] {
