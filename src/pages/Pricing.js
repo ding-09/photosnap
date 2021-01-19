@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import BetaInvite from '../components/BetaInvite';
+import HeroSection from '../components/HeroSection';
 
-// images and icons 
+// images and icons
 import heroImage from '../assets/pricing/desktop/hero.jpg';
 import tabletHeroImage from '../assets/pricing/tablet/hero.jpg';
 import mobileHeroImage from '../assets/pricing/mobile/hero.jpg';
@@ -20,6 +21,8 @@ const Pricing = () => {
     pro: '$390.00',
     business: '$990.00',
   };
+
+  // state to indicate toggle status and current display price
   const [toggle, setToggle] = useState(false);
   const [displayPrice, setDisplayPrice] = useState(monthlyPrice);
 
@@ -42,30 +45,21 @@ const Pricing = () => {
       setDisplayPrice(yearlyPrice);
     } else {
       monthly.style.opacity = 1;
-      setDisplayPrice(monthlyPrice)
+      setDisplayPrice(monthlyPrice);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [toggle]);
 
   return (
     <main>
-      <HeroSection>
-        <HeroText>
-          <div className="hero-border"></div>
-          <div className="mobile-hero-border"></div>
-          <div className="text-container">
-            <h1>PRICING</h1>
-            <p>
-              Create your stories. Photosnap is a platform for photographers and
-              visual storytellers. It’s the simple way to create and share your
-              photos.
-            </p>
-          </div>
-        </HeroText>
-        <HeroImage>
-          <figure></figure>
-        </HeroImage>
-      </HeroSection>
+      <HeroSection
+        title="PRICING"
+        description="Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos."
+        heroImage={heroImage}
+        tabletHeroImage={tabletHeroImage}
+        mobileHeroImage={mobileHeroImage}
+        Pricing={true}
+      />
       <PricingSection>
         <div className="pricing-container">
           <PriceToggle>
@@ -219,86 +213,6 @@ const Pricing = () => {
   );
 };
 
-const HeroSection = styled.section`
-  display: flex;
-  height: 49rem;
-  @media (max-width: 600px) {
-    flex-direction: column-reverse;
-    height: 60rem;
-  }
-`;
-
-const HeroText = styled.article`
-  background: #000000;
-  color: #ffffff;
-  flex: 1 1 61rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  .hero-border {
-    height: 14.4rem;
-  }
-  .text-container {
-    min-width: 37.5rem;
-    height: 15rem;
-    margin: 5rem;
-    h1 {
-      margin-bottom: 2rem;
-    }
-    .summary {
-      margin-bottom: 4.2rem;
-      opacity: 0.6;
-    }
-  }
-  @media (max-width: 450px) {
-    .hero-border {
-      display: none;
-    }
-    flex: 1 1 45%;
-  }
-  @media (max-width: 440px) {
-    .text-container {
-      padding: 0 3rem;
-      h1 {
-        font-size: 3.2rem;
-        line-height: 4rem;
-        letter-spacing: 3.3px;
-      }
-    }
-  }
-  @media (max-width: 375px) {
-    .mobile-hero-border {
-      display: block;
-      left: 3rem;
-    }
-  }
-`;
-
-const HeroImage = styled.article`
-  flex: 1 1 83rem;
-  @media (max-width: 600px) {
-    flex: 1 1 55%;
-  }
-  figure {
-    width: 100%;
-    height: 100%;
-    background: url(${heroImage}) no-repeat;
-    background-size: cover;
-    background-position: center;
-    @media (max-width: 768px) {
-      background: url(${tabletHeroImage}) no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-    @media (max-width: 600px) {
-      background: url(${mobileHeroImage}) no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-  }
-`;
-
 const PricingSection = styled.section`
   margin: 12rem 2rem 16rem;
   .pricing-container {
@@ -310,7 +224,6 @@ const PricingSection = styled.section`
 const PriceToggle = styled.section`
   display: flex;
   justify-content: center;
-
   .toggle-container {
     display: flex;
     width: 25rem;
@@ -321,9 +234,6 @@ const PriceToggle = styled.section`
     align-items: center;
     margin-right: 2rem;
     .toggle-switch {
-      /* -webkit-background-clip: padding-box;
-      -moz-background-clip: padding;
-      background-clip: padding-box; */
       width: 6.4rem;
       height: 3.2rem;
       border-radius: 1.6rem;
@@ -352,7 +262,6 @@ const PriceToggle = styled.section`
           border: none;
           transition: 0.5s;
           @media (max-width: 375px) {
-
           }
         }
         &:checked {
@@ -378,6 +287,7 @@ const PriceTable = styled.section`
   }
   @media (max-width: 500px) {
     max-height: 130rem;
+    margin-top: 4rem;
   }
 `;
 
@@ -385,10 +295,10 @@ const PriceCard = styled.article`
   background: #f5f5f5;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   text-align: center;
   height: 40.7rem;
   padding: 0 2rem;
-  justify-content: space-evenly;
   position: relative;
   margin: 0 2rem;
   h2 {
@@ -401,15 +311,15 @@ const PriceCard = styled.article`
     height: 27rem;
     text-align: left;
     justify-content: space-around;
-    margin: 1rem auto;
+    margin: 2rem auto;
     width: 95%;
     .intro,
     button {
       width: 45%;
-      margin-left: 2rem;
+      margin-left: 1rem;
     }
     .intro {
-      margin-top: 2rem;
+      padding-top: 2rem;
     }
     .pricing {
       position: absolute;
@@ -422,13 +332,17 @@ const PriceCard = styled.article`
     }
   }
   @media (max-width: 500px) {
-    height: auto;
+    height: 40.7rem;
+    padding: 0;
+    width: 90%;
     text-align: center;
-    padding-top: 3rem;
     .intro,
     button {
-      width: 90%;
+      width: 85%;
       margin: 3rem auto;
+    }
+    button {
+      width: 80%;
     }
     .pricing {
       position: relative;

@@ -98,6 +98,7 @@ const FeaturesSection = styled.section`
   padding: 0 2rem;
   @media (max-width: 768px) {
     margin: 11rem auto;
+    padding: 0 4rem;
   }
   .features-container {
     display: grid;
@@ -106,7 +107,6 @@ const FeaturesSection = styled.section`
     grid-row-gap: 5rem;
     grid-column-gap: 1rem;
     @media (max-width: 600px) {
-      padding: 0 2rem;
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: auto;
     }

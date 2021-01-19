@@ -7,10 +7,11 @@ const HeroSection = ({
   heroImage,
   tabletHeroImage,
   mobileHeroImage,
+  Pricing
 }) => {
   return (
     <Hero>
-      <HeroText>
+      <HeroText Pricing={Pricing}>
         <div className="hero-border"></div>
         <div className="mobile-hero-border"></div>
         <div className="text-container">
@@ -65,6 +66,15 @@ const HeroText = styled.article`
   }
   @media (max-width: 600px) {
     flex: 1 1 50%;
+    .hero-border {
+      height: ${props => props.Pricing && '11rem'};
+      top: ${props => props.Pricing && '8rem'}
+    }
+  }
+  @media (max-width: 565px) {
+    .hero-border {
+      height: ${props => props.Pricing && '13.5rem'};
+    }
   }
   @media (max-width: 500px) {
     flex: 1 1 45%;
@@ -107,6 +117,8 @@ const HeroImage = styled.article`
     flex: 1 1 50%;
     figure {
       background: url(${(props) => props.mobileHeroImage}) no-repeat;
+      background-size: cover;
+      background-position: center;
     }
   }
 `;

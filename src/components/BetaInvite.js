@@ -43,7 +43,7 @@ const InviteSection = styled.section`
     }
     .invite-container {
       h2 {
-        font-size: 3.2rem;
+        font-size: 2.6rem;
         line-height: 4rem;
         letter-spacing: 3.3px;
       }
