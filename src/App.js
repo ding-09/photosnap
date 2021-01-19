@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import GlobalStyle from './styles/GlobalStyle';
+
+
 // use React router
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';

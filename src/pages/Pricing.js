@@ -305,6 +305,7 @@ const PricingSection = styled.section`
 const PriceToggle = styled.section`
   display: flex;
   justify-content: center;
+
   .toggle-container {
     display: flex;
     width: 25rem;
@@ -315,16 +316,20 @@ const PriceToggle = styled.section`
     align-items: center;
     margin-right: 2rem;
     .toggle-switch {
+      /* -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; */
       width: 6.4rem;
       height: 3.2rem;
       border-radius: 1.6rem;
-      border: 1px solid transparent;
       outline: none;
       overflow: hidden;
       text-align: center;
       input[type='checkbox'] {
         width: 100%;
         height: 100%;
+        border: none;
+        border-radius: 1.6rem;
         background: #dfdfdf;
         appearance: none;
         cursor: pointer;
@@ -334,12 +339,16 @@ const PriceToggle = styled.section`
           content: '';
           position: absolute;
           left: 4px;
-          top: 4px;
-          width: 2.3rem;
-          height: 2.3rem;
+          top: 4.5px;
+          width: 2.4rem;
+          height: 2.4rem;
           background: #000000;
           border-radius: 50%;
+          border: none;
           transition: 0.5s;
+          @media (max-width: 375px) {
+
+          }
         }
         &:checked {
           transition: 0.5s;
