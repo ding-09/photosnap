@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import BetaInvite from '../components/BetaInvite';
+
+// images and icons 
 import heroImage from '../assets/pricing/desktop/hero.jpg';
 import tabletHeroImage from '../assets/pricing/tablet/hero.jpg';
 import mobileHeroImage from '../assets/pricing/mobile/hero.jpg';
@@ -23,9 +25,9 @@ const Pricing = () => {
 
   const handlePriceToggle = () => {
     setToggle(!toggle);
-    setDisplayPrice((prevState) => (!toggle ? yearlyPrice : monthlyPrice));
   };
 
+  // useEffect hook to activate toggle and dynamically change price
   useEffect(() => {
     const monthly = document.getElementById('monthly');
     const yearly = document.getElementById('yearly');
@@ -37,9 +39,12 @@ const Pricing = () => {
     if (toggle) {
       monthly.style.opacity = 0.5;
       yearly.style.opacity = 1;
+      setDisplayPrice(yearlyPrice);
     } else {
       monthly.style.opacity = 1;
+      setDisplayPrice(monthlyPrice)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [toggle]);
 
   return (

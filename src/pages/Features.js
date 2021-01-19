@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import BetaInvite from '../components/BetaInvite';
+import HeroSection from '../components/HeroSection';
+
+// images and icons
 import heroImage from '../assets/features/desktop/hero.jpg';
 import tabletHeroImage from '../assets/features/tablet/hero.jpg';
 import mobileHeroImage from '../assets/features/mobile/hero.jpg';
@@ -9,14 +13,13 @@ import embedIcon from '../assets/features/desktop/embed.svg';
 import domainIcon from '../assets/features/desktop/custom-domain.svg';
 import exposureIcon from '../assets/features/desktop/boost-exposure.svg';
 import dragDropIcon from '../assets/features/desktop/drag-drop.svg';
-import BetaInvite from '../components/BetaInvite';
 
 const Features = ({ setOnFeatures }) => {
   useEffect(() => {
-    // set to true on mount to change header button
+    // set to true on mount to change Header button specific to Features page
     setOnFeatures(true);
 
-    // set back to false on unmount to change back to original header button
+    // set back to false on unmount to change back to original Header button
     return () => {
       setOnFeatures(false);
     };
@@ -24,23 +27,13 @@ const Features = ({ setOnFeatures }) => {
 
   return (
     <main>
-      <HeroSection>
-        <HeroText>
-          <div className="hero-border"></div>
-          <div className="mobile-hero-border"></div>
-          <div className="text-container">
-            <h1>FEATURES</h1>
-            <p>
-              We make sure all of our features are designed to be loved by every
-              aspiring and even professional photograpers who wanted to share
-              their stories.
-            </p>
-          </div>
-        </HeroText>
-        <HeroImage>
-          <figure></figure>
-        </HeroImage>
-      </HeroSection>
+      <HeroSection
+        title="FEATURES"
+        description="We make sure all of our features are designed to be loved by every aspiring and even professional photograpers who wanted to share their stories."
+        heroImage={heroImage}
+        tabletHeroImage={tabletHeroImage}
+        mobileHeroImage={mobileHeroImage}
+      />
       <FeaturesSection>
         <div className="features-container">
           <article>
@@ -98,88 +91,6 @@ const Features = ({ setOnFeatures }) => {
   );
 };
 
-const HeroSection = styled.section`
-  display: flex;
-  height: 49rem;
-  @media (max-width: 600px) {
-    flex-direction: column-reverse;
-    height: 60rem;
-  }
-`;
-
-const HeroText = styled.article`
-  background: #000000;
-  color: #ffffff;
-  flex: 1 1 61rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  @media (max-width: 600px) {
-    flex: 1 1 50%;
-  }
-  @media (max-width: 500px) {
-    .text-container {
-      padding: 0 1rem;
-      height: auto;
-      margin: 0;
-      h1 {
-        font-size: 3.2rem;
-        line-height: 4rem;
-        letter-spacing: 3.3px;
-      }
-    }
-  }
-  @media (max-width: 450px) {
-    .hero-border{ 
-      display: none;
-    }
-    flex: 1 1 45%;
-  }
-  @media (max-width: 375px) {
-    .mobile-hero-border {
-      display: block;
-    }
-  }
-  .hero-border {
-    height: 14.4rem;
-  }
-  .text-container {
-    min-width: 37.5rem;
-    height: 15rem;
-    margin: 5rem;
-    h1 {
-      margin-bottom: 2rem;
-    }
-    p {
-      margin-bottom: 4.2rem;
-      opacity: 0.6;
-    }
-  }
-`;
-
-const HeroImage = styled.article`
-  flex: 1 1 83rem;
-  @media (max-width: 600px) {
-    flex: 1 1 49%;
-  }
-  figure {
-    width: 100%;
-    height: 100%;
-    background: url(${heroImage}) no-repeat;
-    background-size: cover;
-    background-position: center;
-    @media (max-width: 768px) {
-      background: url(${tabletHeroImage}) no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-    @media (max-width: 600px) {
-      background: url(${mobileHeroImage}) no-repeat;
-    }
-  }
-`;
-
 const FeaturesSection = styled.section`
   max-width: 112rem;
   height: auto;
@@ -195,7 +106,7 @@ const FeaturesSection = styled.section`
     grid-row-gap: 5rem;
     grid-column-gap: 1rem;
     @media (max-width: 600px) {
-      padding: 0 3rem;
+      padding: 0 2rem;
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: auto;
     }
