@@ -5,9 +5,9 @@ import StoryData from '../components/StoryData';
 import StoryCard from '../components/StoryCard';
 
 // images and icons
-import createAndShare from '../assets/home/desktop/create-and-share.jpg';
-import tabletCreateAndShare from '../assets/home/tablet/create-and-share.jpg';
-import mobileCreateAndShare from '../assets/home/mobile/create-and-share.jpg';
+import createAndShare from '../assets/home/desktop/hero.jpg';
+import tabletCreateAndShare from '../assets/home/desktop/hero.jpg';
+import mobileCreateAndShare from '../assets/home/desktop/hero.jpg';
 import beautifulStories from '../assets/home/desktop/beautiful-stories.jpg';
 import tabletBeautifulStories from '../assets/home/tablet/beautiful-stories.jpg';
 import mobileBeautifulStories from '../assets/home/mobile/beautiful-stories.jpg';

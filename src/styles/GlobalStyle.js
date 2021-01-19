@@ -127,6 +127,7 @@ const GlobalStyle = createGlobalStyle`
             letter-spacing: 3.3px;
         }
     }
+
 `;
 
 export default GlobalStyle;
