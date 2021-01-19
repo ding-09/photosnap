@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import RectangleButton from '../styles/RectangleButton';
 
 const MobileMenu = ({ setDisplayMenu }) => {
+  // handle menu on link clicks
   const closeMenu = () => {
     setDisplayMenu(false);
   };
@@ -15,19 +16,19 @@ const MobileMenu = ({ setDisplayMenu }) => {
           <nav>
             <ul>
               <li>
-                <Link to="/stories" onClick={closeMenu}>
+                <NavLink to="/stories" activeClassName="selected" onClick={closeMenu}>
                   STORIES
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/features" onClick={closeMenu}>
+                <NavLink to="/features" activeClassName="selected" onClick={closeMenu}>
                   FEATURES
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/pricing" onClick={closeMenu}>
+                <NavLink to="/pricing" activeClassName="selected" onClick={closeMenu}>
                   PRICING
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </nav>
@@ -49,7 +50,6 @@ const MenuBG = styled.div`
 
 const Menu = styled.section`
   background: #ffffff;
-  height: auto;
   .menu-container {
     padding-top: 3.2rem;
     padding-bottom: 2rem;

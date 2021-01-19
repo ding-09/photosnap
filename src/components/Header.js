@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import RectangleButton from '../styles/RectangleButton';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
+// logo and icons
 import logo from '../assets/shared/desktop/logo.svg';
 import menuIcon from '../assets/shared/mobile/menu.svg';
 import exitIcon from '../assets/shared/mobile/close.svg';
 import MobileMenu from './MobileMenu';
 
 const Header = ({ onFeatures }) => {
+  // dynamically change Header button title depending on prop value
   let title = onFeatures ? 'SIGN UP' : 'GET AN INVITE';
+
+  // state for toggling mobile menu
   const [displayMenu, setDisplayMenu] = useState(false);
+
   return (
     <header>
       <HeaderContainer>
@@ -21,13 +27,19 @@ const Header = ({ onFeatures }) => {
         <Nav>
           <ul>
             <li>
-              <Link to="/stories">STORIES</Link>
+              <NavLink to="/stories" activeClassName="selected">
+                STORIES
+              </NavLink>
             </li>
             <li>
-              <Link to="/features">FEATURES</Link>
+              <NavLink to="/features" activeClassName="selected">
+                FEATURES
+              </NavLink>
             </li>
             <li>
-              <Link to="/pricing">PRICING</Link>
+              <NavLink to="/pricing" activeClassName="selected">
+                PRICING
+              </NavLink>
             </li>
           </ul>
         </Nav>
@@ -80,6 +92,12 @@ const MobileHeaderContainer = styled(HeaderContainer)`
   }
   @media (max-width: 700px) {
     display: flex;
+    figure {
+      padding-top: 5px;
+    }
+  }
+  @media (max-width: 375px) {
+    padding: 0 1.8rem;
   }
 `;
 

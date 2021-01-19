@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import GlobalStyle from './styles/GlobalStyle';
 
 
-// use React router
+// React router 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 
-// import all the pages and necessary components
+// all the pages and necessary components
 import Home from './pages/Home';
 import Stories from './pages/Stories';
 import Features from './pages/Features';
@@ -15,7 +15,10 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 const App = () => {
+  // state to indicate whether Feature page is active 
+  // to trigger a different button on the Header 
   const [onFeatures, setOnFeatures] = useState(false);
+
   return (
     <BrowserRouter>
       <GlobalStyle />

@@ -8,7 +8,6 @@ import { createGlobalStyle } from 'styled-components';
 
 // Global Styles
 const GlobalStyle = createGlobalStyle`
-    -webkit-font-smoothing: antialiased;
     * {
         margin: 0;
         padding: 0;
@@ -24,8 +23,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'DM Sans', sans-serif;
     }
-    html, body{ height: 100%;}
-
+    html, body { height: 100%;}
     header {
         @media (max-width: 768px){
             position: sticky;
@@ -37,7 +35,6 @@ const GlobalStyle = createGlobalStyle`
     footer {
         background: #000000;
         padding: 6.4rem 3.9rem;
-        height: auto;
         @media (max-width: 700px) {
             padding: 0;
         }
@@ -85,21 +82,13 @@ const GlobalStyle = createGlobalStyle`
     button {
         cursor: pointer;
     }
-    .theme-border {
-        width: 100% ;
-        height: 6px;
-        background: linear-gradient(
-            26.57deg,
-            #ffc593 0%,
-            #bc7198 43.29%,
-            #5a77ff 83.33%
-        );
-        position: absolute;
-        display: none;
+    .selected {
+        opacity: 0.5;
+        pointer-events: none;
     }
     .hero-border {
         width: 6px;
-        height: 31rem;
+        height: 45%;
         left: 0;
         background: linear-gradient(
             26.57deg,
@@ -122,6 +111,13 @@ const GlobalStyle = createGlobalStyle`
         top: 0;
         left: 3.5rem;
         display: none;
+    }
+    @media (max-width: 500px) {
+        h1, .heading {
+            font-size: 3.2rem;
+            line-height: 4rem;
+            letter-spacing: 3.3px;
+        }
     }
 `;
 

@@ -4,7 +4,7 @@ import ArrowButton from '../styles/ArrowButton';
 import StoryData from '../components/StoryData';
 import StoryCard from '../components/StoryCard';
 
-// images and icons 
+// images and icons
 import createAndShare from '../assets/home/desktop/create-and-share.jpg';
 import tabletCreateAndShare from '../assets/home/tablet/create-and-share.jpg';
 import mobileCreateAndShare from '../assets/home/mobile/create-and-share.jpg';
@@ -21,7 +21,8 @@ import embedIcon from '../assets/features/desktop/embed.svg';
 const Home = () => {
   return (
     <main>
-      <Section height="65rem" className="create-and-share">
+      {/* Main 3 Sections */}
+      <Section height="65rem">
         <TextBox background="#000000">
           <div className="hero-border"></div>
           <div className="mobile-hero-border"></div>
@@ -32,7 +33,7 @@ const Home = () => {
               We make it easy to share photos, tell stories and connect with
               others.
             </p>
-            <ArrowButton title="GET AN INVITE" color="#fff" />
+            <ArrowButton title="GET AN INVITE" color="#ffffff" />
           </div>
         </TextBox>
         <ImageBox url={createAndShare}>
@@ -50,7 +51,7 @@ const Home = () => {
               Easily add photos, text, embed maps and media from other networks.
               Then share your story with everyone.
             </p>
-            <ArrowButton title="VIEW THE STORIES" color="#000" />
+            <ArrowButton title="VIEW THE STORIES" color="#000000" />
           </div>
         </TextBox>
         <ImageBox url={beautifulStories}>
@@ -66,19 +67,21 @@ const Home = () => {
               audience. Our tool is designed for photographers of all levels,
               brands, businesses you name it.
             </p>
-            <ArrowButton title="VIEW THE STORIES" color="#000" />
+            <ArrowButton title="VIEW THE STORIES" color="#000000" />
           </div>
         </TextBox>
         <ImageBox url={designedFor}>
           <figure id="design"></figure>
         </ImageBox>
       </Section>
+      {/* Story Card Section */}
       <StoryRow>
         {/* use slice up to 4 before mapping */}
         {StoryData.slice(0, 4).map((data, index) => (
           <StoryCard data={data} key={index} onHome={true} />
         ))}
       </StoryRow>
+      {/* Additional Feature Info */}
       <AdditionalInfo>
         <div className="additionalInfo-container">
           <article>
@@ -119,7 +122,7 @@ const Section = styled.section`
   }
   @media (max-width: 600px) {
     flex-direction: column-reverse;
-    height: 70rem;
+    min-height: 70rem;
     #middle-textBox {
       order: 0;
     }
@@ -131,48 +134,57 @@ const TextBox = styled.div`
   color: ${(props) => props.background && '#ffffff'};
   flex: 1 1 61rem;
   display: flex;
-  justify-content: center;
   align-items: center;
   position: relative;
   .text-container {
     min-width: 37.5rem;
     width: 40rem;
-    height: 30rem;
-    margin: 5rem;
+    height: 30.4rem;
+    margin: 0 10rem;
     h1,
     h2 {
       margin-bottom: 2rem;
     }
     p {
-      margin-bottom: 4.2rem;
+      margin-bottom: 4.5rem;
       opacity: 0.6;
     }
   }
-  @media (max-width: 600px) {
-    flex: 1 1 60%;
+  @media (max-width: 768px) {
+    .text-container {
+      margin: 0 5rem;
+    }
   }
-  @media (max-width: 500px) {
-    flex: 1 1 57%;
+  @media (max-width: 600px) {
+    flex: 1 1 55%;
+    .hero-border {
+      height: 65%;
+    }
+    .text-container {
+      margin: 0 8rem;
+      height: auto;
+      h1,
+      h2 {
+        margin-bottom: 1.5rem;
+      }
+      p {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  @media (max-width: 560px) {
     .hero-border {
       display: none;
     }
     .text-container {
-      padding: 0 3.5rem;
-      height: auto;
-      h1, .heading {
-        font-size: 3.2rem;
-        line-height: 4rem;
-        letter-spacing: 3.3px;
-      }
-      h1, h2 {
-        margin-bottom: 1.6rem;
-      }
-      p {
-        margin-bottom: 2.3rem;
-      }
+      padding: 0 2.2rem;
     }
   }
+  @media (max-width: 500px) {
+    justify-content: center;
+  }
   @media (max-width: 375px) {
+    flex: 1 1 60%;
     .mobile-hero-border {
       display: block;
     }
@@ -227,13 +239,12 @@ const ImageBox = styled.div`
     }
   }
   @media (max-width: 500px) {
-    flex: 1 1 40%;
+    flex: 1 1 43%;
   }
 `;
 
 const StoryRow = styled.section`
   display: flex;
-  height: auto;
   @media (max-width: 768px) {
     flex-wrap: wrap;
   }
@@ -268,6 +279,7 @@ const AdditionalInfo = styled.section`
       width: 80%;
       height: auto;
       margin: 12rem auto;
+      padding: 0 7rem;
       article {
         flex-basis: 21rem;
       }
@@ -280,6 +292,7 @@ const AdditionalInfo = styled.section`
     }
     @media (max-width: 500px) {
       margin: 8rem auto;
+      padding: 0 2rem;
     }
   }
 `;
