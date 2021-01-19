@@ -83,8 +83,16 @@ const GlobalStyle = createGlobalStyle`
         cursor: pointer;
     }
     .selected {
-        opacity: 0.5;
+        opacity: 0.3;
         pointer-events: none;
+    }
+    .theme-border {
+        width: 100%;
+        height: 6px;
+        position: absolute;
+        background: linear-gradient(26.57deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
+        bottom: 0;
+        display: none;
     }
     .hero-border {
         width: 6px;

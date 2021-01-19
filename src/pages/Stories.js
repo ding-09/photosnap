@@ -1,18 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import heroImage from '../assets/stories/desktop/moon-of-appalacia.jpg';
-import tabletHeroImage from '../assets/stories/tablet/moon-of-appalacia.jpg';
-import mobileHeroImage from '../assets/stories/mobile/moon-of-appalacia.jpg';
 import ArrowButton from '../styles/ArrowButton';
 import StoryData from '../components/StoryData';
 import StoryCard from '../components/StoryCard';
+
+// images
+import heroImage from '../assets/stories/desktop/moon-of-appalacia.jpg';
+import tabletHeroImage from '../assets/stories/tablet/moon-of-appalacia.jpg';
+import mobileHeroImage from '../assets/stories/mobile/moon-of-appalacia.jpg';
 
 const Stories = () => {
   return (
     <main>
       <HeroSection>
-        <section className="mobile-hero-image">
-        </section>
+        <section className="mobile-hero-image"></section>
         <section className="hero-text">
           <h4>LAST MONTH’S FEATURED STORY</h4>
           <h1>HAZY FULL MOON OF APPALACHIA</h1>
@@ -47,35 +48,6 @@ const HeroSection = styled.section`
   position: relative;
   display: flex;
   align-items: center;
-  @media (max-width: 768px) {
-    background: url(${tabletHeroImage}) no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-left: 4rem;
-  }
-  @media (max-width: 450px) {
-    background: #000000;
-    min-height: 50rem;
-    padding: 0;
-    flex-direction: column;
-    .mobile-hero-image {
-      width: 100%;
-      min-height: 32rem;
-      background: url(${mobileHeroImage}) no-repeat;
-      background-position: center;
-      background-size: cover;
-    }
-    .hero-text {
-      min-width: 31rem;
-      margin: 0 auto;
-      padding: 4rem 3rem;
-      h1 {
-        font-size: 3.2rem;
-        line-height: 4rem;
-        letter-spacing: 3.3px;
-      }
-    }
-  }
   .hero-text {
     width: 37.5rem;
     min-height: 40.6rem;
@@ -94,6 +66,31 @@ const HeroSection = styled.section`
     #summary {
       margin: 2.4rem 0;
       opacity: 0.6;
+    }
+  }
+  @media (max-width: 768px) {
+    background: url(${tabletHeroImage}) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-left: 4rem;
+  }
+  @media (max-width: 500px) {
+    background: #000000;
+    min-height: 50rem;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    .mobile-hero-image {
+      width: 100%;
+      min-height: 32rem;
+      background: url(${mobileHeroImage}) no-repeat;
+      background-position: 70%;
+      background-size: cover;
+    }
+    .hero-text {
+      min-width: 31rem;
+      margin: 0 auto;
+      padding: 4rem 3rem;
     }
   }
 `;

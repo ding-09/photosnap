@@ -30,22 +30,6 @@ const Card = styled.article`
   cursor: pointer;
   overflow-x: hidden;
   transition: 0.25s;
-  @media (max-width: 375px) {
-    flex: 1 1 37.5rem;
-    height: 37.5rem;
-    background: url(${(props) => props.mobileImg && `${props.mobileImg}`})
-      no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  @media (min-width: 769px) {
-    &:hover {
-      transform: translateY(-2.4rem);
-      .theme-border {
-        display: block;
-      }
-    }
-  }
   .card-container {
     width: 100%;
     height: 70%;
@@ -65,7 +49,7 @@ const Card = styled.article`
       margin-bottom: 2rem;
       p {
         padding-top: 4px;
-        padding-bottom: 1.5rem;
+        padding-bottom: 1.6rem;
         font-size: 1.3rem;
         line-height: 1.7rem;
       }
@@ -73,6 +57,22 @@ const Card = styled.article`
         padding-bottom: 4px;
       }
     }
+  }
+  @media (min-width: 769px) {
+    &:hover {
+      transform: translateY(-2.4rem);
+      .theme-border {
+        display: block;
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    flex: 1 1 37.5rem;
+    height: 37.5rem;
+    background: url(${(props) => props.mobileImg && `${props.mobileImg}`})
+      no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 `;
 
