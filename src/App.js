@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import GlobalStyle from './styles/GlobalStyle';
 
 
@@ -6,7 +6,7 @@ import GlobalStyle from './styles/GlobalStyle';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 
-// all the pages and necessary components
+// import main components
 import Home from './pages/Home';
 import Stories from './pages/Stories';
 import Features from './pages/Features';

@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import BetaInvite from '../components/BetaInvite';
 import HeroSection from '../components/HeroSection';
@@ -14,17 +13,7 @@ import domainIcon from '../assets/features/desktop/custom-domain.svg';
 import exposureIcon from '../assets/features/desktop/boost-exposure.svg';
 import dragDropIcon from '../assets/features/desktop/drag-drop.svg';
 
-const Features = ({ setOnFeatures }) => {
-  useEffect(() => {
-    // set to true on mount to change Header button specific to Features page
-    setOnFeatures(true);
-
-    // set back to false on unmount to change back to original Header button
-    return () => {
-      setOnFeatures(false);
-    };
-  }, [setOnFeatures]);
-
+const Features = () => {
   return (
     <main>
       <HeroSection
