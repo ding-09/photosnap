@@ -3,6 +3,9 @@
 
 A marketing website designed by [Frontend Mentor](https://www.frontendmentor.io/home) and built by me. 
 
+![Preview of Photosnap Project](/public/preview.png)
+
+
 
 ## Links
 
