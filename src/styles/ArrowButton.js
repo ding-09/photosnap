@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import React from 'react';
 
 // Default style for arrow buttons 
 

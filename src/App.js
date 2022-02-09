@@ -1,9 +1,7 @@
-import { useState } from 'react';
-import GlobalStyle from './styles/GlobalStyle';
+import GlobalStyle from './GlobalStyle';
 
-
-// React router 
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+// React router
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 
 // import main components
@@ -16,26 +14,29 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <GlobalStyle />
-      <ScrollToTop />
+
+      {/* ScrollToTop component allows page to scroll to top on page change in mobile view */}
+      <ScrollToTop /> 
+      
       <Header />
       <Switch>
-        <Route exact path="/">
+        <Route exact path='/'>
           <Home />
         </Route>
-        <Route exact path="/stories">
+        <Route exact path='/stories'>
           <Stories />
         </Route>
-        <Route exact path="/features">
+        <Route exact path='/features'>
           <Features />
         </Route>
-        <Route exact path="/pricing">
+        <Route exact path='/pricing'>
           <Pricing />
         </Route>
       </Switch>
       <Footer />
-    </BrowserRouter>
+    </Router>
   );
 };
 
