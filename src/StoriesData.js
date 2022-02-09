@@ -1,37 +1,37 @@
-import mountains from '../assets/stories/desktop/mountains.jpg';
-import mobileMountains from '../assets/stories/mobile/mountains.jpg';
-import cityscapes from '../assets/stories/desktop/cityscapes.jpg';
-import mobileCityscapes from '../assets/stories/mobile/cityscapes.jpg';
-import voyage from '../assets/stories/desktop/18-days-voyage.jpg';
-import mobileVoyage from '../assets/stories/mobile/18-days-voyage.jpg';
-import architecturals from '../assets/stories/desktop/architecturals.jpg';
-import mobileArchitecturals from '../assets/stories/mobile/architecturals.jpg';
-import worldTour from '../assets/stories/desktop/world-tour.jpg';
-import mobileWorldTour from '../assets/stories/mobile/world-tour.jpg';
-import unforeseenCorners from '../assets/stories/desktop/unforeseen-corners.jpg';
-import mobileUnforeseenCorners from '../assets/stories/mobile/unforeseen-corners.jpg';
-import kingOnAfrica from '../assets/stories/desktop/king-on-africa.jpg';
-import mobileKingOnAfrica from '../assets/stories/mobile/king-on-africa.jpg';
-import tripToNowhere from '../assets/stories/desktop/trip-to-nowhere.jpg';
-import mobileTripToNowhere from '../assets/stories/mobile/trip-to-nowhere.jpg';
-import rageSea from '../assets/stories/desktop/rage-of-the-sea.jpg';
-import mobileRageSea from '../assets/stories/mobile/rage-of-the-sea.jpg';
-import horses from '../assets/stories/desktop/running-free.jpg';
-import mobileHorses from '../assets/stories/mobile/running-free.jpg';
-import waves from '../assets/stories/desktop/behind-the-waves.jpg';
-import mobileWaves from '../assets/stories/mobile/behind-the-waves.jpg';
-import calmWaters from '../assets/stories/desktop/calm-waters.jpg';
-import mobileCalmWaters from '../assets/stories/mobile/calm-waters.jpg';
-import milkyWay from '../assets/stories/desktop/milky-way.jpg';
-import mobileMilkyWay from '../assets/stories/mobile/milky-way.jpg';
-import darkForest from '../assets/stories/desktop/dark-forest.jpg';
-import mobileDarkForest from '../assets/stories/mobile/dark-forest.jpg';
-import somwarpet from '../assets/stories/desktop/somwarpet.jpg';
-import mobileSomwarpet from '../assets/stories/mobile/somwarpet.jpg';
-import dreamland from '../assets/stories/desktop/land-of-dreams.jpg';
-import mobileDreamland from '../assets/stories/mobile/land-of-dreams.jpg';
+import mountains from './assets/stories/desktop/mountains.jpg';
+import mobileMountains from './assets/stories/mobile/mountains.jpg';
+import cityscapes from './assets/stories/desktop/cityscapes.jpg';
+import mobileCityscapes from './assets/stories/mobile/cityscapes.jpg';
+import voyage from './assets/stories/desktop/18-days-voyage.jpg';
+import mobileVoyage from './assets/stories/mobile/18-days-voyage.jpg';
+import architecturals from './assets/stories/desktop/architecturals.jpg';
+import mobileArchitecturals from './assets/stories/mobile/architecturals.jpg';
+import worldTour from './assets/stories/desktop/world-tour.jpg';
+import mobileWorldTour from './assets/stories/mobile/world-tour.jpg';
+import unforeseenCorners from './assets/stories/desktop/unforeseen-corners.jpg';
+import mobileUnforeseenCorners from './assets/stories/mobile/unforeseen-corners.jpg';
+import kingOnAfrica from './assets/stories/desktop/king-on-africa.jpg';
+import mobileKingOnAfrica from './assets/stories/mobile/king-on-africa.jpg';
+import tripToNowhere from './assets/stories/desktop/trip-to-nowhere.jpg';
+import mobileTripToNowhere from './assets/stories/mobile/trip-to-nowhere.jpg';
+import rageSea from './assets/stories/desktop/rage-of-the-sea.jpg';
+import mobileRageSea from './assets/stories/mobile/rage-of-the-sea.jpg';
+import horses from './assets/stories/desktop/running-free.jpg';
+import mobileHorses from './assets/stories/mobile/running-free.jpg';
+import waves from './assets/stories/desktop/behind-the-waves.jpg';
+import mobileWaves from './assets/stories/mobile/behind-the-waves.jpg';
+import calmWaters from './assets/stories/desktop/calm-waters.jpg';
+import mobileCalmWaters from './assets/stories/mobile/calm-waters.jpg';
+import milkyWay from './assets/stories/desktop/milky-way.jpg';
+import mobileMilkyWay from './assets/stories/mobile/milky-way.jpg';
+import darkForest from './assets/stories/desktop/dark-forest.jpg';
+import mobileDarkForest from './assets/stories/mobile/dark-forest.jpg';
+import somwarpet from './assets/stories/desktop/somwarpet.jpg';
+import mobileSomwarpet from './assets/stories/mobile/somwarpet.jpg';
+import dreamland from './assets/stories/desktop/land-of-dreams.jpg';
+import mobileDreamland from './assets/stories/mobile/land-of-dreams.jpg';
 
-const StoryData = [
+const StoriesData = [
   {
     img: mountains,
     mobileImg: mobileMountains,
@@ -146,4 +146,4 @@ const StoryData = [
   },
 ];
 
-export default StoryData;
+export default StoriesData;

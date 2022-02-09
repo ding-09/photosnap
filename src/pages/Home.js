@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import ArrowButton from '../styles/ArrowButton';
-import StoryData from '../components/StoryData';
 import StoryCard from '../components/StoryCard';
+import StoriesData from '../StoriesData'
 
 // images and icons
 import createAndShare from '../assets/home/desktop/hero.jpg';
@@ -76,7 +76,7 @@ const Home = () => {
       {/* Story Card Section */}
       <StoryRow>
         {/* use slice up to 4 before mapping */}
-        {StoryData.slice(0, 4).map((data, index) => (
+        {StoriesData.slice(0, 4).map((data, index) => (
           <StoryCard data={data} key={index} onHome={true} />
         ))}
       </StoryRow>

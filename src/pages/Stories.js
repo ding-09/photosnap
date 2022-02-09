@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 import ArrowButton from '../styles/ArrowButton';
-import StoryData from '../components/StoryData';
+import StoriesData from '../StoriesData';
 import StoryCard from '../components/StoryCard';
 
 // images
@@ -31,7 +30,7 @@ const Stories = () => {
         </section>
       </HeroSection>
       <StoryGrid>
-        {StoryData.map((data, index) => (
+        {StoriesData.map((data, index) => (
           <StoryCard data={data} key={index} />
         ))}
       </StoryGrid>
