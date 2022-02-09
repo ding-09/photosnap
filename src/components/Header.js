@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import RectangleButton from '../styles/RectangleButton';
 import { Link, NavLink } from 'react-router-dom';

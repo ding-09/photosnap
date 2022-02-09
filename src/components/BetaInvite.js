@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import ArrowButton from '../styles/ArrowButton';
 import betaBG from '../assets/shared/desktop/bg-beta.jpg';
