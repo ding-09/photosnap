@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import ArrowButton from '../styles/ArrowButton';
 import StoryCard from '../components/StoryCard';
-import StoriesData from '../StoriesData'
+import StoriesData from '../StoriesData';
 
-// images and icons
+// images and icons for Home page
 import createAndShare from '../assets/home/desktop/hero.jpg';
 import tabletCreateAndShare from '../assets/home/desktop/hero.jpg';
 import mobileCreateAndShare from '../assets/home/desktop/hero.jpg';
@@ -20,29 +20,30 @@ import embedIcon from '../assets/features/desktop/embed.svg';
 const Home = () => {
   return (
     <main>
-      {/* Main 3 Sections */}
-      <Section height="65rem">
-        <TextBox background="#000000">
-          <div className="hero-border"></div>
-          <div className="mobile-hero-border"></div>
-          <div className="text-container">
+      {/* Section 1 */}
+      <Section height='65rem'>
+        <TextBox background='#000000'>
+          <div className='hero-border'></div>
+          <div className='mobile-hero-border'></div>
+          <div className='text-container'>
             <h1>CREATE AND SHARE YOUR PHOTO STORIES.</h1>
             <p>
               Photosnap is a platform for photographers and visual storytellers.
               We make it easy to share photos, tell stories and connect with
               others.
             </p>
-            <ArrowButton title="GET AN INVITE" color="#ffffff" />
+            <ArrowButton title='GET AN INVITE' color='#ffffff' />
           </div>
         </TextBox>
         <ImageBox url={createAndShare}>
-          <figure id="create"></figure>
+          <figure id='create'></figure>
         </ImageBox>
       </Section>
+      {/* Section 2 */}
       <Section>
-        <TextBox id="middle-textBox">
-          <div className="text-container">
-            <h2 className="heading">
+        <TextBox id='middle-textBox'>
+          <div className='text-container'>
+            <h2 className='heading'>
               BEAUTIFUL STORIES <br></br>EVERY TIME
             </h2>
             <p>
@@ -50,49 +51,53 @@ const Home = () => {
               Easily add photos, text, embed maps and media from other networks.
               Then share your story with everyone.
             </p>
-            <ArrowButton title="VIEW THE STORIES" color="#000000" />
+            <ArrowButton title='VIEW THE STORIES' color='#000000' />
           </div>
         </TextBox>
         <ImageBox url={beautifulStories}>
-          <figure id="stories"></figure>
+          <figure id='stories'></figure>
         </ImageBox>
       </Section>
+      {/* Section 3 */}
       <Section>
         <TextBox>
-          <div className="text-container">
-            <h2 className="heading">DESIGNED FOR EVERYONE</h2>
+          <div className='text-container'>
+            <h2 className='heading'>DESIGNED FOR EVERYONE</h2>
             <p>
               Photosnap can help you create stories that resonate with your
               audience. Our tool is designed for photographers of all levels,
               brands, businesses you name it.
             </p>
-            <ArrowButton title="VIEW THE STORIES" color="#000000" />
+            <ArrowButton title='VIEW THE STORIES' color='#000000' />
           </div>
         </TextBox>
         <ImageBox url={designedFor}>
-          <figure id="design"></figure>
+          <figure id='design'></figure>
         </ImageBox>
       </Section>
-      {/* Story Card Section */}
+
+
+      {/* Story Cards Section */}
       <StoryRow>
         {/* use slice up to 4 before mapping */}
         {StoriesData.slice(0, 4).map((data, index) => (
           <StoryCard data={data} key={index} onHome={true} />
         ))}
       </StoryRow>
+      
       {/* Additional Feature Info */}
       <AdditionalInfo>
-        <div className="additionalInfo-container">
+        <div className='additionalInfo-container'>
           <article>
-            <img src={responsiveIcon} alt="icon" />
+            <img src={responsiveIcon} alt='icon' />
             <h3>100% Responsive</h3>
             <p>
               No matter which the device you’re on, our site is fully responsive
               and stories look beautiful on any screen.
             </p>
           </article>
-          <article className="middle-feature">
-            <img src={noLimitIcon} alt="icon" />
+          <article className='middle-feature'>
+            <img src={noLimitIcon} alt='icon' />
             <h3>No Photo Upload Limit</h3>
             <p>
               Our tool has no limits on uploads or bandwidth. Freely upload in
@@ -100,7 +105,7 @@ const Home = () => {
             </p>
           </article>
           <article>
-            <img src={embedIcon} alt="icon" />
+            <img src={embedIcon} alt='icon' />
             <h3>Available to Embed</h3>
             <p>
               Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube
