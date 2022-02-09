@@ -15,15 +15,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 const App = () => {
-  // state to indicate whether Feature page is active 
-  // to trigger a different button on the Header 
-  const [onFeatures, setOnFeatures] = useState(false);
-
   return (
     <BrowserRouter>
       <GlobalStyle />
       <ScrollToTop />
-      <Header onFeatures={onFeatures} />
+      <Header />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -32,7 +28,7 @@ const App = () => {
           <Stories />
         </Route>
         <Route exact path="/features">
-          <Features setOnFeatures={setOnFeatures} />
+          <Features />
         </Route>
         <Route exact path="/pricing">
           <Pricing />
