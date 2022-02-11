@@ -11,14 +11,30 @@ const GlobalStyle = createGlobalStyle`
     }
     html {
         font-size: 62.5%;
+        min-height: 100%;
     }
     body {
         font-family: 'DM Sans', sans-serif;
         font-size: 1.5rem;
         line-height: 2.5rem;
+        min-height: 100%;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+    button {
+        border: none;
+    }
+    ul {
+        display: flex;
+    }
+    li {
+        list-style-type: none;
     }
     a {
         text-decoration: none;
+        text-transform: uppercase;
         font-size: 1.2rem;
         font-weight: 700;
         line-height: 1.6rem;
