@@ -1,8 +1,9 @@
 import { NavLink } from 'react-router-dom';
+import {StyledNav} from './Nav.styled'
 
 const index = () => {
   return (
-    <nav>
+    <StyledNav>
       <ul>
         <li className='mobile-only'>
           <NavLink to='/'>Home</NavLink>
@@ -17,7 +18,7 @@ const index = () => {
           <NavLink to='pricing'>Pricing</NavLink>
         </li>
       </ul>
-    </nav>
+    </StyledNav>
   );
 };
 

@@ -2,6 +2,7 @@ import { StyledFooter } from './Footer.styled';
 import { ReactComponent as MainLogo } from '../../assets/shared/desktop/logo.svg';
 import { FbIcon, YtIcon, TwitterIcon, PinIcon, IgIcon } from './SocialIcons';
 import Nav from '../Nav';
+import { ArrowButton } from '../../styles/Buttons'
 
 const index = () => {
   return (
@@ -40,7 +41,8 @@ const index = () => {
       </section>
       <Nav />
       <section className="misc-info">
-
+        <ArrowButton innerText='Get an invite' color='white'/>
+        <p className='copyright'>Copyright 2022. All Rights Reserved</p>
       </section>
     </StyledFooter>
   );

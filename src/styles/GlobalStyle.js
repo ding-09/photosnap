@@ -20,8 +20,7 @@ const GlobalStyle = createGlobalStyle`
         min-height: 100%;
     }
     footer {
-        position: absolute;
-        bottom: 0;
+        margin-top: auto;
     }
     button {
         border: none;
@@ -32,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
     li {
         list-style-type: none;
     }
-    a {
+    a, button {
         text-decoration: none;
         text-transform: uppercase;
         font-size: 1.2rem;
