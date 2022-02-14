@@ -51,7 +51,7 @@ export const StyledFooter = styled.footer`
   }
   .misc-info {
     button {
-      margin-bottom: 3rem;
+      margin: 0 auto 3rem;
     }
     .copyright {
       opacity: 0.5;
