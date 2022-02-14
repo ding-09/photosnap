@@ -1,9 +1,16 @@
-const index = () => {
-    return (
-        <div>
-            hello
-        </div>
-    )
-}
+import Hero from '../Hero';
+import HomeContent from './HomeContent';
 
-export default index
+const index = () => {
+  return (
+    <>
+      <Hero
+        img={HomeContent.heroImg}
+        heroHeading={HomeContent.heroHeading}
+        heroDesc={HomeContent.heroDesc}
+      />
+    </>
+  );
+};
+
+export default index;

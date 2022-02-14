@@ -18,12 +18,14 @@ const App = () => {
         <GlobalStyle />
         <Router>
           <Header />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='stories' element={<Stories />} />
-            <Route path='features' element={<Features />} />
-            <Route path='pricing' element={<Pricing />} />
-          </Routes>
+          <main>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='stories' element={<Stories />} />
+              <Route path='features' element={<Features />} />
+              <Route path='pricing' element={<Pricing />} />
+            </Routes>
+          </main>
           <Footer />
         </Router>
       </ThemeProvider>

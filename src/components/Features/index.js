@@ -1,11 +1,16 @@
-import React from 'react'
+import Hero from '../Hero';
+import FeaturesContent from './FeaturesContent';
 
 const index = () => {
-    return (
-        <div>
-            Features
-        </div>
-    )
-}
+  return (
+    <>
+      <Hero
+        img={FeaturesContent.heroImg}
+        heroHeading={FeaturesContent.heroHeading}
+        heroDesc={FeaturesContent.heroDesc}
+      />
+    </>
+  );
+};
 
-export default index
+export default index;

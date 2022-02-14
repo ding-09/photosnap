@@ -24,6 +24,9 @@ const GlobalStyle = createGlobalStyle`
         flex-direction: column;
         min-height: 100%;
     }
+    main {
+        min-width: 37.5rem;
+    }
     footer {
         margin-top: auto;
     }
@@ -41,6 +44,14 @@ const GlobalStyle = createGlobalStyle`
         text-transform: uppercase;
         font-size: 1.2rem;
         font-weight: 700;
+        line-height: 1.6rem;
+        letter-spacing: 0.2rem;
+    }
+    img {
+        max-width: 100%;
+    }
+    .xsm-heading {
+        font-size: 1.2rem;
         line-height: 1.6rem;
         letter-spacing: 0.2rem;
     }
