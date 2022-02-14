@@ -48,6 +48,7 @@ const GlobalStyle = createGlobalStyle`
         letter-spacing: 0.2rem;
     }
     img {
+        display: block;
         max-width: 100%;
     }
     .xsm-heading {

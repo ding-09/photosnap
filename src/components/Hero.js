@@ -1,4 +1,5 @@
 import { StyledHero } from './Hero.styled';
+import { ArrowButton } from '../styles/Buttons'
 
 const Hero = ({ img, heroHeading, heroDesc }) => {
   return (
@@ -9,8 +10,9 @@ const Hero = ({ img, heroHeading, heroDesc }) => {
       <div className='hero-text'>
         <h1>{heroHeading}</h1>
         <p>{heroDesc}</p>
+        <div className='hero-border'></div>
+        <ArrowButton innerText={'Get an invite'} color='#fff'/>
       </div>
-      <div className='hero-border'>Colorful Border</div>
     </StyledHero>
   );
 };

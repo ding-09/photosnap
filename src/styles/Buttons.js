@@ -3,13 +3,13 @@ import { ReactComponent as ArrowIcon } from '../assets/shared/desktop/arrow.svg'
 
 const StyledArrowButton = styled.button`
   background-color: inherit;
+  color: ${(props) => props.color};
   display: flex;
   justify-content: space-between;
   min-width: 75%;
-  margin: 0 auto;
   svg {
     g {
-      stroke: ${props => props.color};
+      stroke: ${(props) => props.color};
     }
   }
 `;

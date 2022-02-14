@@ -4,11 +4,11 @@ import HomeContent from './HomeContent';
 const index = () => {
   return (
     <>
-      <Hero
-        img={HomeContent.heroImg}
-        heroHeading={HomeContent.heroHeading}
-        heroDesc={HomeContent.heroDesc}
-      />
+        <Hero
+          img={HomeContent.heroImg}
+          heroHeading={HomeContent.heroHeading}
+          heroDesc={HomeContent.heroDesc}
+        />
     </>
   );
 };

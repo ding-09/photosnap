@@ -9,6 +9,7 @@ export const theme = {
         purple: '#bc7198',
         blue: '#ffc593'
     }
+    
 }
 
 
