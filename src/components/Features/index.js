@@ -8,6 +8,7 @@ const index = () => {
         img={FeaturesContent.heroImg}
         heroHeading={FeaturesContent.heroHeading}
         heroDesc={FeaturesContent.heroDesc}
+        hasBorder={true}
       />
     </>
   );

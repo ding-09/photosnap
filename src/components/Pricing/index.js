@@ -8,6 +8,7 @@ const index = () => {
         img={PricingContent.heroImg}
         heroHeading={PricingContent.heroHeading}
         heroDesc={PricingContent.heroDesc}
+        hasBorder={true}
       />
     </>
   );
