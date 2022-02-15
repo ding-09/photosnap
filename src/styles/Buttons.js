@@ -22,3 +22,16 @@ export const ArrowButton = ({ innerText, color }) => {
     </StyledArrowButton>
   );
 };
+
+const StyledRectangleButton = styled.button`
+  background-color: ${(props) => props.backgroundColor};
+  color: ${(props) => (props.backgroundColor === '#000' ? '#fff' : '#000')};
+`;
+
+export const RectangleButton = ({ innerText, backgroundColor = '#000' }) => {
+  return (
+    <StyledRectangleButton backgroundColor={backgroundColor}>
+      {innerText}
+    </StyledRectangleButton>
+  );
+};

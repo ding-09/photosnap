@@ -5,6 +5,7 @@ export const StyledHero = styled.section`
   flex-direction: column;
   .hero-text {
     position: relative;
+    z-index: -1;
     padding: 7rem 3rem;
     text-align: left;
     background-color: #000;

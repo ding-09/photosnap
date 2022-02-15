@@ -1,7 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
-    ul {
-        flex-direction: column;
-    }
-`
+  display: flex;
+  flex-direction: column;
+  ul {
+    flex-direction: column;
+  }
+`;

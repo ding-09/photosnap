@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
         display: flex;
         flex-direction: column;
         min-height: 100%;
+        position: relative;
     }
     main {
         min-width: 37.5rem;

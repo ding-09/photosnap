@@ -1,11 +1,12 @@
 import { NavLink } from 'react-router-dom';
-import {StyledNav} from './Nav.styled'
+import { StyledNav } from './Nav.styled';
+import { RectangleButton } from '../../styles/Buttons';
 
 const index = () => {
   return (
     <StyledNav>
       <ul>
-        <li className='mobile-only'>
+        <li id='footer-only'>
           <NavLink to='/'>Home</NavLink>
         </li>
         <li>
@@ -18,6 +19,7 @@ const index = () => {
           <NavLink to='pricing'>Pricing</NavLink>
         </li>
       </ul>
+      <RectangleButton innerText='Get an invite'/>
     </StyledNav>
   );
 };
