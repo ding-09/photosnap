@@ -32,7 +32,20 @@ const Header = () => {
           <span className={toggleAnimation(2)}></span>
         </div>
         {showMenu && (
-          <div className='nav-modal'>
+          <div
+            className='nav-modal'
+            onClick={(e) => {
+              let tagName = e.target.tagName;
+              if (
+                tagName === 'A' ||
+                tagName === 'BUTTON' ||
+                tagName === 'DIV'
+              ) {
+                setShowMenu(!showMenu);
+                setAnimateOpenMenu(!animateOpenMenu);
+              }
+            }}
+          >
             <Nav />
           </div>
         )}
