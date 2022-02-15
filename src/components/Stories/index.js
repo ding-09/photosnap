@@ -4,16 +4,13 @@ import StoriesContent from './StoriesContent';
 const index = () => {
   return (
     <>
-      <p className='xsm-heading'>Last Month's Featured Story</p>
       <Hero
         img={StoriesContent.heroImg}
         heroHeading={StoriesContent.heroHeading}
         heroDesc={StoriesContent.heroDesc}
+        hasLink={true}
+        linkText='Read the story'
       />
-      <div className="sub-info">
-          <span className="date">March 2nd 2020</span>
-          <span className="author"> by John Appleseed</span>
-      </div>
     </>
   );
 };

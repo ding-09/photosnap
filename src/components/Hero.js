@@ -1,7 +1,7 @@
 import { StyledHero } from './Hero.styled';
-import { ArrowButton } from '../styles/Buttons'
+import { ArrowButton } from '../styles/Buttons';
 
-const Hero = ({ img, heroHeading, heroDesc }) => {
+const Hero = ({ img, heroHeading, heroDesc, hasBorder, hasLink, linkText }) => {
   return (
     <StyledHero>
       <figure>
@@ -10,8 +10,8 @@ const Hero = ({ img, heroHeading, heroDesc }) => {
       <div className='hero-text'>
         <h1>{heroHeading}</h1>
         <p>{heroDesc}</p>
-        <div className='hero-border'></div>
-        <ArrowButton innerText={'Get an invite'} color='#fff'/>
+        {hasBorder && <div className='hero-border'></div>}
+        {hasLink && <ArrowButton innerText={linkText} color='#fff' />}
       </div>
     </StyledHero>
   );
