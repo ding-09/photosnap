@@ -1,4 +1,5 @@
 import Hero from '../Hero';
+import Beta from '../Beta';
 import featuresContent from './featuresContent';
 import FeatureCard from './FeatureCard';
 import { StyledFeatures } from './Features.styled';
@@ -17,6 +18,7 @@ const index = () => {
           <FeatureCard feature={feature} />
         ))}
       </section>
+      <Beta />
     </StyledFeatures>
   );
 };
