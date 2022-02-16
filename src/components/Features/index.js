@@ -1,16 +1,23 @@
 import Hero from '../Hero';
-import FeaturesContent from './FeaturesContent';
+import featuresContent from './featuresContent';
+import FeatureCard from './FeatureCard';
+import { StyledFeatures } from './Features.styled';
 
 const index = () => {
   return (
-    <>
+    <StyledFeatures>
       <Hero
-        img={FeaturesContent.heroImg}
-        heroHeading={FeaturesContent.heroHeading}
-        heroDesc={FeaturesContent.heroDesc}
+        img={featuresContent.heroImg}
+        heroHeading={featuresContent.heroHeading}
+        heroDesc={featuresContent.heroDesc}
         hasBorder={true}
       />
-    </>
+      <section className='features'>
+        {featuresContent.features.map((feature) => (
+          <FeatureCard feature={feature} />
+        ))}
+      </section>
+    </StyledFeatures>
   );
 };
 
