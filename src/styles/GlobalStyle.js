@@ -51,6 +51,7 @@ const GlobalStyle = createGlobalStyle`
     img {
         display: block;
         max-width: 100%;
+        max-height: 100%;
     }
     .xsm-heading {
         font-size: 1.2rem;

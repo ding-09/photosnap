@@ -1,18 +1,22 @@
 import Hero from '../Hero';
-import StoriesContent from './StoriesContent';
+import storiesContent from './storiesContent';
 import { StyledStories } from './Stories.styled';
+import StoryCard from './StoryCard'
 
 const index = () => {
   return (
     <StyledStories>
       <Hero
-        img={StoriesContent.heroImg}
-        heroHeading={StoriesContent.heroHeading}
-        heroDesc={StoriesContent.heroDesc}
+        img={storiesContent.heroImg}
+        heroHeading={storiesContent.heroHeading}
+        heroDesc={storiesContent.heroDesc}
         hasLink={true}
         linkText='Read the story'
         stories={true}
       />
+      <section className="stories">
+        {storiesContent.stories.map(story => (<StoryCard story={story}/>))}
+      </section>
     </StyledStories>
   );
 };
