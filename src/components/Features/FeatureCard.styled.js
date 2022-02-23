@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledFeatureCard = styled.section`
   display: flex;
@@ -10,6 +10,6 @@ export const StyledFeatureCard = styled.section`
     font-size: 1.8rem;
   }
   p {
-    opacity: 0.6;
+    color: rgba(0, 0, 0, 0.5);
   }
 `;
