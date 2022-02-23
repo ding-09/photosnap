@@ -1,7 +1,11 @@
 import Hero from '../Hero';
 import PricingContent from './PricingContent';
+import { useEffect } from 'react';
 
-const index = () => {
+const Pricing = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Hero
@@ -14,5 +18,4 @@ const index = () => {
   );
 };
 
-export default index;
-
+export default Pricing;

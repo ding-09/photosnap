@@ -3,8 +3,12 @@ import Beta from '../Beta';
 import featuresContent from './featuresContent';
 import FeatureCard from './FeatureCard';
 import { StyledFeatures } from './Features.styled';
+import { useEffect } from 'react';
 
-const index = () => {
+const Features = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <StyledFeatures>
       <Hero
@@ -23,4 +27,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Features;

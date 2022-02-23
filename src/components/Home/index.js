@@ -2,8 +2,12 @@ import Hero from '../Hero';
 import homeContent from './homeContent';
 import { StyledHome } from './Home.styled';
 import Details from './Details';
+import { useEffect } from 'react';
 
-const index = () => {
+const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <StyledHome>
       <section className='home-content'>
@@ -23,4 +27,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Home;

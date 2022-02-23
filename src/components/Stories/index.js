@@ -1,9 +1,14 @@
 import Hero from '../Hero';
 import storiesContent from './storiesContent';
 import { StyledStories } from './Stories.styled';
-import StoryCard from './StoryCard'
+import StoryCard from './StoryCard';
+import { useEffect } from 'react';
 
-const index = () => {
+const Stories = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <StyledStories>
       <Hero
@@ -14,11 +19,13 @@ const index = () => {
         linkText='Read the story'
         stories={true}
       />
-      <section className="stories">
-        {storiesContent.stories.map(story => (<StoryCard story={story}/>))}
+      <section className='stories'>
+        {storiesContent.stories.map((story) => (
+          <StoryCard story={story} />
+        ))}
       </section>
     </StyledStories>
   );
 };
 
-export default index;
+export default Stories;
