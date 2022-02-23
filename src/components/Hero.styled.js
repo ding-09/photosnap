@@ -23,18 +23,5 @@ export const StyledHero = styled.section`
     button {
       min-width: 60%;
     }
-    .hero-border {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      max-width: 30%;
-      height: 0.5rem;
-      background: linear-gradient(
-        45deg,
-        ${(props) => props.theme.gradientColors.orange},
-        ${(props) => props.theme.gradientColors.purple},
-        ${(props) => props.theme.gradientColors.blue}
-      );
-    }
   }
 `;

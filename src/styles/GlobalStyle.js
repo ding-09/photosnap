@@ -70,6 +70,19 @@ const GlobalStyle = createGlobalStyle`
         line-height: 4.8rem;
         letter-spacing: 0.4rem;
     }
+    .hero-border {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      max-width: 30%;
+      height: 0.5rem;
+      background: linear-gradient(
+        45deg,
+        ${(props) => props.theme.gradientColors.orange},
+        ${(props) => props.theme.gradientColors.purple},
+        ${(props) => props.theme.gradientColors.blue}
+      );
+    }
 `;
 
 export default GlobalStyle;

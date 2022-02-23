@@ -11,6 +11,7 @@ export const StyledBeta = styled.section`
   justify-content: center;
   gap: 2.4rem;
   padding: 0 3rem;
+  position: relative;
   h2 {
     text-transform: uppercase;
     font-size: 3.2rem;

@@ -7,6 +7,7 @@ const Beta = () => {
     <StyledBeta bgImg={betaBg}>
       <h2>We're in beta. Get your invite today!</h2>
       <ArrowButton innerText='Get an invite' color='#fff' />
+      <div className="hero-border"></div>
     </StyledBeta>
   );
 };
