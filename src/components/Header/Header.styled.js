@@ -4,12 +4,13 @@ export const StyledHeader = styled.header`
   position: sticky;
   top: 0;
   background-color: #fff;
+  z-index: 999;
+
   .mobile-header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2.8rem 2.4rem;
-    z-index: 999;
     .hamburger-menu {
       span {
         display: block;
