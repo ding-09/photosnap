@@ -1,4 +1,4 @@
-import { StyledFooter } from './Footer.styled';
+import { StyledFooter } from './index.styled';
 import { ReactComponent as MainLogo } from '../../assets/shared/desktop/logo.svg';
 import { FbIcon, YtIcon, TwitterIcon, PinIcon, IgIcon } from './SocialIcons';
 import Nav from '../Nav';

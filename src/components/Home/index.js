@@ -1,6 +1,6 @@
 import Hero from '../Hero';
 import homeContent from './homeContent';
-import { StyledHome } from './Home.styled';
+import { StyledHome } from './index.styled';
 import Details from './Details';
 import { useEffect } from 'react';
 

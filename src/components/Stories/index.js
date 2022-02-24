@@ -1,6 +1,6 @@
 import Hero from '../Hero';
 import storiesContent from './storiesContent';
-import { StyledStories } from './Stories.styled';
+import { StyledStories } from './index.styled';
 import StoryCard from './StoryCard';
 import { useEffect } from 'react';
 

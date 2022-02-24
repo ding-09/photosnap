@@ -2,7 +2,7 @@ import Hero from '../Hero';
 import Beta from '../Beta';
 import featuresContent from './featuresContent';
 import FeatureCard from './FeatureCard';
-import { StyledFeatures } from './Features.styled';
+import { StyledFeatures } from './index.styled';
 import { useEffect } from 'react';
 
 const Features = () => {

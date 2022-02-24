@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StyledHeader } from './Header.styled';
+import { StyledHeader } from './index.styled';
 import MainLogo from '../../assets/shared/desktop/logo.svg';
 import Nav from '../Nav';
 

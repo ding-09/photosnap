@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { StyledNav } from './Nav.styled';
+import { StyledNav } from './index.styled';
 import { RectangleButton } from '../../styles/Buttons';
 
 const index = () => {

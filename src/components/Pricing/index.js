@@ -1,7 +1,7 @@
 import Hero from '../Hero';
 import Beta from '../Beta';
 import PricingContent from './PricingContent';
-import { StyledPricing } from './Pricing.styled';
+import { StyledPricing } from './index.styled';
 import { useEffect } from 'react';
 
 const Pricing = () => {
