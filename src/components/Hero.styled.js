@@ -17,7 +17,6 @@ export const StyledHero = styled.section`
       line-height: 4rem;
     }
     p {
-      filter: brightness(0.6);
       margin: 2rem 0;
     }
     button {

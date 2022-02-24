@@ -19,12 +19,12 @@ const Hero = ({
         {stories && <p>Last Month's Featured Story</p>}
         <h1>{heroHeading}</h1>
         {stories && (
-          <p>
+          <p className='light-text'>
             <span>March 2nd 2020</span>
             <span> by John Appleseed</span>
           </p>
         )}
-        <p>{heroDesc}</p>
+        <p className='light-text'>{heroDesc}</p>
         {hasBorder && <div className='hero-border'></div>}
         {hasLink && <ArrowButton innerText={linkText} color='#fff' />}
       </div>

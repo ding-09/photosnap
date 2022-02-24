@@ -9,7 +9,4 @@ export const StyledFeatureCard = styled.section`
     margin: 5rem 0 2rem;
     font-size: 1.8rem;
   }
-  p {
-    color: rgba(0, 0, 0, 0.5);
-  }
 `;

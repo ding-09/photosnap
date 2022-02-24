@@ -9,7 +9,7 @@ const Details = ({ details }) => {
       </figure>
       <div className='text-details'>
         <h2>{heading}</h2>
-        <p>{desc}</p>
+        <p className='light-text'>{desc}</p>
         <ArrowButton innerText='View the stories' />
       </div>
     </section>

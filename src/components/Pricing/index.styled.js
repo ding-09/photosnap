@@ -2,19 +2,20 @@ import styled from 'styled-components';
 
 export const StyledPricing = styled.section`
   .price-card-group {
-    margin: 6.4rem 0;
+    margin: 6.4rem 2.5rem;
   }
   .price-plan-toggle {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    max-width: 80%;
+    max-width: 70%;
     margin: 0 auto;
     .checkbox {
       position: relative;
       width: 6.4rem;
       height: 3.2rem;
       border-radius: 15rem;
+
       input[type='checkbox'] {
         opacity: 0;
         width: 100%;
@@ -54,5 +55,11 @@ export const StyledPricing = styled.section`
         }
       }
     }
+  }
+  .price-cards {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
   }
 `;

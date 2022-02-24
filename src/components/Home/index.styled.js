@@ -16,7 +16,6 @@ export const StyledHome = styled.section`
     }
     p {
       margin: 1.5rem 0 2rem;
-      opacity: 0.6;
     }
   }
 `;

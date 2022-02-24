@@ -53,6 +53,9 @@ const GlobalStyle = createGlobalStyle`
         max-width: 100%;
         max-height: 100%;
     }
+    .light-text {
+        opacity: 0.6;
+    }
     .xsm-heading {
         font-size: 1.2rem;
         line-height: 1.6rem;
@@ -67,6 +70,7 @@ const GlobalStyle = createGlobalStyle`
     }
     .lg-heading {
         font-size: 4rem;
+        font-weight: bold;
         line-height: 4.8rem;
         letter-spacing: 0.4rem;
     }

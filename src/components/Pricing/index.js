@@ -1,8 +1,10 @@
 import Hero from '../Hero';
 import Beta from '../Beta';
+import PriceCard from './PriceCard'
 import PricingContent from './PricingContent';
 import { StyledPricing } from './index.styled';
 import { useEffect } from 'react';
+import { v4 as uuidv4} from 'uuid';
 
 const Pricing = () => {
   useEffect(() => {
@@ -10,8 +12,9 @@ const Pricing = () => {
   }, []);
 
   const handleClick = () => {
-    console.log('Clicked')
   }
+
+  const {pricing} = PricingContent;
 
   return (
     <StyledPricing>
@@ -30,6 +33,9 @@ const Pricing = () => {
           </div>
           <label>Yearly</label>
         </div>
+        <section className="price-cards">
+          {pricing.map(pricePlan => <PriceCard pricePlan={pricePlan} key={uuidv4()}/>)}
+        </section>
       </section>
       <section className='price-table'></section>
       <Beta />

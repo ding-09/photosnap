@@ -9,7 +9,7 @@ const FeatureCard = ({ feature }) => {
         <img src={img} alt={heading} />
       </figure>
       <h2>{heading}</h2>
-      <p>{desc}</p>
+      <p className='light-text'>{desc}</p>
     </StyledFeatureCard>
   );
 };
