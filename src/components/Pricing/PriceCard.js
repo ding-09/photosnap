@@ -4,7 +4,8 @@ import { RectangleButton } from '../../styles/Buttons';
 const PriceCard = ({ pricePlan }) => {
   const { tier, desc, monthlyPrice, annualPrice } = pricePlan;
   return (
-    <StyledPriceCard>
+    <StyledPriceCard proPlan={tier === 'Pro'}>
+      {tier === 'Pro' && <div className='hero-border'></div>}
       <div className='price-plan-desc'>
         <h2>{tier}</h2>
         <p className='light-text'>{desc}</p>
@@ -13,7 +14,10 @@ const PriceCard = ({ pricePlan }) => {
         <span className='lg-heading'>${monthlyPrice.toFixed(2)}</span>
         <span className='light-text'>per month</span>
       </div>
-      <RectangleButton innerText='Pick Plan' />
+      <RectangleButton
+        innerText='Pick Plan'
+        backgroundColor={tier === 'Pro' ? '#fff' : '#000'}
+      />
     </StyledPriceCard>
   );
 };

@@ -6,7 +6,9 @@ export const StyledPriceCard = styled.article`
   align-items: center;
   text-align: center;
   padding: 5rem 2.6rem 4rem;
-  background-color: #f5f5f5;
+  background-color: ${props => props.proPlan ? '#000' : '#f5f5f5'};
+  color: ${props => props.proPlan ? '#fff' : ''};
+  position: relative;
   .price-plan-desc {
     h2 {
       font-size: 2.4rem;
@@ -19,7 +21,10 @@ export const StyledPriceCard = styled.article`
       flex-direction: column;
   }
   button {
-      width: 80%;
+      width: 85%;
       padding: 1.2rem 0;
+  }
+  .hero-border {
+    max-width: 100%;
   }
 `;

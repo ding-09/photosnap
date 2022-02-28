@@ -1,7 +1,6 @@
 import { StyledFeatureCard } from './FeatureCard.styled';
 
 const FeatureCard = ({ feature }) => {
-  console.log(feature);
   const { img, heading, desc } = feature;
   return (
     <StyledFeatureCard>
