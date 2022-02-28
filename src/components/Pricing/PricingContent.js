@@ -28,6 +28,80 @@ const PricingContent = {
       annualPrice: 990,
     },
   ],
+  features: [
+    {
+      heading: 'Unlimited story posting',
+      tiers: {
+        basic: true,
+        pro: true,
+        business: true,
+      },
+    },
+    {
+      heading: 'Unlimited photo upload',
+      tiers: {
+        basic: true,
+        pro: true,
+        business: true,
+      },
+    },
+    {
+      heading: 'Unlimited story posting',
+      tiers: {
+        basic: true,
+        pro: true,
+        business: true,
+      },
+    },
+    {
+      heading: 'Embedding custom content',
+      tiers: {
+        basic: false,
+        pro: true,
+        business: true,
+      },
+    },
+    {
+      heading: 'Customize metadata',
+      tiers: {
+        basic: false,
+        pro: true,
+        business: true,
+      },
+    },
+    {
+      heading: 'Advanced metrics',
+      tiers: {
+        basic: false,
+        pro: false,
+        business: true,
+      },
+    },
+    {
+      heading: 'Photo downloads',
+      tiers: {
+        basic: false,
+        pro: false,
+        business: true,
+      },
+    },
+    {
+      heading: 'Search engine indexing',
+      tiers: {
+        basic: false,
+        pro: false,
+        business: true,
+      },
+    },
+    {
+      heading: 'Custom analytics',
+      tiers: {
+        basic: false,
+        pro: false,
+        business: true,
+      },
+    },
+  ],
 };
 
 export default PricingContent;
