@@ -48,6 +48,9 @@ export const StyledFooter = styled.footer`
         margin-bottom: 1.5rem;
       }
     }
+    button {
+      display: none;
+    }
   }
   .misc-info {
     button {
