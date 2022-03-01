@@ -1,6 +1,7 @@
 import Hero from '../Hero';
 import Beta from '../Beta';
 import PriceCard from './PriceCard'
+import PriceTable from './PriceTable'
 import PricingContent from './PricingContent';
 import { StyledPricing } from './index.styled';
 import { useEffect } from 'react';
@@ -37,7 +38,9 @@ const Pricing = () => {
           {pricing.map(pricePlan => <PriceCard pricePlan={pricePlan} key={uuidv4()}/>)}
         </section>
       </section>
-      <section className='price-table'></section>
+      <section className='price-table'>
+        <PriceTable features={PricingContent.features}/>
+      </section>
       <Beta />
     </StyledPricing>
   );
