@@ -3,9 +3,9 @@ import { ReactComponent as CheckIcon } from '../../assets/pricing/desktop/check.
 const PriceTableRow = ({ feature }) => {
   const { heading, tiers } = feature;
   return (
-    <>
+    <div className='row-container'>
       <tr>
-        <th>{heading}}</th>
+        <th>{heading}</th>
       </tr>
       <tr className='tier-name'>
         <td>Basic</td>
@@ -20,10 +20,10 @@ const PriceTableRow = ({ feature }) => {
             </td>
           ) : (
             <td></td>
-          );
+          )
         })}
       </tr>
-    </>
+    </div>
   );
 };
 

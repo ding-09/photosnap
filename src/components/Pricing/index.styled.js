@@ -63,7 +63,7 @@ export const StyledPricing = styled.section`
     gap: 2.4rem;
   }
   .price-table {
-    padding: 0 2.6rem;
+    padding: 0 2.8rem;
     margin-bottom: 6.4rem;
   }
 `;
