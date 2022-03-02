@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom'
 import { StyledHeader } from './index.styled';
 import MainLogo from '../../assets/shared/desktop/logo.svg';
 import Nav from '../Nav';
@@ -19,7 +20,9 @@ const Header = () => {
   return (
     <StyledHeader>
       <div className='mobile-header-container'>
-        <img src={MainLogo} alt='Photosnap logo' />
+        <Link to='/'>
+          <img src={MainLogo} alt='Photosnap logo' />
+        </Link>
         <div
           className='hamburger-menu'
           onClick={(e) => {
