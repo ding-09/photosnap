@@ -4,6 +4,7 @@ import featuresContent from './featuresContent';
 import FeatureCard from './FeatureCard';
 import { StyledFeatures } from './index.styled';
 import { useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const Features = () => {
   useEffect(() => {
@@ -19,7 +20,7 @@ const Features = () => {
       />
       <section className='features'>
         {featuresContent.features.map((feature) => (
-          <FeatureCard feature={feature} />
+          <FeatureCard feature={feature} key={uuidv4()} />
         ))}
       </section>
       <Beta />
