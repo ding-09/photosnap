@@ -88,10 +88,9 @@ const GlobalStyle = createGlobalStyle`
       );
     }
     .features {
-        margin: 6rem 3rem 9rem;
+        margin: 6rem 3rem 3rem;
         display: flex;
         flex-direction: column;
-        gap: 6rem;
     }
 `;
 
