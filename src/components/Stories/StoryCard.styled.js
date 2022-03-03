@@ -11,17 +11,21 @@ export const StyledStoryCard = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 2rem;
+  gap: 1rem;
   color: #fff;
   .text-container {
-    border-bottom: 1px solid #979797;
+    border-bottom: 2px solid rgba(256, 256, 256, 0.25);
     padding-bottom: 1.5rem;
-    .date, .author {
-        font-size: 1.3rem;
+    .date,
+    .author {
+      font-size: 1.3rem;
     }
     h2 {
-        padding: 0.4rem 0;
-        font-size: 1.8rem;
+      padding: 0.4rem 0;
+      font-size: 1.8rem;
     }
+  }
+  button {
+    margin-top: 2rem;
   }
 `;
