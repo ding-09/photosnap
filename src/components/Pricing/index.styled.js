@@ -38,7 +38,7 @@ export const StyledPricing = styled.section`
         bottom: 0;
         left: 0;
         right: 0;
-        transition: 0.5s;
+        transition: 0.3s;
         background-color: ${(props) => props.theme.mainColors.lightGray};
         &:before {
           content: '';
@@ -60,7 +60,6 @@ export const StyledPricing = styled.section`
     margin-top: 4rem;
     display: flex;
     flex-direction: column;
-    gap: 2.4rem;
   }
   .price-table {
     padding: 0 2.8rem;

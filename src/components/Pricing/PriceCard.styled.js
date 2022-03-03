@@ -5,6 +5,7 @@ export const StyledPriceCard = styled.article`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin: ${props => props.proPlan ? '2.4rem 0' : ''};
   padding: 5rem 2.6rem 4rem;
   background-color: ${props => props.proPlan ? '#000' : '#f5f5f5'};
   color: ${props => props.proPlan ? '#fff' : ''};
