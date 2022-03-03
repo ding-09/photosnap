@@ -21,21 +21,21 @@ export const StyledHeader = styled.header`
       }
       .open-animation-1 {
         animation-name: openMenu-1;
-        animation-duration: 0.7s;
+        animation-duration: 0.2s;
         animation-fill-mode: forwards;
       }
       .open-animation-2 {
         animation-name: openMenu-2;
-        animation-duration: 0.7s;
+        animation-duration: 0.2s;
         animation-fill-mode: forwards;
       }
       .close-animation-1 {
         animation-name: closeMenu-1;
-        animation-duration: 0.6s;
+        animation-duration: 0.2s;
       }
       .close-animation-2 {
         animation-name: closeMenu-2;
-        animation-duration: 0.6s;
+        animation-duration: 0.2s;
       }
     }
     @keyframes openMenu-1 {
