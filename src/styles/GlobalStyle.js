@@ -87,6 +87,12 @@ const GlobalStyle = createGlobalStyle`
         ${(props) => props.theme.gradientColors.blue}
       );
     }
+    .features {
+        margin: 6rem 3rem 9rem;
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+    }
 `;
 
 export default GlobalStyle;

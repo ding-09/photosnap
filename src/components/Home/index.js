@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <StyledHome>
-      <section className='home-content'>
+      <section className='home-page'>
         <Hero
           img={homeContent.heroImg}
           heroHeading={homeContent.heroHeading}
@@ -32,12 +32,12 @@ const Home = () => {
           <Details details={details} key={uuidv4()} />
         ))}
       </section>
-      <section className='stories-content'>
+      <section className='stories'>
         {stories.slice(0, 4).map((story) => (
           <StoryCard story={story} key={uuidv4()} />
         ))}
       </section>
-      <section className='features-content'>
+      <section className='features'>
         {features.slice(0, 3).map((feature) => (
           <FeatureCard feature={feature} key={uuidv4()} />
         ))}

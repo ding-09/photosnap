@@ -2,7 +2,6 @@ import Hero from '../Hero';
 import Beta from '../Beta';
 import featuresContent from './featuresContent';
 import FeatureCard from './FeatureCard';
-import { StyledFeatures } from './index.styled';
 import { useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -11,7 +10,7 @@ const Features = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <StyledFeatures>
+    <section className='features-page'>
       <Hero
         img={featuresContent.heroImg}
         heroHeading={featuresContent.heroHeading}
@@ -24,7 +23,7 @@ const Features = () => {
         ))}
       </section>
       <Beta />
-    </StyledFeatures>
+    </section>
   );
 };
 

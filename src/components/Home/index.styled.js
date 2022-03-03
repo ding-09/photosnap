@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledHome = styled.section`
   display: flex;
   flex-direction: column;
-  .home-content .sub-details {
+  .home-page .sub-details {
     .text-details {
       padding: 7rem 3rem;
     }
@@ -17,8 +17,5 @@ export const StyledHome = styled.section`
     p {
       margin: 1.5rem 0 2rem;
     }
-  }
-  .features-content {
-    margin: 8rem 3rem;
   }
 `;
