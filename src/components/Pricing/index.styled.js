@@ -62,7 +62,7 @@ export const StyledPricing = styled.section`
     flex-direction: column;
   }
   .price-table {
-    padding: 0 2.8rem;
+    padding: 0 2.9rem;
     margin-bottom: 6.4rem;
   }
 `;

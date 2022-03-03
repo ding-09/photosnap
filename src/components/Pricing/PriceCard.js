@@ -1,7 +1,7 @@
 import { StyledPriceCard } from './PriceCard.styled';
 import { RectangleButton } from '../../styles/Buttons';
 
-const PriceCard = ({ pricePlan }) => {
+const PriceCard = ({ pricePlan, annual }) => {
   const { tier, desc, monthlyPrice, annualPrice } = pricePlan;
   return (
     <StyledPriceCard proPlan={tier === 'Pro'}>
@@ -11,7 +11,9 @@ const PriceCard = ({ pricePlan }) => {
         <p className='light-text'>{desc}</p>
       </div>
       <div className='price-amount'>
-        <span className='lg-heading'>${monthlyPrice.toFixed(2)}</span>
+        <span className='lg-heading'>
+          ${annual ? annualPrice.toFixed(2) : monthlyPrice.toFixed(2)}
+        </span>
         <span className='light-text'>per month</span>
       </div>
       <RectangleButton

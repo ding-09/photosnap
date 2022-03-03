@@ -1,21 +1,24 @@
 import Hero from '../Hero';
 import Beta from '../Beta';
-import PriceCard from './PriceCard'
-import PriceTable from './PriceTable'
+import PriceCard from './PriceCard';
+import PriceTable from './PriceTable';
 import PricingContent from './PricingContent';
 import { StyledPricing } from './index.styled';
-import { useEffect } from 'react';
-import { v4 as uuidv4} from 'uuid';
+import { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const Pricing = () => {
+  const { pricing } = PricingContent;
+
+  const [annual, setAnnual] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const handleClick = () => {
-  }
-
-  const {pricing} = PricingContent;
+    setAnnual(!annual);
+  };
 
   return (
     <StyledPricing>
@@ -34,12 +37,18 @@ const Pricing = () => {
           </div>
           <label>Yearly</label>
         </div>
-        <section className="price-cards">
-          {pricing.map(pricePlan => <PriceCard pricePlan={pricePlan} key={uuidv4()}/>)}
+        <section className='price-cards'>
+          {pricing.map((pricePlan) => (
+            <PriceCard
+              pricePlan={pricePlan}
+              key={uuidv4()}
+              annual={annual}
+            />
+          ))}
         </section>
       </section>
       <section className='price-table'>
-        <PriceTable features={PricingContent.features}/>
+        <PriceTable features={PricingContent.features} />
       </section>
       <Beta />
     </StyledPricing>
