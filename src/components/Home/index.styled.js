@@ -18,4 +18,7 @@ export const StyledHome = styled.section`
       margin: 1.5rem 0 2rem;
     }
   }
+  .features-content {
+    margin: 8rem 3rem;
+  }
 `;
