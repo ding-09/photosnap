@@ -1,11 +1,12 @@
 import { ArrowButton } from '../../styles/Buttons';
+import Picture from '../Picture';
 
 const Details = ({ details }) => {
-  const { img, heading, desc } = details;
+  const { imgs, heading, desc } = details;
   return (
     <section className='sub-details'>
       <figure>
-        <img src={img} alt={heading} />
+        <Picture imgs={imgs} />
       </figure>
       <div className='text-details'>
         <h2>{heading}</h2>

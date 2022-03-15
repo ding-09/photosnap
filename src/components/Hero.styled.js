@@ -23,4 +23,5 @@ export const StyledHero = styled.section`
       min-width: 60%;
     }
   }
+
 `;

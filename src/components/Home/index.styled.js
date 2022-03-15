@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledHome = styled.section`
   display: flex;
   flex-direction: column;
-  .home-page .sub-details {
+  .main-content .sub-details {
     .text-details {
       padding: 7rem 3rem;
     }
@@ -16,6 +16,19 @@ export const StyledHome = styled.section`
     }
     p {
       margin: 1.5rem 0 2rem;
+    }
+  }
+
+  /* MEDIA QUERIES */
+  @media (min-width: 768px) {
+    .main-content > section {
+      display: flex;
+      flex-direction: row;
+      &:nth-child(odd) {
+        figure {
+          order: 2;
+        }
+      }
     }
   }
 `;

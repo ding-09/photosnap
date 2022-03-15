@@ -19,9 +19,9 @@ const Home = () => {
 
   return (
     <StyledHome>
-      <section className='home-page'>
+      <section className='main-content'>
         <Hero
-          img={homeContent.heroImg}
+          heroImgs={homeContent.heroImgs}
           heroHeading={homeContent.heroHeading}
           heroDesc={homeContent.heroDesc}
           hasBorder={true}
