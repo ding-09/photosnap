@@ -5,12 +5,16 @@ export const StyledHeader = styled.header`
   top: 0;
   background-color: #fff;
   z-index: 999;
-
-  .mobile-header-container {
+  padding: 2.8rem 2.4rem;
+  .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.8rem 2.4rem;
+    li#footer-only {
+      display: none;
+    }
+  }
+  .mobile-header {
     .hamburger-menu {
       span {
         display: block;
@@ -89,9 +93,7 @@ export const StyledHeader = styled.header`
         li {
           margin-bottom: 2rem;
         }
-        li#footer-only {
-          display: none;
-        }
+
         a {
           font-size: 1.5rem;
           color: #000;
@@ -100,6 +102,40 @@ export const StyledHeader = styled.header`
           padding: 1.4rem 0;
         }
       }
+    }
+  }
+
+  /* large header style */
+  .header {
+    nav {
+      flex-direction: row;
+      justify-content: space-between;
+      flex: 2;
+      ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex: 2;
+        align-items: center;
+      }
+      button {
+        padding: 1.1rem 2.3rem;
+      }
+    }
+  }
+
+  /* MEDIA QUERIES */
+
+  /* HIDE MOBILE CONTAINER ABOVE TABLET SCREEN SIZE */
+  @media (min-width: 768px) {
+    padding: 2rem 3.5rem;
+    .mobile-header {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .header {
+      display: none;
     }
   }
 `;

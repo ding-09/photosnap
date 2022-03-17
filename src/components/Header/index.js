@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { StyledHeader } from './index.styled';
 import MainLogo from '../../assets/shared/desktop/logo.svg';
 import Nav from '../Nav';
@@ -19,7 +19,7 @@ const Header = () => {
   };
   return (
     <StyledHeader>
-      <div className='mobile-header-container'>
+      <div className='mobile-header header-container'>
         <Link to='/'>
           <img src={MainLogo} alt='Photosnap logo' />
         </Link>
@@ -53,7 +53,12 @@ const Header = () => {
           </div>
         )}
       </div>
-      <div className='header-container'></div>
+      <div className='header header-container'>
+        <Link to='/'>
+          <img src={MainLogo} alt='Photosnap logo' />
+        </Link>
+        <Nav />
+      </div>
     </StyledHeader>
   );
 };

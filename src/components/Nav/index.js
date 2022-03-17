@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { StyledNav } from './index.styled';
-import { RectangleButton } from '../../styles/Buttons';
+import {RectangleButton } from '../../styles/Buttons'
 
 const index = () => {
   return (

@@ -47,6 +47,7 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 700;
         line-height: 1.6rem;
         letter-spacing: 0.2rem;
+        color: #000;
     }
     img {
         display: block;
