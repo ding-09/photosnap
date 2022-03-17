@@ -5,8 +5,10 @@ const StyledArrowButton = styled.button`
   background-color: inherit;
   color: ${(props) => props.color};
   display: flex;
-  justify-content: space-between;
-  min-width: 75%;
+  align-items: center;
+  span {
+    margin-right: 3rem;
+  }
   svg {
     g {
       stroke: ${(props) => props.color};
@@ -17,7 +19,7 @@ const StyledArrowButton = styled.button`
 export const ArrowButton = ({ innerText, color }) => {
   return (
     <StyledArrowButton color={color}>
-      {innerText}
+      <span>{innerText}</span>
       <ArrowIcon />
     </StyledArrowButton>
   );

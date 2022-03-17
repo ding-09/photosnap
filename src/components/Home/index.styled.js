@@ -19,6 +19,8 @@ export const StyledHome = styled.section`
     }
   }
 
+
+
   /* MEDIA QUERIES */
   @media (min-width: 768px) {
     .main-content > section {
@@ -31,4 +33,5 @@ export const StyledHome = styled.section`
       }
     }
   }
+
 `;

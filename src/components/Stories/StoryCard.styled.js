@@ -27,5 +27,6 @@ export const StyledStoryCard = styled.article`
   }
   button {
     margin-top: 2rem;
+    justify-content: space-between;
   }
 `;

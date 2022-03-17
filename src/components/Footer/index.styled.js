@@ -89,6 +89,10 @@ export const StyledFooter = styled.footer`
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: flex-end;
+      button {
+        margin: 0;
+      }
     }
   }
 `;

@@ -19,9 +19,6 @@ export const StyledHero = styled.section`
     p {
       margin: 2rem 0;
     }
-    button {
-      min-width: 60%;
-    }
   }
 
 `;
