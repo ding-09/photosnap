@@ -76,17 +76,26 @@ const GlobalStyle = createGlobalStyle`
         letter-spacing: 0.4rem;
     }
     .hero-border {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      max-width: 30%;
-      height: 0.5rem;
-      background: linear-gradient(
-        45deg,
-        ${(props) => props.theme.gradientColors.orange},
-        ${(props) => props.theme.gradientColors.purple},
-        ${(props) => props.theme.gradientColors.blue}
-      );
+        position: absolute;
+        top: 0;
+        width: 100%;
+        max-width: 30%;
+        height: 0.5rem;
+        background: linear-gradient(
+            45deg,
+            ${(props) => props.theme.gradientColors.orange},
+            ${(props) => props.theme.gradientColors.purple},
+            ${(props) => props.theme.gradientColors.blue}
+        );
+
+        /* MEDIA QUERIES */
+        @media (min-width: 768px) {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0.5rem;
+            min-height: 55%;
+        }
     }
     .features {
         margin: 6rem 3rem 3rem;

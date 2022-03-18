@@ -21,4 +21,27 @@ export const StyledHero = styled.section`
     }
   }
 
+  /* MEDIA QUERIES */
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 5.4rem;
+      h1 {
+        font-size: 4rem;
+        line-height: 4.8rem;
+        letter-spacing: 0.4rem;
+      }
+      p {
+        margin: 2rem 0 4.8rem;
+      }
+    }
+    figure {
+      order: 2;
+    }
+  }
 `;

@@ -23,10 +23,10 @@ export const StyledHome = styled.section`
 
   /* MEDIA QUERIES */
   @media (min-width: 768px) {
-    .main-content > section {
+    .main-content > section.sub-details {
       display: flex;
       flex-direction: row;
-      &:nth-child(odd) {
+      &:last-child {
         figure {
           order: 2;
         }
