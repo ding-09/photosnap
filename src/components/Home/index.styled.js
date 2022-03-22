@@ -19,19 +19,40 @@ export const StyledHome = styled.section`
     }
   }
 
-
-
   /* MEDIA QUERIES */
   @media (min-width: 768px) {
-    .main-content > section.sub-details {
-      display: flex;
-      flex-direction: row;
-      &:last-child {
-        figure {
-          order: 2;
+    .main-content {
+      section:first-child {
+        min-height: 65rem;
+      }
+      section.sub-details {
+        display: flex;
+        flex-direction: row;
+        min-height: 60rem;
+        &:last-child {
+          .text-details h2 {
+            margin-right: 20%;
+          }
+          figure {
+            order: 2;
+          }
+        }
+        .text-details {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0 5.4rem;
+          h2 {
+            font-size: 4rem;
+            line-height: 4.8rem;
+            letter-spacing: 0.4rem;
+            margin-right: 30%;
+          }
+          p {
+            margin: 2rem 0 4.8rem;
+          }
         }
       }
     }
   }
-
 `;

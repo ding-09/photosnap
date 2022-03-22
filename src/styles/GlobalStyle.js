@@ -52,7 +52,8 @@ const GlobalStyle = createGlobalStyle`
     img {
         display: block;
         max-width: 100%;
-        max-height: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     .light-text {
         opacity: 0.6;
@@ -94,7 +95,7 @@ const GlobalStyle = createGlobalStyle`
             top: 50%;
             transform: translateY(-50%);
             width: 0.5rem;
-            min-height: 55%;
+            min-height: 47%;
         }
     }
     .features {

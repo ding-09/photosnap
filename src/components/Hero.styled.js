@@ -30,6 +30,7 @@ export const StyledHero = styled.section`
       display: flex;
       flex-direction: column;
       justify-content: center;
+      flex: 70%;
       padding: 0 5.4rem;
       h1 {
         font-size: 4rem;

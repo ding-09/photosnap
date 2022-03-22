@@ -1,6 +1,6 @@
 // HERO IMGS 
 import heroMobileImg from '../../assets/home/mobile/create-and-share.jpg';
-import heroTabletImg from '../../assets/home/tablet/create-and-share.jpg';
+import heroTabletImg from '../../assets/home/tablet/create-and-share.png';
 import heroDesktopImg from '../../assets/home/desktop/create-and-share.jpg';
 
 // SUB DETAILS IMGS
