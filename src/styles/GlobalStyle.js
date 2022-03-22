@@ -98,10 +98,30 @@ const GlobalStyle = createGlobalStyle`
             min-height: 47%;
         }
     }
+    .stories {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        /* MEDIA QUERIES */
+        @media (min-width: 768px) {
+            flex-direction: row;
+            article {
+                flex: 50%;
+                min-height: 50rem;
+            }
+        } 
+    }
     .features {
         margin: 6rem 3rem 3rem;
         display: flex;
         flex-direction: column;
+        @media (min-width: 768px) {
+            margin: 12rem 14rem 4rem;
+            section {
+                margin-bottom: 8rem;
+            }
+        }
     }
 `;
 
