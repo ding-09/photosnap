@@ -13,7 +13,7 @@ const Stories = () => {
   return (
     <StyledStories>
       <Hero
-        img={storiesContent.heroImg}
+        heroImgs={storiesContent.heroImgs}
         heroHeading={storiesContent.heroHeading}
         heroDesc={storiesContent.heroDesc}
         hasLink={true}

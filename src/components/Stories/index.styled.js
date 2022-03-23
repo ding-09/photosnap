@@ -1,8 +1,40 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledStories = styled.section`
-    .stories {
-        display: flex;
-        flex-direction: column;
+  section:first-child {
+    .hero-text {
+      p:first-child {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
     }
-`
+    .story-info {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* MEDIA QUERIES */
+  @media (min-width: 768px) {
+    section:first-child {
+      display: flex;
+      align-items: center;
+      position: relative;
+      .hero-text {
+        position: absolute;
+        z-index: 99;
+        left: 0;
+        max-width: 65%;
+        margin-bottom: 5rem;
+        background-color: transparent;
+        p {
+          margin-bottom: 2.4rem;
+        }
+        .story-info {
+          margin: 1.6rem 0 0.4rem;
+        }
+      }
+    }
+  }
+`;

@@ -20,8 +20,8 @@ const Hero = ({
         {stories && <p>Last Month's Featured Story</p>}
         <h1>{heroHeading}</h1>
         {stories && (
-          <p className='light-text'>
-            <span>March 2nd 2020</span>
+          <p className='story-info'>
+            <span className='light-text'>March 2nd 2020 </span>
             <span> by John Appleseed</span>
           </p>
         )}
