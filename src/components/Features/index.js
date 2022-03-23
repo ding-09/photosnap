@@ -2,6 +2,7 @@ import Hero from '../Hero';
 import Beta from '../Beta';
 import featuresContent from './featuresContent';
 import FeatureCard from './FeatureCard';
+import { StyledFeatures } from './index.styled';
 import { useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -10,20 +11,20 @@ const Features = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <section className='features-page'>
+    <StyledFeatures>
       <Hero
-        img={featuresContent.heroImg}
+        heroImgs={featuresContent.heroImgs}
         heroHeading={featuresContent.heroHeading}
         heroDesc={featuresContent.heroDesc}
         hasBorder={true}
       />
-      <section className='features'>
+      <section className='features features-details'>
         {featuresContent.features.map((feature) => (
           <FeatureCard feature={feature} key={uuidv4()} />
         ))}
       </section>
       <Beta />
-    </section>
+    </StyledFeatures>
   );
 };
 

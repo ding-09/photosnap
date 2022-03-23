@@ -115,10 +115,12 @@ const GlobalStyle = createGlobalStyle`
     .features {
         margin: 6rem 3rem 3rem;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         @media (min-width: 768px) {
+            flex-direction: row;
             margin: 12rem 14rem 4rem;
-            section {
+            article {
                 margin-bottom: 8rem;
             }
         }

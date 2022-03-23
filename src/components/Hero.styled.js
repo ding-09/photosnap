@@ -26,6 +26,7 @@ export const StyledHero = styled.section`
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: center;
+    min-height: 50rem;
     .hero-text {
       display: flex;
       flex-direction: column;
@@ -43,6 +44,7 @@ export const StyledHero = styled.section`
     }
     figure {
       order: 2;
+      flex: 35%;
     }
   }
 `;

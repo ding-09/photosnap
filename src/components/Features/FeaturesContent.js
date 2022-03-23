@@ -1,4 +1,8 @@
-import heroImg from '../../assets/features/desktop/hero.jpg';
+import heroMobileImg from '../../assets/features/mobile/hero.jpg';
+import heroTabletImg from '../../assets/features/tablet/hero.jpg';
+import heroDesktopImg from '../../assets/features/desktop/hero.jpg';
+
+// FEATURES ICONS 
 import featuresResponsive from '../../assets/features/desktop/responsive.svg';
 import featuresLimit from '../../assets/features/desktop/no-limit.svg';
 import featuresEmbed from '../../assets/features/desktop/embed.svg';
@@ -7,7 +11,11 @@ import featuresExposure from '../../assets/features/desktop/boost-exposure.svg';
 import featuresDragDrop from '../../assets/features/desktop/drag-drop.svg';
 
 const featuresContent = {
-  heroImg,
+  heroImgs: {
+    mobile: heroMobileImg,
+    tablet: heroTabletImg,
+    desktop: heroDesktopImg
+  },
   heroHeading: 'Features',
   heroDesc:
     'Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos.',
