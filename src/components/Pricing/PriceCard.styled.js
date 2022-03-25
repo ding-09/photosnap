@@ -28,4 +28,26 @@ export const StyledPriceCard = styled.article`
   .hero-border {
     max-width: 100%;
   }
+
+  /* MEDIA QUERIES */
+  @media (min-width: 768px) {
+    align-items: flex-start;
+    text-align: left;
+    padding: 4rem;
+    .price-amount {
+      position: absolute;
+      top: 0;
+      right: 4rem;
+      align-items: flex-end;
+    }
+    .price-plan-desc, button {
+      max-width: 45%;
+    }
+    .price-plan-desc {
+      margin-bottom: 3.2rem;
+    }
+    .hero-border {
+      height: 100%;
+    }
+  }
 `;

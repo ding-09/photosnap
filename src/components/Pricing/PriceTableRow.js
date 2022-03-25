@@ -3,7 +3,7 @@ import { ReactComponent as CheckIcon } from '../../assets/pricing/desktop/check.
 const PriceTableRow = ({ feature }) => {
   const { heading, tiers } = feature;
   return (
-    <div className='row-container'>
+    <>
       <tr>
         <th>{heading}</th>
       </tr>
@@ -23,7 +23,7 @@ const PriceTableRow = ({ feature }) => {
           )
         })}
       </tr>
-    </div>
+    </>
   );
 };
 

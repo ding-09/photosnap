@@ -23,7 +23,7 @@ const Pricing = () => {
   return (
     <StyledPricing>
       <Hero
-        img={PricingContent.heroImg}
+        heroImgs={PricingContent.heroImgs}
         heroHeading={PricingContent.heroHeading}
         heroDesc={PricingContent.heroDesc}
         hasBorder={true}
