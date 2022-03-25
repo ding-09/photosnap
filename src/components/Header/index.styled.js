@@ -138,4 +138,12 @@ export const StyledHeader = styled.header`
       display: none;
     }
   }
+
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: space-around;
+    .header {
+      min-width: 85%;
+    }
+  }
 `;
