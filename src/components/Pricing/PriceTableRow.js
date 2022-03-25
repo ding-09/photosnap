@@ -19,7 +19,7 @@ const PriceTableRow = ({ feature }) => {
               <CheckIcon />
             </td>
           ) : (
-            <td></td>
+            <td> </td>
           )
         })}
       </tr>

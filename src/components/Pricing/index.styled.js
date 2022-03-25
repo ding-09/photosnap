@@ -65,4 +65,11 @@ export const StyledPricing = styled.section`
     padding: 0 2.9rem;
     margin-bottom: 6.4rem;
   }
+
+  /* MEDIA QUERIES */
+  @media (min-width: 768px) {
+    .price-card-group {
+      margin: 11rem 4rem;
+    }
+  }
 `;

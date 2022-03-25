@@ -5,12 +5,23 @@ import { v4 as uuidv4 } from 'uuid';
 const PriceTable = ({ features }) => {
   return (
     <StyledPriceTable>
-      <caption>The Features</caption>
-      <tbody>
-        {features.map((feature) => (
+      <caption className='mobile-caption'>The Features</caption>
+      <caption className='caption'>Compare</caption>
+      <thead className='table-head'>
+        <tr>
+          <th>The Features</th>
+        </tr>
+        <tr>
+          <th>Basic</th>
+          <th>Pro</th>
+          <th>Business</th>
+        </tr>
+      </thead>
+      {features.map((feature) => (
+        <tbody>
           <PriceTableRow feature={feature} key={uuidv4()} />
-        ))}
-      </tbody>
+        </tbody>
+      ))}
     </StyledPriceTable>
   );
 };
