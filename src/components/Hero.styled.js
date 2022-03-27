@@ -44,7 +44,25 @@ export const StyledHero = styled.section`
     }
     figure {
       order: 2;
-      flex: 35%;
+      flex: 30%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-text {
+      flex: 50%;
+    }
+    figure {
+      flex: 50%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .hero-text {
+      flex: 45%
+    }
+    figure {
+      flex: 55%;
     }
   }
 `;

@@ -36,11 +36,6 @@ export const StyledFooter = styled.footer`
     button {
       background-color: inherit;
       padding: 0 0.7rem;
-      svg {
-        path {
-          fill: #fff;
-        }
-      }
     }
   }
   nav {
@@ -92,6 +87,16 @@ export const StyledFooter = styled.footer`
       align-items: flex-end;
       button {
         margin: 0;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .socials {
+      ul li button {
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }

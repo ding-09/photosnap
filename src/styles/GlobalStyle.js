@@ -110,7 +110,12 @@ const GlobalStyle = createGlobalStyle`
                 flex: 50%;
                 min-height: 50rem;
             }
-        } 
+        }
+        @media (min-width: 1200px) {
+            article {
+                flex: 25%;
+            }
+        }
     }
     .features {
         margin: 6rem 3rem 3rem;
@@ -119,9 +124,20 @@ const GlobalStyle = createGlobalStyle`
         flex-direction: column;
         @media (min-width: 768px) {
             flex-direction: row;
-            margin: 12rem 14rem 4rem;
+            justify-content: center;
+            align-items: center;
+            margin: 12rem 0;
             article {
                 margin-bottom: 8rem;
+            }
+        }
+        @media (min-width: 1200px) {
+            padding: 0 8rem;
+            article {
+                flex: 25%;
+                height: 23rem;
+                justify-content: flex-end;
+                margin: 0 3rem 0;
             }
         }
     }

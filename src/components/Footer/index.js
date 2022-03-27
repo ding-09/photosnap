@@ -1,6 +1,13 @@
 import { StyledFooter } from './index.styled';
 import { ReactComponent as MainLogo } from '../../assets/shared/desktop/logo.svg';
-import { FbIcon, YtIcon, TwitterIcon, PinIcon, IgIcon } from './SocialIcons';
+import {
+  FbIcon,
+  YtIcon,
+  TwitterIcon,
+  PinIcon,
+  IgIcon,
+  SocialButton,
+} from './SocialIcons';
 import Nav from '../Nav';
 import { ArrowButton } from '../../styles/Buttons';
 
@@ -14,29 +21,29 @@ const index = () => {
         <section className='socials'>
           <ul>
             <li>
-              <button>
+              <SocialButton color='fb'>
                 <FbIcon />
-              </button>
+              </SocialButton>
             </li>
             <li>
-              <button>
+              <SocialButton color='yt'>
                 <YtIcon />
-              </button>
+              </SocialButton>
             </li>
             <li>
-              <button>
+              <SocialButton color='twt'>
                 <TwitterIcon />
-              </button>
+              </SocialButton>
             </li>
             <li>
-              <button>
+              <SocialButton color='pt'>
                 <PinIcon />
-              </button>
+              </SocialButton>
             </li>
             <li>
-              <button>
+              <SocialButton color='ig'>
                 <IgIcon />
-              </button>
+              </SocialButton>
             </li>
           </ul>
         </section>
