@@ -92,12 +92,34 @@ export const StyledFooter = styled.footer`
   }
 
   @media (min-width: 1024px) {
-    .socials {
-      ul li button {
-        &:hover {
-          cursor: pointer;
+    .footer-container {
+      flex-direction: row;
+      max-height: 15rem;
+      .logo {
+        margin-right: 11rem;
+      }
+      .socials {
+        position: absolute;
+        bottom: 0;
+        ul li button {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      nav {
+        ul {
+          flex-direction: column;
+          align-items: flex-start;
+          li {
+            padding-right: 0;
+          }
         }
       }
     }
+  }
+
+  @media (min-width: 1200px) {
+    padding: 6.5rem 12rem;
   }
 `;
