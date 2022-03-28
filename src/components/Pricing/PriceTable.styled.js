@@ -85,4 +85,12 @@ export const StyledPriceTable = styled.table`
   tbody {
     border-bottom: 1px solid lightgray;
   }
+
+  @media (min-width: 1200px) {
+    max-width: 70%;
+    margin: 0 auto 10rem;
+    caption {
+      margin-bottom: 0;
+    }
+  }
 `;
