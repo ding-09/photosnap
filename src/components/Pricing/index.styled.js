@@ -72,4 +72,15 @@ export const StyledPricing = styled.section`
       margin: 11rem 4rem;
     }
   }
+
+  @media (min-width: 1200px) {
+    .price-card-group {
+      margin: 11rem 9rem;
+    }
+    .price-cards {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 `;

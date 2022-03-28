@@ -1,14 +1,14 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledPriceCard = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: ${props => props.proPlan ? '2.4rem 0' : ''};
+  margin: ${(props) => (props.proPlan ? '2.4rem 0' : '')};
   padding: 5rem 2.6rem 4rem;
-  background-color: ${props => props.proPlan ? '#000' : '#f5f5f5'};
-  color: ${props => props.proPlan ? '#fff' : ''};
+  background-color: ${(props) => (props.proPlan ? '#000' : '#f5f5f5')};
+  color: ${(props) => (props.proPlan ? '#fff' : '')};
   position: relative;
   .price-plan-desc {
     h2 {
@@ -17,13 +17,13 @@ export const StyledPriceCard = styled.article`
     }
   }
   .price-amount {
-      margin: 4rem 0;
-      display: flex;
-      flex-direction: column;
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
   }
   button {
-      width: 85%;
-      padding: 1.2rem 0;
+    width: 85%;
+    padding: 1.2rem 0;
   }
   .hero-border {
     max-width: 100%;
@@ -40,7 +40,8 @@ export const StyledPriceCard = styled.article`
       right: 4rem;
       align-items: flex-end;
     }
-    .price-plan-desc, button {
+    .price-plan-desc,
+    button {
       max-width: 45%;
     }
     .price-plan-desc {
@@ -48,6 +49,30 @@ export const StyledPriceCard = styled.article`
     }
     .hero-border {
       height: 100%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    align-items: center;
+    text-align: center;
+    margin: ${(props) => (props.proPlan ? '0 3rem' : '')};
+    padding-top: ${(props) => (props.proPlan ? '6.5rem' : '')};
+    min-height: ${(props) => (props.proPlan ? '47rem' : '40rem')};
+    flex: ${(props) => (props.proPlan ? '33%' : '30%')};
+    .price-amount {
+      position: relative;
+      align-items: center;
+      right: 0;
+    }
+    .price-plan-desc,
+    button {
+      max-width: 100%;
+    }
+    .hero-border {
+      top: 0;
+      max-height: 0.5rem;
+      min-height: 0;
+      min-width: 100%;
     }
   }
 `;
