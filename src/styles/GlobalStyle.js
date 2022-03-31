@@ -22,11 +22,12 @@ const GlobalStyle = createGlobalStyle`
     #root {
         display: flex;
         flex-direction: column;
-        min-height: 100%;
+        height: 100%;
         position: relative;
     }
     main {
         min-width: 37.5rem;
+        min-height: 100%;
     }
     footer {
         margin-top: auto;
