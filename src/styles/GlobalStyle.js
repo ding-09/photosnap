@@ -27,7 +27,6 @@ const GlobalStyle = createGlobalStyle`
     }
     main {
         min-width: 37.5rem;
-        min-height: 100%;
     }
     footer {
         margin-top: auto;
