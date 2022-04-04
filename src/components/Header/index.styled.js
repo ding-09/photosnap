@@ -96,7 +96,6 @@ export const StyledHeader = styled.header`
 
         a {
           font-size: 1.5rem;
-          color: #000;
         }
         button {
           padding: 1.4rem 0;

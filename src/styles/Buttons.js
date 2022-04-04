@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 import { ReactComponent as ArrowIcon } from '../assets/shared/desktop/arrow.svg';
 
-const StyledArrowButton = styled.button`
+const StyledArrowButton = styled.a`
   background-color: inherit;
   color: ${(props) => props.color};
   display: flex;
   align-items: center;
-  span {
-    margin-right: 3rem;
-  }
+  justify-content: space-between;
   svg {
     g {
       stroke: ${(props) => props.color};
@@ -16,19 +14,22 @@ const StyledArrowButton = styled.button`
   }
 `;
 
-export const ArrowButton = ({ innerText, color }) => {
+const StyledRectangleButton = styled.a`
+  background-color: ${(props) => props.backgroundColor};
+  color: ${(props) => (props.backgroundColor === '#000' ? '#fff' : '#000')};
+  padding: 1.4rem 0;
+  display: flex;
+  justify-content: center;
+`;
+
+export const ArrowButton = ({ innerText, textColor = '#fff' }) => {
   return (
-    <StyledArrowButton color={color}>
+    <StyledArrowButton color={textColor}>
       <span>{innerText}</span>
       <ArrowIcon />
     </StyledArrowButton>
   );
 };
-
-const StyledRectangleButton = styled.button`
-  background-color: ${(props) => props.backgroundColor};
-  color: ${(props) => (props.backgroundColor === '#000' ? '#fff' : '#000')};
-`;
 
 export const RectangleButton = ({ innerText, backgroundColor = '#000' }) => {
   return (
