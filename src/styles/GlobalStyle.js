@@ -9,6 +9,35 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+    :root {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+        
+        /* MAIN COLORS */
+        --pure-black: 0, 0, 0,;
+        --light-grey: 223, 223, 223;
+        --pure-white: 255, 255, 255
+
+        /* GRADIENT COLORS */
+        --grd-orange: 90, 119, 255;
+        --grd-purple: 188, 113, 152;
+        --grd-blue: 255, 197, 147;
+
+        /* TYPOGRAPHY */
+        --fs-xsm: 1.2rem; 
+        --fs-sm: 1.8rem; 
+        --fs-md: 2.4rem; 
+        --fs-lg: 4rem; 
+
+        --line-sm: 1.6rem;
+        --line-lg: 4.8rem;
+
+        --letter-sp-sm: 0.2rem;
+        --letter-sp-lg: 0.417rem;
+
+    }
     html {
         font-size: 62.5%;
         height: 100%;
@@ -17,22 +46,14 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'DM Sans', sans-serif;
         font-size: 1.5rem;
         line-height: 2.5rem;
+        letter-spacing: 0;
         height: 100%;
-    }
-    #root {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        position: relative;
     }
     main {
         min-width: 37.5rem;
     }
     footer {
         margin-top: auto;
-    }
-    button {
-        border: none;
     }
     ul {
         display: flex;
@@ -48,8 +69,9 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.6rem;
         letter-spacing: 0.2rem;
         color: #000;
+        border: none;
     }
-    img {
+    img, picture {
         display: block;
         max-width: 100%;
         height: 100%;
@@ -122,6 +144,8 @@ const GlobalStyle = createGlobalStyle`
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+
+        /* MEDIA QUERIES */
         @media (min-width: 768px) {
             flex-direction: row;
             justify-content: center;
