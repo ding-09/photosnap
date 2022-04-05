@@ -12,12 +12,14 @@ const Features = () => {
   }, []);
   return (
     <StyledFeatures>
+      {/* HERO SECTION */}
       <Hero
         heroImgs={featuresContent.heroImgs}
         heroHeading={featuresContent.heroHeading}
         heroDesc={featuresContent.heroDesc}
         hasBorder={true}
       />
+      {/* FEATURES DETAILS */}
       <section className='features features-details'>
         {featuresContent.features.map((feature) => (
           <FeatureCard feature={feature} key={uuidv4()} />
