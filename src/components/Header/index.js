@@ -5,10 +5,13 @@ import MainLogo from '../../assets/shared/desktop/logo.svg';
 import Nav from '../nav';
 
 const Header = () => {
+
+  // MENU STATE
   const [showMenu, setShowMenu] = useState(false);
   const [animateOpenMenu, setAnimateOpenMenu] = useState(false);
   const [menuClicked, setMenuClicked] = useState(false);
 
+  // ANIMATION TOGGLE FUNC
   const toggleAnimation = (num) => {
     if (showMenu && animateOpenMenu) {
       return `open-animation-${num}`;
@@ -17,8 +20,11 @@ const Header = () => {
       return `close-animation-${num}`;
     }
   };
+
+
   return (
     <StyledHeader>
+      {/* MOBILE HEADER */}
       <div className='mobile-header header-container'>
         <Link to='/'>
           <img src={MainLogo} alt='Photosnap logo' />
@@ -53,6 +59,8 @@ const Header = () => {
           </div>
         )}
       </div>
+
+      {/* LARGE HEADER */}
       <div className='header header-container'>
         <Link to='/'>
           <img src={MainLogo} alt='Photosnap logo' />
