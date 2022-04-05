@@ -9,11 +9,14 @@ import { ReactComponent as IgIcon } from '../../assets/shared/desktop/instagram.
 
 
 export const SocialButton = styled.button`
+  /* SET DEFAULT ICON COLORS TO WHITE */
   svg {
     path {
       fill: #fff;
     }
   }
+  
+  /* INDIVIDUAL ICON COLOR CHANGE ON HOVER */
   &:hover {
     svg {
       path {

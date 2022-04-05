@@ -8,16 +8,19 @@ import {
   IgIcon,
   SocialButton,
 } from './SocialIcons';
-import Nav from '../nav';
 import { ArrowButton } from '../../styles/Buttons';
+import Nav from '../nav';
 
 const index = () => {
   return (
     <StyledFooter>
       <div className='footer-container'>
+        {/* LOGO IMAGE */}
         <section className='logo'>
           <MainLogo />
         </section>
+
+        {/* SOCIAL ICON + LINKS */}
         <section className='socials'>
           <ul>
             <li>
