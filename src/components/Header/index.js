@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { StyledHeader } from './index.styled';
 import MainLogo from '../../assets/shared/desktop/logo.svg';
-import Nav from '../Nav';
+import Nav from '../nav';
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);

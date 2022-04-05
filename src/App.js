@@ -4,15 +4,15 @@ import { theme } from './styles/theme';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // shared components
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Error from './components/Error'
+import Header from './components/header';
+import Footer from './components/footer';
+import Error from './components/error'
 
 // routes
-import Home from './components/Home';
-import Stories from './components/Stories';
-import Features from './components/Features';
-import Pricing from './components/Pricing';
+import Home from './components/home';
+import Stories from './components/stories';
+import Features from './components/features';
+import Pricing from './components/pricing';
 
 const App = () => {
   return (

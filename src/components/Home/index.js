@@ -4,10 +4,10 @@ import { StyledHome } from './index.styled';
 import Details from './Details';
 import { useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import storiesContent from '../Stories/storiesContent';
-import featuresContent from '../Features/featuresContent';
-import StoryCard from '../Stories/StoryCard';
-import FeatureCard from '../Features/FeatureCard';
+import storiesContent from '../stories/storiesContent';
+import featuresContent from '../features/featuresContent';
+import StoryCard from '../stories/StoryCard';
+import FeatureCard from '../features/FeatureCard';
 
 const Home = () => {
   const { stories } = storiesContent;

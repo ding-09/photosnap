@@ -8,7 +8,7 @@ import {
   IgIcon,
   SocialButton,
 } from './SocialIcons';
-import Nav from '../Nav';
+import Nav from '../nav';
 import { ArrowButton } from '../../styles/Buttons';
 
 const index = () => {
