@@ -3,13 +3,12 @@ import Beta from '../Beta';
 import featuresContent from './featuresContent';
 import FeatureCard from './FeatureCard';
 import { StyledFeatures } from './index.styled';
-import { useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import ScrollToTop from '../ScrollToTop';
 
 const Features = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  ScrollToTop();
+
   return (
     <StyledFeatures>
       {/* HERO SECTION */}

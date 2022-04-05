@@ -6,17 +6,16 @@ import featuresContent from '../features/featuresContent';
 import StoryCard from '../stories/StoryCard';
 import FeatureCard from '../features/FeatureCard';
 import { StyledHome } from './index.styled';
-import { useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import ScrollToTop from '../ScrollToTop';
+
 
 const Home = () => {
+  ScrollToTop();
+
   const { stories } = storiesContent;
   const { features } = featuresContent;
   const { subDetails } = homeContent;
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <StyledHome>

@@ -1,14 +1,12 @@
 import Hero from '../Hero';
 import storiesContent from './storiesContent';
+import ScrollToTop from '../ScrollToTop';
 import { StyledStories } from './index.styled';
 import StoryCard from './StoryCard';
-import { useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 const Stories = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  ScrollToTop();
 
   return (
     <StyledStories>

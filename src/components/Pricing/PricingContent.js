@@ -2,7 +2,7 @@ import heroMobileImg from '../../assets/pricing/mobile/hero.jpg';
 import heroTabletImg from '../../assets/pricing/tablet/hero.jpg';
 import heroDesktopImg from '../../assets/pricing/desktop/hero.jpg';
 
-const PricingContent = {
+const pricingContent = {
   heroImgs: {
     mobile: heroMobileImg,
     tablet: heroTabletImg,
@@ -110,4 +110,4 @@ const PricingContent = {
   ],
 };
 
-export default PricingContent;
+export default pricingContent;
