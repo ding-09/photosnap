@@ -6,7 +6,7 @@ const StyledArrowButton = styled.a`
   color: ${(props) => props.color};
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: ${(props) => props.storyCard ? 'space-between' : ''};
   svg {
     g {
       stroke: ${(props) => props.color};
@@ -27,9 +27,9 @@ const StyledRectangleButton = styled.a`
   }
 `;
 
-export const ArrowButton = ({ innerText, textColor = '#fff' }) => {
+export const ArrowButton = ({ innerText, textColor = '#fff', storyCard }) => {
   return (
-    <StyledArrowButton color={textColor}>
+    <StyledArrowButton color={textColor} storyCard={storyCard}>
       <span>{innerText}</span>
       <ArrowIcon />
     </StyledArrowButton>

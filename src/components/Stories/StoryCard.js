@@ -10,7 +10,7 @@ const StoryCard = ({ story }) => {
         <h2>{title}</h2>
         <p className='author'>by {author}</p>
       </div>
-      <ArrowButton innerText='Read story' color='#fff' />
+      <ArrowButton innerText='Read story' color='#fff' storyCard={true}/>
     </StyledStoryCard>
   );
 };

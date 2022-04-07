@@ -12,7 +12,7 @@ const Hero = ({
   stories = false,
 }) => {
   return (
-    <StyledHero>
+    <StyledHero onStories={stories}>
       <figure>
         <Picture imgs={heroImgs} />
       </figure>

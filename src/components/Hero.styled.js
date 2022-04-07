@@ -19,6 +19,9 @@ export const StyledHero = styled.section`
     p {
       margin: 2rem 0;
     }
+    a span {
+      padding-right: ${(props) => (props.onStories ? '1.6rem' : '1.8rem')};
+    }
   }
 
   /* MEDIA QUERIES */
@@ -59,7 +62,7 @@ export const StyledHero = styled.section`
 
   @media (min-width: 1200px) {
     .hero-text {
-      flex: 45%
+      flex: 45%;
     }
     figure {
       flex: 55%;
