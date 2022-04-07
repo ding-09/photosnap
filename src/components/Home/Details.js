@@ -11,7 +11,7 @@ const Details = ({ details }) => {
       <div className='text-details'>
         <h2>{heading}</h2>
         <p className='light-text'>{desc}</p>
-        <ArrowButton innerText='View the stories' />
+        <ArrowButton innerText='View the stories' color='#000' />
       </div>
     </section>
   );

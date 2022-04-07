@@ -27,9 +27,9 @@ const StyledRectangleButton = styled.a`
   }
 `;
 
-export const ArrowButton = ({ innerText, textColor = '#fff', storyCard }) => {
+export const ArrowButton = ({ innerText, color = '#fff', storyCard }) => {
   return (
-    <StyledArrowButton color={textColor} storyCard={storyCard}>
+    <StyledArrowButton color={color} storyCard={storyCard}>
       <span>{innerText}</span>
       <ArrowIcon />
     </StyledArrowButton>
