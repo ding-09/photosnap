@@ -1,11 +1,12 @@
 import { StyledPriceCard } from './PriceCard.styled';
 import { RectangleButton } from '../../styles/Buttons';
+import MainBorder from '../border'
 
 const PriceCard = ({ pricePlan, annual }) => {
   const { tier, desc, monthlyPrice, annualPrice } = pricePlan;
   return (
     <StyledPriceCard proPlan={tier === 'Pro'}>
-      {tier === 'Pro' && <div className='hero-border'></div>}
+      {tier === 'Pro' && <MainBorder />}
       <div className='price-plan-desc'>
         <h2>{tier}</h2>
         <p className='light-text'>{desc}</p>

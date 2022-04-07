@@ -25,9 +25,6 @@ export const StyledPriceCard = styled.article`
     width: 85%;
     padding: 1.2rem 0;
   }
-  .hero-border {
-    max-width: 100%;
-  }
 
   /* MEDIA QUERIES */
   @media (min-width: 768px) {
@@ -47,9 +44,6 @@ export const StyledPriceCard = styled.article`
     .price-plan-desc {
       margin-bottom: 3.2rem;
     }
-    .hero-border {
-      height: 100%;
-    }
   }
 
   @media (min-width: 1200px) {
@@ -67,12 +61,6 @@ export const StyledPriceCard = styled.article`
     .price-plan-desc,
     button {
       max-width: 100%;
-    }
-    .hero-border {
-      top: 0;
-      max-height: 0.5rem;
-      min-height: 0;
-      min-width: 100%;
     }
   }
 `;

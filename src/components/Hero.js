@@ -18,7 +18,6 @@ const Hero = ({
         <Picture imgs={heroImgs} />
       </figure>
       <div className='hero-text'>
-        <MainBorder />
         {stories && <p>Last Month's Featured Story</p>}
         <h1>{heroHeading}</h1>
         {stories && (
@@ -28,7 +27,7 @@ const Hero = ({
           </p>
         )}
         <p className='light-text'>{heroDesc}</p>
-        {hasBorder && <div className='hero-border'></div>}
+        {hasBorder && <MainBorder />}
         {hasLink && <ArrowButton innerText={linkText} color='#fff' />}
       </div>
     </StyledHero>

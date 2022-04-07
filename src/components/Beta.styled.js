@@ -35,9 +35,6 @@ export const StyledBeta = styled.section`
       line-height: 4.8rem;
       flex: 60%;
     }
-    .hero-border {
-      height: 100%;
-    }
   }
 
   @media (min-width: 1200px) {
