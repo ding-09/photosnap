@@ -4,7 +4,6 @@ export const StyledFooter = styled.footer`
   min-width: 100%;
   padding: 5.6rem 3.2rem;
   background-color: #000;
-  button,
   a,
   p {
     color: #fff;
@@ -46,12 +45,12 @@ export const StyledFooter = styled.footer`
         margin-bottom: 1.5rem;
       }
     }
-    button {
+    & > a {
       display: none;
     }
   }
   .misc-info {
-    button {
+    a {
       margin: 0 auto 3rem;
     }
     .copyright {
@@ -85,7 +84,7 @@ export const StyledFooter = styled.footer`
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-end;
-      button {
+      a {
         margin: 0;
       }
     }
@@ -101,7 +100,7 @@ export const StyledFooter = styled.footer`
       .socials {
         position: absolute;
         bottom: 0;
-        ul li button {
+        ul li a {
           &:hover {
             cursor: pointer;
           }
