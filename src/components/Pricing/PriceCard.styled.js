@@ -21,9 +21,13 @@ export const StyledPriceCard = styled.article`
     display: flex;
     flex-direction: column;
   }
-  button {
-    width: 85%;
-    padding: 1.2rem 0;
+  a {
+    width: 100%;
+  }
+
+  /* BORDER STYLE */
+  div:first-child {
+    max-width: ${(props) => (props.proPlan ? '100%' : '')};
   }
 
   /* MEDIA QUERIES */
@@ -36,10 +40,6 @@ export const StyledPriceCard = styled.article`
       top: 0;
       right: 4rem;
       align-items: flex-end;
-    }
-    .price-plan-desc,
-    button {
-      max-width: 45%;
     }
     .price-plan-desc {
       margin-bottom: 3.2rem;
