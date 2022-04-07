@@ -20,6 +20,11 @@ const StyledRectangleButton = styled.a`
   padding: 1.4rem 0;
   display: flex;
   justify-content: center;
+
+  /* MEDIA QUERIES */
+  @media (min-width: 768px) {
+    padding: 1.2rem 2.4rem;
+  }
 `;
 
 export const ArrowButton = ({ innerText, textColor = '#fff' }) => {
