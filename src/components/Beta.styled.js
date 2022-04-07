@@ -21,11 +21,8 @@ export const StyledBeta = styled.section`
     line-height: 4rem;
     letter-spacing: 0.3rem;
   }
-  button {
-    justify-content: flex-start;
-    svg {
-      margin-left: 2rem;
-    }
+  a span {
+    padding-right: 1.6rem;
   }
 
   /* MEDIA QUERIES */
