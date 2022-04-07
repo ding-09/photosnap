@@ -71,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
         color: #000;
         border: none;
     }
-    img, picture {
+    img {
         display: block;
         max-width: 100%;
         height: 100%;

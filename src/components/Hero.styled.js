@@ -34,8 +34,8 @@ export const StyledHero = styled.section`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      flex: 70%;
       padding: 0 5.4rem;
+      max-width: 49.5rem;
       h1 {
         font-size: 4rem;
         line-height: 4.8rem;
@@ -47,7 +47,6 @@ export const StyledHero = styled.section`
     }
     figure {
       order: 2;
-      flex: 30%;
     }
   }
 
