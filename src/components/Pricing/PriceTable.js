@@ -11,7 +11,7 @@ const PriceTable = ({ features }) => {
         <tr>
           <th>The Features</th>
         </tr>
-        <tr>
+        <tr className='tier-heading'>
           <th>Basic</th>
           <th>Pro</th>
           <th>Business</th>

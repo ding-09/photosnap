@@ -13,10 +13,18 @@ export const StyledPriceTable = styled.table`
     font-size: 1.2rem;
     letter-spacing: 0.2rem;
   }
+  thead {
+    tr:first-child {
+      border-bottom: 1px solid #000;
+      padding-bottom: 2rem;
+    }
+  }
   tbody {
     display: flex;
     flex-direction: column;
-    gap: 2.3rem;
+    padding: 2.4rem 0;
+    border-bottom: 1px solid lightgray;
+
   }
   tr {
     display: flex;
@@ -46,6 +54,14 @@ export const StyledPriceTable = styled.table`
   }
 
   /*  MEDIA QUERIES  */
+  @media (max-width: 767px) {
+    caption {
+      display: none;
+    }
+    .tier-heading {
+      display: none;
+    }
+  }
   @media (min-width: 768px) {
     .mobile-caption {
       display: none;
@@ -58,32 +74,32 @@ export const StyledPriceTable = styled.table`
       padding-bottom: 6rem;
       border-bottom: none;
     }
-  }
-  .tier-name {
-    display: none;
-  }
-  thead,
-  tbody {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem;
-    tr:first-child {
-      flex: 1;
+    .tier-name {
+      display: none;
     }
-    tr:last-child {
-      width: 60%;
-      th,
-      td {
-        text-align: center;
+    thead,
+    tbody {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 2rem;
+      tr:first-child {
+        flex: 1;
+      }
+      tr:last-child {
+        width: 60%;
+        th,
+        td {
+          text-align: center;
+        }
       }
     }
-  }
-  thead {
-    border-bottom: 1px solid #000;
-  }
-  tbody {
-    border-bottom: 1px solid lightgray;
+    thead {
+      border-bottom: 1px solid #000;
+      tr:first-child {
+        border: none;
+      }
+    }
   }
 
   @media (min-width: 1200px) {
