@@ -35,16 +35,16 @@ export const StyledBeta = styled.section`
       line-height: 4.8rem;
       flex: 60%;
     }
-    button {
-      flex: 40%;
-      justify-content: flex-end;
-      margin-right: 1rem;
-      svg {
-        margin-left: 0;
-      }
-    }
     .hero-border {
       height: 100%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding: 6rem 12rem 6rem 12rem;
+    justify-content: space-between;
+    h2 {
+      max-width: 50%;
     }
   }
 `;

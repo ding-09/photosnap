@@ -66,7 +66,7 @@ export const StyledFooter = styled.footer`
 
   /* MEDIA QUERIES */
   @media (min-width: 768px) {
-    padding: 6.4rem 4rem;
+    padding: 6.4rem 3rem 6.4rem 4rem;
     .footer-container {
       align-items: flex-start;
       .socials {
@@ -90,9 +90,6 @@ export const StyledFooter = styled.footer`
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-end;
-      a {
-        margin: 0;
-      }
     }
   }
 

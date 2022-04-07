@@ -140,7 +140,7 @@ const GlobalStyle = createGlobalStyle`
         }
     }
     .features {
-        margin: 6rem 3rem 3rem;
+        margin: 6rem 3rem 5rem;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -148,11 +148,12 @@ const GlobalStyle = createGlobalStyle`
         /* MEDIA QUERIES */
         @media (min-width: 768px) {
             flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin: 12rem 0;
+            align-items: flex-end;
+            margin: 12rem 15rem 8rem;
             article {
+                min-height: 24rem;
                 margin-bottom: 8rem;
+                justify-content: space-between;
             }
         }
         @media (min-width: 1200px) {
