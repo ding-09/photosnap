@@ -38,7 +38,7 @@ export const StyledFooter = styled.footer`
     }
   }
   nav {
-    margin-bottom: 8.5rem;
+    margin-bottom: 7.5rem;
     ul {
       align-items: center;
       li {
@@ -50,8 +50,14 @@ export const StyledFooter = styled.footer`
     }
   }
   .misc-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     a {
-      margin: 0 auto 3rem;
+      margin-bottom: 3.4rem;
+      span {
+        padding-right: 2.2rem;
+      }
     }
     .copyright {
       opacity: 0.5;
