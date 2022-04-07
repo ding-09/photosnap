@@ -1,5 +1,6 @@
 import { StyledHero } from './Hero.styled';
 import { ArrowButton } from '../styles/Buttons';
+import MainBorder from './border'
 import Picture from './Picture';
 
 const Hero = ({
@@ -17,6 +18,7 @@ const Hero = ({
         <Picture imgs={heroImgs} />
       </figure>
       <div className='hero-text'>
+        <MainBorder />
         {stories && <p>Last Month's Featured Story</p>}
         <h1>{heroHeading}</h1>
         {stories && (

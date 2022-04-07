@@ -18,12 +18,12 @@ const GlobalStyle = createGlobalStyle`
         /* MAIN COLORS */
         --pure-black: 0, 0, 0,;
         --light-grey: 223, 223, 223;
-        --pure-white: 255, 255, 255
+        --pure-white: 255, 255, 255;
 
         /* GRADIENT COLORS */
-        --grd-orange: 90, 119, 255;
+        --grd-blue: 90, 119, 255;
         --grd-purple: 188, 113, 152;
-        --grd-blue: 255, 197, 147;
+        --grd-orange: 255, 197, 147;
 
         /* TYPOGRAPHY */
         --fs-xsm: 1.2rem; 
@@ -97,28 +97,6 @@ const GlobalStyle = createGlobalStyle`
         font-weight: bold;
         line-height: 4.8rem;
         letter-spacing: 0.4rem;
-    }
-    .hero-border {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        max-width: 30%;
-        height: 0.5rem;
-        background: linear-gradient(
-            45deg,
-            ${(props) => props.theme.gradientColors.orange},
-            ${(props) => props.theme.gradientColors.purple},
-            ${(props) => props.theme.gradientColors.blue}
-        );
-
-        /* MEDIA QUERIES */
-        @media (min-width: 768px) {
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 0.5rem;
-            min-height: 47%;
-        }
     }
     .stories {
         display: flex;
