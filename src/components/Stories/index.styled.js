@@ -2,6 +2,11 @@ import styled from 'styled-components';
 
 export const StyledStories = styled.section`
   section:first-child {
+    figure {
+      img {
+        object-position: 60%;
+      }
+    }
     .hero-text {
       p:first-child {
         font-size: 1.2rem;
@@ -21,6 +26,9 @@ export const StyledStories = styled.section`
       display: flex;
       align-items: center;
       position: relative;
+      figure {
+        flex-basis: 100%;
+      }
       .hero-text {
         position: absolute;
         z-index: 99;

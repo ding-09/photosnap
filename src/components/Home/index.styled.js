@@ -27,11 +27,19 @@ export const StyledHome = styled.section`
     .main-content {
       section:first-child {
         min-height: 65rem;
+        figure {
+          img {
+            height: 100%;
+          }
+        }
       }
       section.sub-details {
         display: flex;
         flex-direction: row;
         min-height: 60rem;
+        figure {
+          min-width: 27rem;
+        }
         &:last-child {
           .text-details h2 {
             margin-right: 20%;

@@ -3,6 +3,12 @@ import styled from 'styled-components';
 export const StyledHero = styled.section`
   display: flex;
   flex-direction: column;
+  figure {
+    img {
+      width: 100%;
+      height: 30rem;
+    }
+  }
   .hero-text {
     position: relative;
     z-index: -1;
@@ -46,7 +52,11 @@ export const StyledHero = styled.section`
       }
     }
     figure {
+      flex-basis: 27rem;
       order: 2;
+      img {
+        height: 100%;
+      }
     }
   }
 
