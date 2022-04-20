@@ -32,9 +32,14 @@ export const StyledPriceCard = styled.article`
 
   /* MEDIA QUERIES */
   @media (min-width: 768px) {
-    align-items: flex-start;
     text-align: left;
+    align-items: flex-start;
     padding: 4rem;
+
+    /* BORDER STYLE */
+    div:first-child {
+      max-width: ${(props) => (props.proPlan ? '0.6rem' : '')};
+    }
     .price-amount {
       position: absolute;
       top: 0;
@@ -43,6 +48,10 @@ export const StyledPriceCard = styled.article`
     }
     .price-plan-desc {
       margin-bottom: 3.2rem;
+    }
+    .price-plan-desc,
+    a {
+      max-width: 50%;
     }
   }
 
