@@ -26,12 +26,7 @@ export const StyledHome = styled.section`
   @media (min-width: 768px) {
     .main-content {
       section:first-child {
-        min-height: 65rem;
-        figure {
-          img {
-            height: 100%;
-          }
-        }
+        height: 65rem;
       }
       section.sub-details {
         display: flex;
@@ -39,6 +34,9 @@ export const StyledHome = styled.section`
         min-height: 60rem;
         figure {
           min-width: 27rem;
+          img {
+            object-position: 40%;
+          }
         }
         &:last-child {
           .text-details h2 {
@@ -53,6 +51,7 @@ export const StyledHome = styled.section`
           flex-direction: column;
           justify-content: center;
           padding: 0 5.4rem;
+          min-width: 50rem;
           h2 {
             font-size: 4rem;
             line-height: 4.8rem;
