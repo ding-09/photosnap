@@ -24,7 +24,6 @@ export const StyledStories = styled.section`
   @media (min-width: 768px) {
     section:first-child {
       display: flex;
-      align-items: center;
       position: relative;
       figure {
         flex-basis: 100%;

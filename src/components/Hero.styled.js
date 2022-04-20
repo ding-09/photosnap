@@ -58,7 +58,8 @@ export const StyledHero = styled.section`
       }
     }
     figure {
-      flex-basis: 27rem;
+      min-width: 27rem;
+      flex: 20%;
       order: 2;
       img {
         height: 100%;
