@@ -32,12 +32,12 @@ const Pricing = () => {
       {/* PRICING CARDS */}
       <section className='price-card-group'>
         <div className='price-plan-toggle'>
-          <label>Monthly</label>
+          <label className={annual ? 'inactive-label' : ''}>Monthly</label>
           <div className='checkbox'>
             <input type='checkbox' onClick={handleClick} />
             <span className='slider'></span>
           </div>
-          <label>Yearly</label>
+          <label className={annual ? '' : 'inactive-label'}>Yearly</label>
         </div>
         <section className='price-cards'>
           {pricing.map((pricePlan) => (

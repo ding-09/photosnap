@@ -10,6 +10,8 @@ export const StyledPricing = styled.section`
     align-items: center;
     max-width: 70%;
     margin: 0 auto;
+    font-weight: bold;
+    font-size: 1.8rem;
     .checkbox {
       position: relative;
       width: 6.4rem;
@@ -65,11 +67,17 @@ export const StyledPricing = styled.section`
     padding: 0 2.9rem;
     margin-bottom: 6.4rem;
   }
+  .inactive-label {
+    opacity: 0.6;
+  }
 
   /* MEDIA QUERIES */
   @media (min-width: 768px) {
     .price-card-group {
       margin: 11rem 4rem;
+    }
+    .price-plan-toggle {
+      max-width: 40%;
     }
   }
 
