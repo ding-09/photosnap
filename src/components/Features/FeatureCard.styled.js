@@ -6,7 +6,7 @@ export const StyledFeatureCard = styled.article`
   align-items: center;
   text-align: center;
   margin-bottom: 6rem;
-  min-height: 23.6rem;
+  height: 23.6rem;
   justify-content: space-between;
   h2 {
     font-size: 1.8rem;
