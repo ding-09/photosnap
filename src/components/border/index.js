@@ -12,6 +12,13 @@ const StyledBorder = styled.div`
     rgb(var(--grd-purple)),
     rgb(var(--grd-orange))
   );
+
+  /* MEDIA QUERIES */
+  @media (min-width: 768px) {
+    left: 0;
+    max-width: 0.6rem;
+    height: 100%;
+  }
 `;
 
 

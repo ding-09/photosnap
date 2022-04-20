@@ -9,24 +9,25 @@ export const StyledHero = styled.section`
       height: 30rem;
     }
   }
-  .hero-text {
+  .hero-text-container {
     position: relative;
-    z-index: -1;
     padding: 7rem 3rem;
     text-align: left;
     background-color: #000;
     color: #fff;
-    h1 {
-      text-transform: uppercase;
-      font-size: 3.2rem;
-      letter-spacing: 0.3rem;
-      line-height: 4rem;
-    }
-    p {
-      margin: 2rem 0;
-    }
-    a span {
-      padding-right: ${(props) => (props.onStories ? '1.6rem' : '1.8rem')};
+    .hero-text {
+      h1 {
+        text-transform: uppercase;
+        font-size: 3.2rem;
+        letter-spacing: 0.3rem;
+        line-height: 4rem;
+      }
+      p {
+        margin: 2rem 0;
+      }
+      a span {
+        padding-right: ${(props) => (props.storiesBtn ? '1.6rem' : '1.8rem')};
+      }
     }
   }
 
@@ -36,19 +37,24 @@ export const StyledHero = styled.section`
     flex-direction: row;
     justify-content: center;
     min-height: 50rem;
-    .hero-text {
+    .hero-text-container {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 5.4rem;
-      max-width: 49.5rem;
-      h1 {
-        font-size: 4rem;
-        line-height: 4.8rem;
-        letter-spacing: 0.4rem;
-      }
-      p {
-        margin: 2rem 0 4.8rem;
+      align-items: center;
+      padding: 0;
+      .hero-text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 0 4.8rem;
+        max-width: 49.5rem;
+        h1 {
+          font-size: 4rem;
+          line-height: 4.8rem;
+          letter-spacing: 0.4rem;
+        }
+        p {
+          margin: 2rem 0 ${(props) => (props.hasLink ? '4.8rem' : '0')};
+        }
       }
     }
     figure {

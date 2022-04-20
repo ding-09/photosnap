@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-// BG IMGS
+// BG IMG
 import bgBeta from '../assets/shared/desktop/bg-beta.jpg';
 
 export const StyledBeta = styled.section`
@@ -29,11 +29,16 @@ export const StyledBeta = styled.section`
   @media (min-width: 768px) {
     flex-direction: row;
     align-items: center;
+
     h2 {
       font-size: 4rem;
       letter-spacing: 0.4rem;
       line-height: 4.8rem;
-      flex: 60%;
+      flex: 70%;
+    }
+    a {
+      flex: 40%;
+      justify-content: flex-end;
     }
   }
 
