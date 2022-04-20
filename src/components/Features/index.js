@@ -18,7 +18,7 @@ const Features = () => {
         heroDesc={featuresContent.heroDesc}
         hasBorder={true}
       />
-      {/* FEATURES DETAILS */}
+      {/* FEATURES DETAILS & FEATURE CARDS */}
       <section className='features features-details'>
         {featuresContent.features.map((feature) => (
           <FeatureCard feature={feature} key={uuidv4()} />

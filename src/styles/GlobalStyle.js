@@ -126,12 +126,9 @@ const GlobalStyle = createGlobalStyle`
         /* MEDIA QUERIES */
         @media (min-width: 768px) {
             flex-direction: row;
-            align-items: flex-end;
-            margin: 12rem 15rem 8rem;
+            margin: 12rem 15rem 5rem;
             article {
-                min-height: 24rem;
                 margin-bottom: 8rem;
-                justify-content: space-between;
             }
         }
         @media (min-width: 1200px) {

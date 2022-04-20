@@ -6,8 +6,13 @@ export const StyledFeatureCard = styled.article`
   align-items: center;
   text-align: center;
   margin-bottom: 6rem;
+  min-height: 23.6rem;
+  justify-content: space-between;
   h2 {
-    margin: 5rem 0 2rem;
     font-size: 1.8rem;
+    margin-bottom: 1.6rem;
+  }
+  .photo-limit {
+    margin-top: 2.5rem;
   }
 `;
