@@ -29,7 +29,7 @@ export const StyledStories = styled.section`
       figure {
         flex-basis: 100%;
       }
-      .hero-text {
+      .hero-text-container {
         position: absolute;
         z-index: 99;
         left: 0;
