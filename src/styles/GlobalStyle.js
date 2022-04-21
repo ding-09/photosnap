@@ -133,7 +133,7 @@ const GlobalStyle = createGlobalStyle`
             }
         }
         @media (min-width: 1200px) {
-            padding: 0 8rem;
+            margin: 12rem;
             article {
                 flex: 25%;
                 height: 23rem;
