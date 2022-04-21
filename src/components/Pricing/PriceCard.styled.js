@@ -72,6 +72,14 @@ export const StyledPriceCard = styled.article`
       max-width: 100%;
     }
 
+    a {
+      &:hover {
+        background-color: #dfdfdf;
+        color: ${(props) => (props.proPlan ? '' : '#000')};
+        cursor: pointer;
+      }
+    }
+
     /* BORDER STYLE */
     div:first-child {
       max-width: ${(props) => (props.proPlan ? '100%' : '')};

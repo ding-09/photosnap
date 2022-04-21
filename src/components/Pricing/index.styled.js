@@ -85,6 +85,13 @@ export const StyledPricing = styled.section`
     .price-card-group {
       margin: 11rem 9rem;
     }
+    .price-plan-toggle {
+      .checkbox {
+        input[type='checkbox'] {
+          cursor: pointer;
+        }
+      }
+    }
     .price-cards {
       flex-direction: row;
       justify-content: center;
