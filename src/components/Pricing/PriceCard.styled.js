@@ -68,8 +68,14 @@ export const StyledPriceCard = styled.article`
       right: 0;
     }
     .price-plan-desc,
-    button {
+    a {
       max-width: 100%;
+    }
+
+    /* BORDER STYLE */
+    div:first-child {
+      max-width: ${(props) => (props.proPlan ? '100%' : '')};
+      max-height: ${(props) => (props.proPlan ? '0.6rem' : '')};
     }
   }
 `;
