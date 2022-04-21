@@ -12,6 +12,14 @@ const StyledArrowButton = styled.a`
       stroke: ${(props) => props.color};
     }
   }
+
+  /* MEDIA QUERIES */
+  @media (min-width: 1200px) {
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
 `;
 
 const StyledRectangleButton = styled.a`
