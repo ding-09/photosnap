@@ -126,6 +126,7 @@ const GlobalStyle = createGlobalStyle`
         /* MEDIA QUERIES */
         @media (min-width: 768px) {
             flex-direction: row;
+            justify-content: center;
             margin: 12rem 15rem 5rem;
             article {
                 margin-bottom: 8rem;
@@ -136,7 +137,6 @@ const GlobalStyle = createGlobalStyle`
             article {
                 flex: 25%;
                 height: 23rem;
-                justify-content: flex-end;
                 margin: 0 3rem 0;
             }
         }
